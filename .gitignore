@@ -1,0 +1,3 @@
+SourceCode/src/Win32_Build/ReleaseDLL/
+SourceCode/src/Win32_Build/Debug/
+*.user
