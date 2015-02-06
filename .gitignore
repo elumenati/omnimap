@@ -24,3 +24,14 @@ SourceCode/src/Win32_Build/DebugDLL/omnimapdll.log
 SourceCode/src/Win32_Build/UpgradeLog2.XML
 SourceCode/src/Win32_Build/UpgradeLog2.htm
 NeededDependencies/glew-1.12.0-win32/
+SourceCode/*.log
+*.log
+*.pdb
+*.tlog
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Game.sln.GhostDoc.xml
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Game.v11.suo
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Release/Basecode.obj
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Release/Demo.exe
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Release/Demo.lastbuildstate
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Release/Map.obj
+SourceCode/examples/hallway/hallway_dome_enabled/Source/Demo.vcxproj.filters
