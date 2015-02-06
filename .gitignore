@@ -18,3 +18,9 @@ SourceCode/src/Win32_Build/omnimapdll.vcxproj
 SourceCode/src/Win32_Build/omnimapdll.vcxproj.filters
 SourceCode/examples/hallway/hallway_original/Source/Game.suo
 *.user
+SourceCode/src/Win32_Build/Backup1/omnimapdll.sln
+SourceCode/src/Win32_Build/Backup1/omnimapdll.v11.suo
+SourceCode/src/Win32_Build/DebugDLL/omnimapdll.log
+SourceCode/src/Win32_Build/UpgradeLog2.XML
+SourceCode/src/Win32_Build/UpgradeLog2.htm
+NeededDependencies/glew-1.12.0-win32/
