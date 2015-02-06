@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>OmniMap API Release Notes</title>
+</head>
+<body>
+<table style="width: 100%; height: 77px;" border="0" cellpadding="4"
+ cellspacing="3">
+  <thead><tr valign="top">
+    <td style="width: 50%;">
+    <p> <a href="http://www.elumenati.com/"> <img src="elumenati.jpg"
+ border="0" height="45" width="313"></a><br>
+    <a href="http://www.elumenati.com/"> </a> </p>
+    </td>
+    <td
+ style="text-align: right; width: 50%; font-family: helvetica,arial,sans-serif;">
+    <br>
+    </td>
+  </tr>
+  </thead>
+</table>
+<small><br>
+</small>
+<h1 style="text-align: center;">OmniMap API Real-Time Geometry
+Correction Library</h1>
+<h2 style="text-align: center;">Release Notes for Release 2.0.0 Beta 5</h2>
+<span style="font-weight: bold;">Known Problems:</span><br>
+1) Documentation for new convenience methods and new Lua configuration
+scripts is not written.<br>
+2) The API could change before the 2.0 release.&nbsp; Source
+compatibility will be maintained but binary compatibility may not.<br>
+<br>
+<span style="font-weight: bold;">Change for Beta Release 2.0.0 beta 5</span><br>
+1) Support for loading external shader through a Lua parameter.<br>
+2) Reorganization of Lua scripts.<br>
+3) More convenience methods for accessing channel parameters.<br>
+4) OmniMapAppTextureD3D and OmniMapChannelATD3D classes added for
+applications that want to supply their own channel rendering&nbsp; in
+D3D.<br>
+5) Built cylinder shaped screen class: OM_CylinderScreen, using
+run-time extensible screen geometry support.<br>
+6) Added support for triangle strips to run-time extensible screen
+geometry.<br>
+.<br>
+<span style="font-weight: bold;">Changes for Beta Release 2.0.0 beta 2</span><br>
+1) Alpha mask support added.<br>
+2) Run-time extensible screen geometry support added.<br>
+3) Numerous new convenience methods added to OmniMapBase for setting
+channel camera orientation and frustum values.<br>
+4) Back buffer channel implementation added.<br>
+5) OmniMapAppTextureOGL, and OmniMapChannelATOGL classes added for
+applications that want to supply their own channel rendering.<br>
+<span style="font-weight: bold;"></span>
+<div style="text-align: center;"></div>
+<p style="text-align: center;"> </p>
+<span style="font-weight: bold;">Changes for the 2.0.0 beta 1 release
+include:</span><br>
+1) Different handling of shader source files.<br>
+2) Added support for non-square non-power-of-2 channel
+resolutions.&nbsp; Application programmes can now set an x and y
+dimenstion for the channel rendering canvas.&nbsp; This is done in the
+file OmniMapConfig/omnimap_dome_wiz_ai.lua.&nbsp; The line:<br>
+&nbsp;&nbsp;&nbsp; channelRes = 1024<br>
+has been replaced with<br>
+&nbsp;&nbsp;&nbsp; channelResX = 1024<br>
+&nbsp;&nbsp;&nbsp; channelResY = 1024<br>
+To create a non-square window just set these values to the values you
+want to use.&nbsp; Non square windows are only supported in back buffer
+and pbuffer rendering modes.(See #3)<br>
+3) Added support for back buffer rendering.&nbsp; OmniMap now supports
+applications rendering to the back buffer.&nbsp; In the file
+OmniMapConfig/omnimap_dome_wiz_ai.lua, the line:<br>
+&nbsp;&nbsp;&nbsp; usefbo = true<br>
+has been replaced by :<br>
+&nbsp;&nbsp; renderTarget = RT_FRAME_BUFFER_OBJECT<br>
+While "usefbo = true" will still cause the channel to be rendered into
+a framebuffer object, applications can use pbuffers and back buffers as
+well.&nbsp; To use pbuffers:<br>
+&nbsp;&nbsp;&nbsp; usefbo = false<br>
+&nbsp;&nbsp;&nbsp; renderTarget = RT_PBUFFER<br>
+To use the back buffer:<br>
+&nbsp;&nbsp;&nbsp; usefbo = false<br>
+&nbsp;&nbsp;&nbsp; renderTarget = RT_BACK_BUFFER<br>
+When using the back buffer, OmniMap assumes that the application is
+drawing to the back buffer, and does not reset the drawing target to
+anything in OmniMapChannelBase::beginRenderToChannel.&nbsp; In
+OmniMapChannelBase::endRenderToChannel, the back buffer is read into
+the channel texture.<br>
+4) References to OpenGL have been removed from all base&nbsp; classes.<br>
+5) A new method for setting up the channel callbacks has been added:<br>
+&nbsp;&nbsp;&nbsp; void OmniMapBase::ForEachChannel(void
+fun(OmniMapChannelBase *chan, void *userData), void *userData);<br>
+This method allows the application developer to pass a void * to the
+channel rendering method.<br>
+<br>
+<span style="font-weight: bold;">Changes for the 1.0.1 release include:<br>
+</span>1) Made a simple change to the shader to fix a crash on Nvidia
+7900 GS Go Graphics.&nbsp; It is also a performance improvement.<br>
+<br>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">Changes
+for the 1.0.0 release include:</span><br>
+1) Changed default for configuration parameter <span
+ style="font-style: italic;">ConsolidateCameraIntoProjectionMatrix.&nbsp;
+</span>It now defaults to <span style="font-style: italic;">true</span>.&nbsp;
+<br>
+2) Fixed a problem with the fragment shader that left some pixels
+undefined in the final render phase on ATI hardware.<br>
+3) Moved the methods <span style="font-style: italic;">ApplyProjectionMatrix
+</span>and <span style="font-style: italic;">ApplyViewMatrix </span>to
+the <span style="font-style: italic;">OmniMap_Channel</span> class
+from the <span style="font-style: italic;">OmniMap_CameraInf</span>o
+class.&nbsp; This was done so that <span style="font-style: italic;">OmniMap_CameraInfo</span>
+did not have any OpenGL dependencies. <br>
+4) Enabled pbuffer usage in offscreen channel rendering.&nbsp; The
+usefbo option in the Lua configuration script omnimap_dome_wiz_ai.lua
+can be set&nbsp; to false to use pbuffer instead of the default Frame
+Buffer Object implementation.<br>
+<br>
+<span style="font-weight: bold;">Changes for the 0.9.4 beta release
+include:</span><br>
+1)&nbsp; Disabled alpha blending during the post render phase.&nbsp;
+The OpenGL state is pushed prior to disabling alpha blending, then
+popped at the end of the post render phase.<br>
+2)&nbsp; Disabled backface culling during rendering of heads-up display.<br>
+3)&nbsp; Disabled the pushing and popping of the OpenGL state in
+Omnimap_Channel::beginRenderToChannel, and
+Omnimap_Channel::endRenderToChannel.&nbsp; There are applications that
+change &nbsp;&nbsp; the state during rendering and expect it to stay
+that way.<br>
+4)&nbsp; Took a #include out of the fragment program used in the post
+rendering phase.&nbsp;&nbsp; #include is not supported in GLSL fragment
+programs on ATI cards. Now building the string&nbsp; that defines
+the number of channels in memory and concatenating the rest of the
+fragment program to it before compiling.&nbsp; <br>
+5) Added a LUA parameter: "UseOmniMapMatrix".&nbsp; If set to false,
+OmniMap does not modify the viewing or projection matrices for channel
+rendering, and it is up to the calling application to set the proper
+viewing and projection matrices.<br>
+<br>
+<br>
+</body>
+</html>

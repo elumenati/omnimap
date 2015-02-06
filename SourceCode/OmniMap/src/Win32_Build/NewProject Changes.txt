@@ -1,0 +1,30 @@
+included utils
+)OpenGl
+)Glew
+)LUA
+)Property Set from the game programming gems series.
+)graphics primitives from brian.
+) hallway demo  - INTERMINABLE TUNNEL     CREATED BY DAVID DUCKER   
+
+
+
+jan 4/06
+
+1)I switched the build type to not register output, because it was failing, and not originally set.
+2)Also I excluded the shader and lua resource files from the build because they weren't in the workspace as per our conversation.
+3)i deleted the network code but not the files yet.
+4)added a metadata container to the channels...
+5)Switched runtime library from MT debug and release.dll to MT debug and release static linked
+ <- is this a good idea?
+6) fixed bug in property set useage
+7) More meaningfull error log
+ 
+ 
+ to do:
+ mem leak check
+ performance test
+ add in lua and frag shaders
+ redo lua and frag shaders
+
+
+

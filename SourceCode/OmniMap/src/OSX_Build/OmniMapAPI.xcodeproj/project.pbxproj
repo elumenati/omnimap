@@ -1,0 +1,1413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3ABA1A640D626DA100A67E0B /* CopyGlew */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3ABA1A690D626DBE00A67E0B /* Build configuration list for PBXAggregateTarget "CopyGlew" */;
+			buildPhases = (
+				3ABA1A630D626DA100A67E0B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CopyGlew;
+			productName = CopyGlew;
+		};
+		3ABA1A6A0D626E5E00A67E0B /* Install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3ABA1A720D626E8800A67E0B /* Build configuration list for PBXAggregateTarget "Install" */;
+			buildPhases = (
+			);
+			dependencies = (
+				3ABA1A6E0D626E6400A67E0B /* PBXTargetDependency */,
+				3ABA1A700D626E6600A67E0B /* PBXTargetDependency */,
+			);
+			name = Install;
+			productName = Install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3A1BC28C0FBE032100FC738F /* OM_ConeScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BC28B0FBE032100FC738F /* OM_ConeScreen.cpp */; };
+		3A1BC28E0FBE034000FC738F /* OM_ConeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1BC28D0FBE034000FC738F /* OM_ConeScreen.h */; };
+		3A1BC4990FC1E25E00FC738F /* OM_ConeScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BC28B0FBE032100FC738F /* OM_ConeScreen.cpp */; };
+		3A1BC49A0FC1E25E00FC738F /* ElumSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4956C0E27ACB000FE443B /* ElumSphere.cpp */; };
+		3A1BC49B0FC1E25E00FC738F /* OmniMapQuartz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEAD7F0DC38DB000AFBEC1 /* OmniMapQuartz.cpp */; };
+		3A1BC49C0FC1E25E00FC738F /* OM_PartialDomeScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEACEE0DC3849700AFBEC1 /* OM_PartialDomeScreen.cpp */; };
+		3A1BC49D0FC1E25E00FC738F /* ProtectorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEACE70DC3846F00AFBEC1 /* ProtectorImpl.cpp */; };
+		3A1BC49E0FC1E25E00FC738F /* OmniMapAppTextureOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C810D60DDFE00FF6732 /* OmniMapAppTextureOGL.cpp */; };
+		3A1BC49F0FC1E25E00FC738F /* OM_CylinderScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C820D60DDFE00FF6732 /* OM_CylinderScreen.cpp */; };
+		3A1BC4A00FC1E25E00FC738F /* OM_DomeScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C830D60DDFE00FF6732 /* OM_DomeScreen.cpp */; };
+		3A1BC4A10FC1E25E00FC738F /* OM_ToroidScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C840D60DDFE00FF6732 /* OM_ToroidScreen.cpp */; };
+		3A1BC4A20FC1E25E00FC738F /* ScreenRendererBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C850D60DDFE00FF6732 /* ScreenRendererBase.cpp */; };
+		3A1BC4A30FC1E25E00FC738F /* ScreenRendererOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C860D60DDFE00FF6732 /* ScreenRendererOGL.cpp */; };
+		3A1BC4A40FC1E25E00FC738F /* screenshapefactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C870D60DDFE00FF6732 /* screenshapefactory.cpp */; };
+		3A1BC4A50FC1E25E00FC738F /* GraphicsPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C880D60DDFE00FF6732 /* GraphicsPrimitives.cpp */; };
+		3A1BC4A60FC1E25E00FC738F /* backbuffertexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C890D60DDFE00FF6732 /* backbuffertexture.cpp */; };
+		3A1BC4A70FC1E25E00FC738F /* FrameBufferObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8A0D60DDFE00FF6732 /* FrameBufferObject.cpp */; };
+		3A1BC4A80FC1E25E00FC738F /* GLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8B0D60DDFE00FF6732 /* GLShader.cpp */; };
+		3A1BC4A90FC1E25E00FC738F /* PBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8C0D60DDFE00FF6732 /* PBuffer.cpp */; };
+		3A1BC4AA0FC1E25E00FC738F /* quad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8D0D60DDFE00FF6732 /* quad.cpp */; };
+		3A1BC4AB0FC1E25E00FC738F /* RenderChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8E0D60DDFE00FF6732 /* RenderChannel.cpp */; };
+		3A1BC4AC0FC1E25E00FC738F /* simple_matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8F0D60DDFE00FF6732 /* simple_matrix.cpp */; };
+		3A1BC4AD0FC1E25E00FC738F /* ViewerPosition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C900D60DDFE00FF6732 /* ViewerPosition.cpp */; };
+		3A1BC4AE0FC1E25E00FC738F /* omnimap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C910D60DDFE00FF6732 /* omnimap.cpp */; };
+		3A1BC4AF0FC1E25E00FC738F /* privatePrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C920D60DDFE00FF6732 /* privatePrimitives.cpp */; };
+		3A1BC4B00FC1E25E00FC738F /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C930D60DDFE00FF6732 /* Property.cpp */; };
+		3A1BC4B10FC1E25E00FC738F /* cLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C940D60DDFE00FF6732 /* cLua.cpp */; };
+		3A1BC4B20FC1E25E00FC738F /* omnimap_luatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C950D60DDFE00FF6732 /* omnimap_luatable.cpp */; };
+		3A1BC4B30FC1E25E00FC738F /* OmniMapBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C960D60DDFE00FF6732 /* OmniMapBase.cpp */; };
+		3A1BC4B40FC1E25E00FC738F /* OmnimapIncludePropertySet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C970D60DDFE00FF6732 /* OmnimapIncludePropertySet.cpp */; };
+		3A1BC4B50FC1E25E00FC738F /* OmniMapAPI_Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = 32BAE0B70371A74B00C91783 /* OmniMapAPI_Prefix.pch */; };
+		3A1BC4B70FC1E28900FC738F /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE56CAF0D60DE1300FF6732 /* libGLEW.a */; };
+		3A1BC4B80FC1E28900FC738F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE56CB00D60DE1300FF6732 /* OpenGL.framework */; };
+		3A1BC4BA0FC1E28900FC738F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
+		3A1BC4C80FC1E47A00FC738F /* OmniMapUnityOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BC47D0FC1DEEA00FC738F /* OmniMapUnityOGL.cpp */; };
+		3A1BC4C90FC1E47A00FC738F /* OmniMapUnitPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BC47F0FC1DEEA00FC738F /* OmniMapUnitPI.cpp */; };
+		3A1BC4D90FC1FCB400FC738F /* omnimap_audience.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2E0D60DDC300FF6732 /* omnimap_audience.lua */; };
+		3A1BC4DA0FC1FCB400FC738F /* omnimap_channel_interface.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2F0D60DDC300FF6732 /* omnimap_channel_interface.lua */; };
+		3A1BC4DC0FC1FCB400FC738F /* omnimap_helperfunctions.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C310D60DDC300FF6732 /* omnimap_helperfunctions.lua */; };
+		3A1BC4DD0FC1FCB400FC738F /* omnimap_hud.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C320D60DDC300FF6732 /* omnimap_hud.lua */; };
+		3A1BC4DE0FC1FCB400FC738F /* omnimap_math.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C340D60DDC300FF6732 /* omnimap_math.lua */; };
+		3A1BC4DF0FC1FCB400FC738F /* omnimap_matrix3x3.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C350D60DDC300FF6732 /* omnimap_matrix3x3.lua */; };
+		3A1BC4E00FC1FCB400FC738F /* omnimap_matrix4x4.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C360D60DDC300FF6732 /* omnimap_matrix4x4.lua */; };
+		3A1BC4E10FC1FCB400FC738F /* omnimap_projector.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C370D60DDC300FF6732 /* omnimap_projector.lua */; };
+		3A1BC4E20FC1FCB400FC738F /* omnimap_renderchannel.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C380D60DDC300FF6732 /* omnimap_renderchannel.lua */; };
+		3A1BC4E30FC1FCB400FC738F /* omnimap_screen.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C390D60DDC300FF6732 /* omnimap_screen.lua */; };
+		3A1BC4E40FC1FCB400FC738F /* omnimap_todo_functions.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C3A0D60DDC300FF6732 /* omnimap_todo_functions.lua */; };
+		3A1BC4E50FC1FCB400FC738F /* omnimap_vector.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C3B0D60DDC300FF6732 /* omnimap_vector.lua */; };
+		3A1BC4E60FC1FCC800FC738F /* FullDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C290D60DDC300FF6732 /* FullDomeDefaults.lua */; };
+		3A1BC50C0FC1FDB600FC738F /* omnimap_user_edit.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A1BC5060FC1FDB600FC738F /* omnimap_user_edit.lua */; };
+		3A1BC50D0FC1FDB600FC738F /* U3DLensInterface.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A1BC5070FC1FDB600FC738F /* U3DLensInterface.lua */; };
+		3A1BC50E0FC1FDB600FC738F /* U3DOmniMapStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A1BC5080FC1FDB600FC738F /* U3DOmniMapStartup.lua */; };
+		3A1BC50F0FC1FDB600FC738F /* U3DPortalDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A1BC5090FC1FDB600FC738F /* U3DPortalDomeDefaults.lua */; };
+		3A1BC5100FC1FDB600FC738F /* U3DTheaterDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A1BC50A0FC1FDB600FC738F /* U3DTheaterDomeDefaults.lua */; };
+		3A1BC55B0FC301C900FC738F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		3A1D92AB0D6A50990028F6FE /* FrameBufferObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1D92A70D6A50990028F6FE /* FrameBufferObject.h */; };
+		3A1D92AC0D6A50990028F6FE /* renderchannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1D92A80D6A50990028F6FE /* renderchannel.h */; };
+		3A1D92AD0D6A50990028F6FE /* simple_matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1D92A90D6A50990028F6FE /* simple_matrix.h */; };
+		3A1D92AE0D6A50990028F6FE /* ViewerPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1D92AA0D6A50990028F6FE /* ViewerPosition.h */; };
+		3A3585B70FD5800400181502 /* U3DOmniMapConfigureDomes.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A3585B50FD5800400181502 /* U3DOmniMapConfigureDomes.lua */; };
+		3A3585B80FD5800400181502 /* U3DOmniMapDomeWizAI.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3A3585B60FD5800400181502 /* U3DOmniMapDomeWizAI.lua */; };
+		3AA3C6F30D69F734005B0676 /* IncludePropertySet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA3C6F20D69F734005B0676 /* IncludePropertySet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ACEACE60DC3845F00AFBEC1 /* OM_Protector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEACE50DC3845F00AFBEC1 /* OM_Protector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ACEACE80DC3846F00AFBEC1 /* ProtectorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEACE70DC3846F00AFBEC1 /* ProtectorImpl.cpp */; };
+		3ACEACED0DC3848A00AFBEC1 /* OM_PartialDomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEACEC0DC3848A00AFBEC1 /* OM_PartialDomeScreen.h */; };
+		3ACEACEF0DC3849700AFBEC1 /* OM_PartialDomeScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEACEE0DC3849700AFBEC1 /* OM_PartialDomeScreen.cpp */; };
+		3ACEAD7E0DC38D9D00AFBEC1 /* OmniMapQuartz.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEAD7D0DC38D9D00AFBEC1 /* OmniMapQuartz.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ACEAD800DC38DB000AFBEC1 /* OmniMapQuartz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEAD7F0DC38DB000AFBEC1 /* OmniMapQuartz.cpp */; };
+		3ADB190B13BBBD17006F1844 /* OmniMap_MirrorBallShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ADB190913BBBD17006F1844 /* OmniMap_MirrorBallShader.h */; };
+		3ADB190C13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB190A13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp */; };
+		3ADB190D13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB190A13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp */; };
+		3AE142DD1450B90D00947CA5 /* OM_PlaneScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE142DB1450B90D00947CA5 /* OM_PlaneScreen.cpp */; };
+		3AE142DE1450B90D00947CA5 /* OM_PlaneScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE142DB1450B90D00947CA5 /* OM_PlaneScreen.cpp */; };
+		3AE142DF1450B90D00947CA5 /* OM_PlaneScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE142DC1450B90D00947CA5 /* OM_PlaneScreen.h */; };
+		3AE142E21450BA7800947CA5 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE142E01450BA7800947CA5 /* liblua.a */; };
+		3AE1439C1450E06100947CA5 /* libLua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE1439B1450E06000947CA5 /* libLua.dylib */; };
+		3AE4956B0E27ACA100FE443B /* ElumSphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE4956A0E27ACA100FE443B /* ElumSphere.h */; };
+		3AE4956D0E27ACB000FE443B /* ElumSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4956C0E27ACB000FE443B /* ElumSphere.cpp */; };
+		3AE56C180D60DD8E00FF6732 /* omnimap_startup.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C150D60DD8E00FF6732 /* omnimap_startup.lua */; };
+		3AE56C190D60DD8E00FF6732 /* omnimap_user_edit.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C160D60DD8E00FF6732 /* omnimap_user_edit.lua */; };
+		3AE56C220D60DD9B00FF6732 /* FullDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C1D0D60DD9B00FF6732 /* FullDomeDefaults.lua */; };
+		3AE56C230D60DD9B00FF6732 /* GeoDomeSlammedDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C1E0D60DD9B00FF6732 /* GeoDomeSlammedDefaults.lua */; };
+		3AE56C240D60DD9B00FF6732 /* HorizontalDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C1F0D60DD9B00FF6732 /* HorizontalDomeDefaults.lua */; };
+		3AE56C250D60DD9B00FF6732 /* PanoramicDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C200D60DD9B00FF6732 /* PanoramicDefaults.lua */; };
+		3AE56C260D60DD9B00FF6732 /* VerticalDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C210D60DD9B00FF6732 /* VerticalDomeDefaults.lua */; };
+		3AE56C3C0D60DDC300FF6732 /* FullDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C290D60DDC300FF6732 /* FullDomeDefaults.lua */; };
+		3AE56C3D0D60DDC300FF6732 /* GeoDomeSlammedDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2A0D60DDC300FF6732 /* GeoDomeSlammedDefaults.lua */; };
+		3AE56C3E0D60DDC300FF6732 /* HorizontalDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2B0D60DDC300FF6732 /* HorizontalDomeDefaults.lua */; };
+		3AE56C3F0D60DDC300FF6732 /* PanoramicDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2C0D60DDC300FF6732 /* PanoramicDefaults.lua */; };
+		3AE56C400D60DDC300FF6732 /* VerticalDomeDefaults.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2D0D60DDC300FF6732 /* VerticalDomeDefaults.lua */; };
+		3AE56C410D60DDC300FF6732 /* omnimap_audience.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2E0D60DDC300FF6732 /* omnimap_audience.lua */; };
+		3AE56C420D60DDC300FF6732 /* omnimap_channel_interface.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C2F0D60DDC300FF6732 /* omnimap_channel_interface.lua */; };
+		3AE56C440D60DDC300FF6732 /* omnimap_helperfunctions.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C310D60DDC300FF6732 /* omnimap_helperfunctions.lua */; };
+		3AE56C450D60DDC300FF6732 /* omnimap_hud.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C320D60DDC300FF6732 /* omnimap_hud.lua */; };
+		3AE56C460D60DDC300FF6732 /* omnimap_lens_interface.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C330D60DDC300FF6732 /* omnimap_lens_interface.lua */; };
+		3AE56C470D60DDC300FF6732 /* omnimap_math.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C340D60DDC300FF6732 /* omnimap_math.lua */; };
+		3AE56C480D60DDC300FF6732 /* omnimap_matrix3x3.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C350D60DDC300FF6732 /* omnimap_matrix3x3.lua */; };
+		3AE56C490D60DDC300FF6732 /* omnimap_matrix4x4.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C360D60DDC300FF6732 /* omnimap_matrix4x4.lua */; };
+		3AE56C4A0D60DDC300FF6732 /* omnimap_projector.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C370D60DDC300FF6732 /* omnimap_projector.lua */; };
+		3AE56C4B0D60DDC300FF6732 /* omnimap_renderchannel.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C380D60DDC300FF6732 /* omnimap_renderchannel.lua */; };
+		3AE56C4C0D60DDC300FF6732 /* omnimap_screen.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C390D60DDC300FF6732 /* omnimap_screen.lua */; };
+		3AE56C4D0D60DDC300FF6732 /* omnimap_todo_functions.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C3A0D60DDC300FF6732 /* omnimap_todo_functions.lua */; };
+		3AE56C4E0D60DDC300FF6732 /* omnimap_vector.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C3B0D60DDC300FF6732 /* omnimap_vector.lua */; };
+		3AE56C520D60DDDD00FF6732 /* omnimap_fragmentOSX.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C500D60DDDD00FF6732 /* omnimap_fragmentOSX.frag */; };
+		3AE56C530D60DDDD00FF6732 /* omnimap_vertex.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3AE56C510D60DDDD00FF6732 /* omnimap_vertex.vert */; };
+		3AE56C6B0D60DDE700FF6732 /* OmniMapAppTextureOGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C550D60DDE600FF6732 /* OmniMapAppTextureOGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C6C0D60DDE700FF6732 /* OM_CylinderScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C560D60DDE600FF6732 /* OM_CylinderScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C6D0D60DDE700FF6732 /* OM_DomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C570D60DDE600FF6732 /* OM_DomeScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C6E0D60DDE700FF6732 /* OM_ToroidScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C580D60DDE600FF6732 /* OM_ToroidScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C700D60DDE700FF6732 /* ScreenGeometryBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C5A0D60DDE700FF6732 /* ScreenGeometryBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C710D60DDE700FF6732 /* ScreenRendererOGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C5B0D60DDE700FF6732 /* ScreenRendererOGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C720D60DDE700FF6732 /* screenshapefactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C5C0D60DDE700FF6732 /* screenshapefactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C730D60DDE700FF6732 /* BackBufferTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C5D0D60DDE700FF6732 /* BackBufferTexture.h */; };
+		3AE56C740D60DDE700FF6732 /* pbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C5E0D60DDE700FF6732 /* pbuffer.h */; };
+		3AE56C750D60DDE700FF6732 /* FragShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C5F0D60DDE700FF6732 /* FragShader.h */; };
+		3AE56C760D60DDE700FF6732 /* VertShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C600D60DDE700FF6732 /* VertShader.h */; };
+		3AE56C780D60DDE700FF6732 /* omnimap.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C620D60DDE700FF6732 /* omnimap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C790D60DDE700FF6732 /* GraphicsPrimitives.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C630D60DDE700FF6732 /* GraphicsPrimitives.h */; };
+		3AE56C7A0D60DDE700FF6732 /* privatePrimitives.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C640D60DDE700FF6732 /* privatePrimitives.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C7B0D60DDE700FF6732 /* omnimap_luatable.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C650D60DDE700FF6732 /* omnimap_luatable.h */; };
+		3AE56C7C0D60DDE700FF6732 /* Property.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C660D60DDE700FF6732 /* Property.h */; };
+		3AE56C7D0D60DDE700FF6732 /* cLua.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C670D60DDE700FF6732 /* cLua.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C7E0D60DDE700FF6732 /* omnimap_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C680D60DDE700FF6732 /* omnimap_defines.h */; };
+		3AE56C7F0D60DDE700FF6732 /* OmniMapBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C690D60DDE700FF6732 /* OmniMapBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE56C800D60DDE700FF6732 /* omnitypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE56C6A0D60DDE700FF6732 /* omnitypedefs.h */; };
+		3AE56C980D60DDFE00FF6732 /* OmniMapAppTextureOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C810D60DDFE00FF6732 /* OmniMapAppTextureOGL.cpp */; };
+		3AE56C990D60DDFE00FF6732 /* OM_CylinderScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C820D60DDFE00FF6732 /* OM_CylinderScreen.cpp */; };
+		3AE56C9A0D60DDFE00FF6732 /* OM_DomeScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C830D60DDFE00FF6732 /* OM_DomeScreen.cpp */; };
+		3AE56C9B0D60DDFE00FF6732 /* OM_ToroidScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C840D60DDFE00FF6732 /* OM_ToroidScreen.cpp */; };
+		3AE56C9C0D60DDFE00FF6732 /* ScreenRendererBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C850D60DDFE00FF6732 /* ScreenRendererBase.cpp */; };
+		3AE56C9D0D60DDFE00FF6732 /* ScreenRendererOGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C860D60DDFE00FF6732 /* ScreenRendererOGL.cpp */; };
+		3AE56C9E0D60DDFE00FF6732 /* screenshapefactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C870D60DDFE00FF6732 /* screenshapefactory.cpp */; };
+		3AE56C9F0D60DDFE00FF6732 /* GraphicsPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C880D60DDFE00FF6732 /* GraphicsPrimitives.cpp */; };
+		3AE56CA00D60DDFE00FF6732 /* backbuffertexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C890D60DDFE00FF6732 /* backbuffertexture.cpp */; };
+		3AE56CA10D60DDFE00FF6732 /* FrameBufferObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8A0D60DDFE00FF6732 /* FrameBufferObject.cpp */; };
+		3AE56CA20D60DDFE00FF6732 /* GLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8B0D60DDFE00FF6732 /* GLShader.cpp */; };
+		3AE56CA30D60DDFE00FF6732 /* PBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8C0D60DDFE00FF6732 /* PBuffer.cpp */; };
+		3AE56CA40D60DDFE00FF6732 /* quad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8D0D60DDFE00FF6732 /* quad.cpp */; };
+		3AE56CA50D60DDFE00FF6732 /* RenderChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8E0D60DDFE00FF6732 /* RenderChannel.cpp */; };
+		3AE56CA60D60DDFE00FF6732 /* simple_matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C8F0D60DDFE00FF6732 /* simple_matrix.cpp */; };
+		3AE56CA70D60DDFE00FF6732 /* ViewerPosition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C900D60DDFE00FF6732 /* ViewerPosition.cpp */; };
+		3AE56CA80D60DDFE00FF6732 /* omnimap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C910D60DDFE00FF6732 /* omnimap.cpp */; };
+		3AE56CA90D60DDFE00FF6732 /* privatePrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C920D60DDFE00FF6732 /* privatePrimitives.cpp */; };
+		3AE56CAA0D60DDFE00FF6732 /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C930D60DDFE00FF6732 /* Property.cpp */; };
+		3AE56CAB0D60DDFE00FF6732 /* cLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C940D60DDFE00FF6732 /* cLua.cpp */; };
+		3AE56CAC0D60DDFE00FF6732 /* omnimap_luatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C950D60DDFE00FF6732 /* omnimap_luatable.cpp */; };
+		3AE56CAD0D60DDFE00FF6732 /* OmniMapBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C960D60DDFE00FF6732 /* OmniMapBase.cpp */; };
+		3AE56CAE0D60DDFE00FF6732 /* OmnimapIncludePropertySet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56C970D60DDFE00FF6732 /* OmnimapIncludePropertySet.cpp */; };
+		3AE56CB20D60DE1300FF6732 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE56CAF0D60DE1300FF6732 /* libGLEW.a */; };
+		3AE56CB30D60DE1300FF6732 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE56CB00D60DE1300FF6732 /* OpenGL.framework */; };
+		8D07F2BE0486CC7A007CD1D0 /* OmniMapAPI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32BAE0B70371A74B00C91783 /* OmniMapAPI_Prefix.pch */; };
+		8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8D07F2C40486CC7A007CD1D0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3ABA1A6D0D626E6400A67E0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D07F2BC0486CC7A007CD1D0;
+			remoteInfo = OmniMapAPI;
+		};
+		3ABA1A6F0D626E6600A67E0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3ABA1A640D626DA100A67E0B;
+			remoteInfo = CopyGlew;
+		};
+		3AE143971450E00500947CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AE143931450E00400947CA5 /* libLua.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3AE142EE1450BFFF00947CA5;
+			remoteInfo = libLua;
+		};
+		3AE143991450E05900947CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AE143931450E00400947CA5 /* libLua.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AE142ED1450BFFF00947CA5;
+			remoteInfo = libLua;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		32BAE0B70371A74B00C91783 /* OmniMapAPI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmniMapAPI_Prefix.pch; sourceTree = "<group>"; };
+		3A1BC28B0FBE032100FC738F /* OM_ConeScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OM_ConeScreen.cpp; path = ../common/OM_ConeScreen.cpp; sourceTree = SOURCE_ROOT; };
+		3A1BC28D0FBE034000FC738F /* OM_ConeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_ConeScreen.h; path = ../common/OM_ConeScreen.h; sourceTree = SOURCE_ROOT; };
+		3A1BC47D0FC1DEEA00FC738F /* OmniMapUnityOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmniMapUnityOGL.cpp; path = ../../../OmniMapUnityPI/OSX_Build/OmniMapUnityOGL.cpp; sourceTree = SOURCE_ROOT; };
+		3A1BC47E0FC1DEEA00FC738F /* OmniMapUnityOGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OmniMapUnityOGL.h; path = ../../../OmniMapUnityPI/OSX_Build/OmniMapUnityOGL.h; sourceTree = SOURCE_ROOT; };
+		3A1BC47F0FC1DEEA00FC738F /* OmniMapUnitPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmniMapUnitPI.cpp; path = ../../../OmniMapUnityPI/src/OmniMapUnitPI.cpp; sourceTree = SOURCE_ROOT; };
+		3A1BC4900FC1E1DD00FC738F /* OmniMapUnityPI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniMapUnityPI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1BC4910FC1E1DD00FC738F /* OmniMapUnityPI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OmniMapUnityPI-Info.plist"; sourceTree = "<group>"; };
+		3A1BC5060FC1FDB600FC738F /* omnimap_user_edit.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_user_edit.lua; path = ../../../OmniMapUnityPI/Resources/omnimap_user_edit.lua; sourceTree = SOURCE_ROOT; };
+		3A1BC5070FC1FDB600FC738F /* U3DLensInterface.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = U3DLensInterface.lua; path = ../../../OmniMapUnityPI/Resources/U3DLensInterface.lua; sourceTree = SOURCE_ROOT; };
+		3A1BC5080FC1FDB600FC738F /* U3DOmniMapStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = U3DOmniMapStartup.lua; path = ../../../OmniMapUnityPI/Resources/U3DOmniMapStartup.lua; sourceTree = SOURCE_ROOT; };
+		3A1BC5090FC1FDB600FC738F /* U3DPortalDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = U3DPortalDomeDefaults.lua; path = ../../../OmniMapUnityPI/Resources/U3DPortalDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3A1BC50A0FC1FDB600FC738F /* U3DTheaterDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = U3DTheaterDomeDefaults.lua; path = ../../../OmniMapUnityPI/Resources/U3DTheaterDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3A1D92A70D6A50990028F6FE /* FrameBufferObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrameBufferObject.h; path = ../omnimap/gltools/FrameBufferObject.h; sourceTree = SOURCE_ROOT; };
+		3A1D92A80D6A50990028F6FE /* renderchannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = renderchannel.h; path = ../omnimap/gltools/renderchannel.h; sourceTree = SOURCE_ROOT; };
+		3A1D92A90D6A50990028F6FE /* simple_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simple_matrix.h; path = ../omnimap/gltools/simple_matrix.h; sourceTree = SOURCE_ROOT; };
+		3A1D92AA0D6A50990028F6FE /* ViewerPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewerPosition.h; path = ../omnimap/gltools/ViewerPosition.h; sourceTree = SOURCE_ROOT; };
+		3A3585B50FD5800400181502 /* U3DOmniMapConfigureDomes.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = U3DOmniMapConfigureDomes.lua; path = ../../../OmniMapUnityPI/Resources/U3DOmniMapConfigureDomes.lua; sourceTree = SOURCE_ROOT; };
+		3A3585B60FD5800400181502 /* U3DOmniMapDomeWizAI.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = U3DOmniMapDomeWizAI.lua; path = ../../../OmniMapUnityPI/Resources/U3DOmniMapDomeWizAI.lua; sourceTree = SOURCE_ROOT; };
+		3AA3C6F20D69F734005B0676 /* IncludePropertySet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IncludePropertySet.h; path = ../omnimap/IncludePropertySet.h; sourceTree = SOURCE_ROOT; };
+		3ACEACE50DC3845F00AFBEC1 /* OM_Protector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_Protector.h; path = ../common/OM_Protector.h; sourceTree = SOURCE_ROOT; };
+		3ACEACE70DC3846F00AFBEC1 /* ProtectorImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProtectorImpl.cpp; path = ../common/ProtectorImpl.cpp; sourceTree = SOURCE_ROOT; };
+		3ACEACEC0DC3848A00AFBEC1 /* OM_PartialDomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_PartialDomeScreen.h; path = ../common/OM_PartialDomeScreen.h; sourceTree = SOURCE_ROOT; };
+		3ACEACEE0DC3849700AFBEC1 /* OM_PartialDomeScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OM_PartialDomeScreen.cpp; path = ../common/OM_PartialDomeScreen.cpp; sourceTree = SOURCE_ROOT; };
+		3ACEAD7D0DC38D9D00AFBEC1 /* OmniMapQuartz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OmniMapQuartz.h; path = ../OmniMapOSX/OmniMapQuartz.h; sourceTree = SOURCE_ROOT; };
+		3ACEAD7F0DC38DB000AFBEC1 /* OmniMapQuartz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmniMapQuartz.cpp; path = ../OmniMapOSX/OmniMapQuartz.cpp; sourceTree = SOURCE_ROOT; };
+		3ADB190913BBBD17006F1844 /* OmniMap_MirrorBallShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmniMap_MirrorBallShader.h; sourceTree = "<group>"; };
+		3ADB190A13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmniMap_MirrorBallShader.cpp; sourceTree = "<group>"; };
+		3AE142DB1450B90D00947CA5 /* OM_PlaneScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OM_PlaneScreen.cpp; path = ../common/OM_PlaneScreen.cpp; sourceTree = "<group>"; };
+		3AE142DC1450B90D00947CA5 /* OM_PlaneScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_PlaneScreen.h; path = ../common/OM_PlaneScreen.h; sourceTree = "<group>"; };
+		3AE142E01450BA7800947CA5 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = "../../../cLua/lua dist/lua-5.1/src/liblua.a"; sourceTree = "<group>"; };
+		3AE143931450E00400947CA5 /* libLua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libLua.xcodeproj; path = "../../../cLua/lua dist/lua-5.1/OSXBuild/libLua/libLua.xcodeproj"; sourceTree = "<group>"; };
+		3AE1439B1450E06000947CA5 /* libLua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libLua.dylib; path = "/Users/jym/dev/Elumenati/Unity/OmniMap/cLua/lua dist/lua-5.1/OSXBuild/libLua/build/Debug/libLua.dylib"; sourceTree = "<absolute>"; };
+		3AE4956A0E27ACA100FE443B /* ElumSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ElumSphere.h; path = ../common/ElumSphere.h; sourceTree = SOURCE_ROOT; };
+		3AE4956C0E27ACB000FE443B /* ElumSphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ElumSphere.cpp; path = ../common/ElumSphere.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C140D60DD8E00FF6732 /* omnimap_dome_wiz_ai.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_dome_wiz_ai.lua; path = ../../bin/OmniMapConfig/omnimap_dome_wiz_ai.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C150D60DD8E00FF6732 /* omnimap_startup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_startup.lua; path = ../../bin/OmniMapConfig/omnimap_startup.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C160D60DD8E00FF6732 /* omnimap_user_edit.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_user_edit.lua; path = ../../bin/OmniMapConfig/omnimap_user_edit.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C1D0D60DD9B00FF6732 /* FullDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FullDomeDefaults.lua; path = ../../Resources/defaults/FullDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C1E0D60DD9B00FF6732 /* GeoDomeSlammedDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GeoDomeSlammedDefaults.lua; path = ../../Resources/defaults/GeoDomeSlammedDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C1F0D60DD9B00FF6732 /* HorizontalDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HorizontalDomeDefaults.lua; path = ../../Resources/defaults/HorizontalDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C200D60DD9B00FF6732 /* PanoramicDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PanoramicDefaults.lua; path = ../../Resources/defaults/PanoramicDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C210D60DD9B00FF6732 /* VerticalDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VerticalDomeDefaults.lua; path = ../../Resources/defaults/VerticalDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C290D60DDC300FF6732 /* FullDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FullDomeDefaults.lua; path = ../../Resources/defaults/FullDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C2A0D60DDC300FF6732 /* GeoDomeSlammedDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GeoDomeSlammedDefaults.lua; path = ../../Resources/defaults/GeoDomeSlammedDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C2B0D60DDC300FF6732 /* HorizontalDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HorizontalDomeDefaults.lua; path = ../../Resources/defaults/HorizontalDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C2C0D60DDC300FF6732 /* PanoramicDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PanoramicDefaults.lua; path = ../../Resources/defaults/PanoramicDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C2D0D60DDC300FF6732 /* VerticalDomeDefaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VerticalDomeDefaults.lua; path = ../../Resources/defaults/VerticalDomeDefaults.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C2E0D60DDC300FF6732 /* omnimap_audience.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_audience.lua; path = ../../Resources/omnimap_audience.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C2F0D60DDC300FF6732 /* omnimap_channel_interface.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_channel_interface.lua; path = ../../Resources/omnimap_channel_interface.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C310D60DDC300FF6732 /* omnimap_helperfunctions.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_helperfunctions.lua; path = ../../Resources/omnimap_helperfunctions.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C320D60DDC300FF6732 /* omnimap_hud.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_hud.lua; path = ../../Resources/omnimap_hud.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C330D60DDC300FF6732 /* omnimap_lens_interface.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_lens_interface.lua; path = ../../Resources/omnimap_lens_interface.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C340D60DDC300FF6732 /* omnimap_math.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_math.lua; path = ../../Resources/omnimap_math.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C350D60DDC300FF6732 /* omnimap_matrix3x3.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_matrix3x3.lua; path = ../../Resources/omnimap_matrix3x3.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C360D60DDC300FF6732 /* omnimap_matrix4x4.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_matrix4x4.lua; path = ../../Resources/omnimap_matrix4x4.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C370D60DDC300FF6732 /* omnimap_projector.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_projector.lua; path = ../../Resources/omnimap_projector.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C380D60DDC300FF6732 /* omnimap_renderchannel.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_renderchannel.lua; path = ../../Resources/omnimap_renderchannel.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C390D60DDC300FF6732 /* omnimap_screen.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_screen.lua; path = ../../Resources/omnimap_screen.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C3A0D60DDC300FF6732 /* omnimap_todo_functions.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_todo_functions.lua; path = ../../Resources/omnimap_todo_functions.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C3B0D60DDC300FF6732 /* omnimap_vector.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_vector.lua; path = ../../Resources/omnimap_vector.lua; sourceTree = SOURCE_ROOT; };
+		3AE56C500D60DDDD00FF6732 /* omnimap_fragmentOSX.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_fragmentOSX.frag; path = ../omnimap/Shaders/omnimap_fragmentOSX.frag; sourceTree = SOURCE_ROOT; };
+		3AE56C510D60DDDD00FF6732 /* omnimap_vertex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = omnimap_vertex.vert; path = ../omnimap/Shaders/omnimap_vertex.vert; sourceTree = SOURCE_ROOT; };
+		3AE56C550D60DDE600FF6732 /* OmniMapAppTextureOGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OmniMapAppTextureOGL.h; path = ../omnimap/OmniMapAppTextureOGL.h; sourceTree = SOURCE_ROOT; };
+		3AE56C560D60DDE600FF6732 /* OM_CylinderScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_CylinderScreen.h; path = ../common/OM_CylinderScreen.h; sourceTree = SOURCE_ROOT; };
+		3AE56C570D60DDE600FF6732 /* OM_DomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_DomeScreen.h; path = ../common/OM_DomeScreen.h; sourceTree = SOURCE_ROOT; };
+		3AE56C580D60DDE600FF6732 /* OM_ToroidScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OM_ToroidScreen.h; path = ../common/OM_ToroidScreen.h; sourceTree = SOURCE_ROOT; };
+		3AE56C5A0D60DDE700FF6732 /* ScreenGeometryBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenGeometryBase.h; path = ../common/ScreenGeometryBase.h; sourceTree = SOURCE_ROOT; };
+		3AE56C5B0D60DDE700FF6732 /* ScreenRendererOGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenRendererOGL.h; path = ../omnimap/ScreenRendererOGL.h; sourceTree = SOURCE_ROOT; };
+		3AE56C5C0D60DDE700FF6732 /* screenshapefactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = screenshapefactory.h; path = ../omnimap/screenshapefactory.h; sourceTree = SOURCE_ROOT; };
+		3AE56C5D0D60DDE700FF6732 /* BackBufferTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackBufferTexture.h; path = ../omnimap/gltools/BackBufferTexture.h; sourceTree = SOURCE_ROOT; };
+		3AE56C5E0D60DDE700FF6732 /* pbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pbuffer.h; path = ../omnimap/gltools/pbuffer.h; sourceTree = SOURCE_ROOT; };
+		3AE56C5F0D60DDE700FF6732 /* FragShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FragShader.h; path = ../omnimap/Shaders/FragShader.h; sourceTree = SOURCE_ROOT; };
+		3AE56C600D60DDE700FF6732 /* VertShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VertShader.h; path = ../omnimap/Shaders/VertShader.h; sourceTree = SOURCE_ROOT; };
+		3AE56C620D60DDE700FF6732 /* omnimap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnimap.h; path = ../omnimap/omnimap.h; sourceTree = SOURCE_ROOT; };
+		3AE56C630D60DDE700FF6732 /* GraphicsPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicsPrimitives.h; path = ../omnimap/GraphicsPrimitives.h; sourceTree = SOURCE_ROOT; };
+		3AE56C640D60DDE700FF6732 /* privatePrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privatePrimitives.h; path = ../omnimap/privatePrimitives.h; sourceTree = SOURCE_ROOT; };
+		3AE56C650D60DDE700FF6732 /* omnimap_luatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnimap_luatable.h; path = ../omnimap/omnimap_luatable.h; sourceTree = SOURCE_ROOT; };
+		3AE56C660D60DDE700FF6732 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Property.h; path = ../omnimap/PropertySet/Property.h; sourceTree = SOURCE_ROOT; };
+		3AE56C670D60DDE700FF6732 /* cLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cLua.h; path = ../cLua/cLua.h; sourceTree = SOURCE_ROOT; };
+		3AE56C680D60DDE700FF6732 /* omnimap_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnimap_defines.h; path = ../omnimap/omnimap_defines.h; sourceTree = SOURCE_ROOT; };
+		3AE56C690D60DDE700FF6732 /* OmniMapBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OmniMapBase.h; path = ../omnimap/OmniMapBase.h; sourceTree = SOURCE_ROOT; };
+		3AE56C6A0D60DDE700FF6732 /* omnitypedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnitypedefs.h; path = ../omnimap/omnitypedefs.h; sourceTree = SOURCE_ROOT; };
+		3AE56C810D60DDFE00FF6732 /* OmniMapAppTextureOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmniMapAppTextureOGL.cpp; path = ../omnimap/OmniMapAppTextureOGL.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C820D60DDFE00FF6732 /* OM_CylinderScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OM_CylinderScreen.cpp; path = ../common/OM_CylinderScreen.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C830D60DDFE00FF6732 /* OM_DomeScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OM_DomeScreen.cpp; path = ../common/OM_DomeScreen.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C840D60DDFE00FF6732 /* OM_ToroidScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OM_ToroidScreen.cpp; path = ../common/OM_ToroidScreen.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C850D60DDFE00FF6732 /* ScreenRendererBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScreenRendererBase.cpp; path = ../common/ScreenRendererBase.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C860D60DDFE00FF6732 /* ScreenRendererOGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScreenRendererOGL.cpp; path = ../omnimap/ScreenRendererOGL.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C870D60DDFE00FF6732 /* screenshapefactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = screenshapefactory.cpp; path = ../omnimap/screenshapefactory.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C880D60DDFE00FF6732 /* GraphicsPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicsPrimitives.cpp; path = ../omnimap/gltools/GraphicsPrimitives.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C890D60DDFE00FF6732 /* backbuffertexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = backbuffertexture.cpp; path = ../omnimap/gltools/backbuffertexture.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C8A0D60DDFE00FF6732 /* FrameBufferObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FrameBufferObject.cpp; path = ../omnimap/gltools/FrameBufferObject.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C8B0D60DDFE00FF6732 /* GLShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLShader.cpp; path = ../omnimap/gltools/GLShader.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C8C0D60DDFE00FF6732 /* PBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PBuffer.cpp; path = ../omnimap/gltools/PBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C8D0D60DDFE00FF6732 /* quad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = quad.cpp; path = ../omnimap/gltools/quad.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C8E0D60DDFE00FF6732 /* RenderChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderChannel.cpp; path = ../omnimap/gltools/RenderChannel.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C8F0D60DDFE00FF6732 /* simple_matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simple_matrix.cpp; path = ../omnimap/gltools/simple_matrix.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C900D60DDFE00FF6732 /* ViewerPosition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewerPosition.cpp; path = ../omnimap/gltools/ViewerPosition.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C910D60DDFE00FF6732 /* omnimap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnimap.cpp; path = ../omnimap/omnimap.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C920D60DDFE00FF6732 /* privatePrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = privatePrimitives.cpp; path = ../omnimap/privatePrimitives.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C930D60DDFE00FF6732 /* Property.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Property.cpp; path = ../omnimap/PropertySet/Property.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C940D60DDFE00FF6732 /* cLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cLua.cpp; path = ../cLua/cLua.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C950D60DDFE00FF6732 /* omnimap_luatable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnimap_luatable.cpp; path = ../omnimap/omnimap_luatable.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C960D60DDFE00FF6732 /* OmniMapBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmniMapBase.cpp; path = ../omnimap/OmniMapBase.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56C970D60DDFE00FF6732 /* OmnimapIncludePropertySet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmnimapIncludePropertySet.cpp; path = ../omnimap/OmnimapIncludePropertySet.cpp; sourceTree = SOURCE_ROOT; };
+		3AE56CAF0D60DE1300FF6732 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = /opt/local/lib/libGLEW.a; sourceTree = "<absolute>"; };
+		3AE56CB00D60DE1300FF6732 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D07F2C80486CC7A007CD1D0 /* OmniMapAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OmniMapAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A1BC48E0FC1E1DD00FC738F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1BC4B70FC1E28900FC738F /* libGLEW.a in Frameworks */,
+				3A1BC4B80FC1E28900FC738F /* OpenGL.framework in Frameworks */,
+				3A1BC4BA0FC1E28900FC738F /* Carbon.framework in Frameworks */,
+				3AE142E21450BA7800947CA5 /* liblua.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D07F2C30486CC7A007CD1D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE1439C1450E06100947CA5 /* libLua.dylib in Frameworks */,
+				8D07F2C40486CC7A007CD1D0 /* Carbon.framework in Frameworks */,
+				3AE56CB20D60DE1300FF6732 /* libGLEW.a in Frameworks */,
+				3AE56CB30D60DE1300FF6732 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DDFF38A45A11DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D07F2C80486CC7A007CD1D0 /* OmniMapAPI.framework */,
+				3A1BC4900FC1E1DD00FC738F /* OmniMapUnityPI.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* OmniMapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				3AE1439B1450E06000947CA5 /* libLua.dylib */,
+				3AE143931450E00400947CA5 /* libLua.xcodeproj */,
+				3A1BC47C0FC1DEB000FC738F /* OmniMapUnityPI */,
+				3AE56C540D60DDE600FF6732 /* Headers */,
+				3AE56C4F0D60DDDD00FF6732 /* Shaders */,
+				08FB77ACFE841707C02AAC07 /* Source */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DDFF38A45A11DB9C8B /* Products */,
+				3A1BC4910FC1E1DD00FC738F /* OmniMapUnityPI-Info.plist */,
+			);
+			name = OmniMapAPI;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3AE142E01450BA7800947CA5 /* liblua.a */,
+				3AE56CAF0D60DE1300FF6732 /* libGLEW.a */,
+				3AE56CB00D60DE1300FF6732 /* OpenGL.framework */,
+				08FB77AAFE841565C02AAC07 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A3585B50FD5800400181502 /* U3DOmniMapConfigureDomes.lua */,
+				3A3585B60FD5800400181502 /* U3DOmniMapDomeWizAI.lua */,
+				3A1BC5060FC1FDB600FC738F /* omnimap_user_edit.lua */,
+				3A1BC5070FC1FDB600FC738F /* U3DLensInterface.lua */,
+				3A1BC5080FC1FDB600FC738F /* U3DOmniMapStartup.lua */,
+				3A1BC5090FC1FDB600FC738F /* U3DPortalDomeDefaults.lua */,
+				3A1BC50A0FC1FDB600FC738F /* U3DTheaterDomeDefaults.lua */,
+				3AE56C2E0D60DDC300FF6732 /* omnimap_audience.lua */,
+				3AE56C2F0D60DDC300FF6732 /* omnimap_channel_interface.lua */,
+				3AE56C310D60DDC300FF6732 /* omnimap_helperfunctions.lua */,
+				3AE56C320D60DDC300FF6732 /* omnimap_hud.lua */,
+				3AE56C330D60DDC300FF6732 /* omnimap_lens_interface.lua */,
+				3AE56C340D60DDC300FF6732 /* omnimap_math.lua */,
+				3AE56C350D60DDC300FF6732 /* omnimap_matrix3x3.lua */,
+				3AE56C360D60DDC300FF6732 /* omnimap_matrix4x4.lua */,
+				3AE56C370D60DDC300FF6732 /* omnimap_projector.lua */,
+				3AE56C380D60DDC300FF6732 /* omnimap_renderchannel.lua */,
+				3AE56C390D60DDC300FF6732 /* omnimap_screen.lua */,
+				3AE56C3A0D60DDC300FF6732 /* omnimap_todo_functions.lua */,
+				3AE56C3B0D60DDC300FF6732 /* omnimap_vector.lua */,
+				3AE56C280D60DDC300FF6732 /* defaults */,
+				3AE56C1C0D60DD9B00FF6732 /* defaults */,
+				3AE56C140D60DD8E00FF6732 /* omnimap_dome_wiz_ai.lua */,
+				3AE56C150D60DD8E00FF6732 /* omnimap_startup.lua */,
+				3AE56C160D60DD8E00FF6732 /* omnimap_user_edit.lua */,
+				8D07F2C70486CC7A007CD1D0 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ACFE841707C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3AE142DB1450B90D00947CA5 /* OM_PlaneScreen.cpp */,
+				3AE142DC1450B90D00947CA5 /* OM_PlaneScreen.h */,
+				3A1BC28B0FBE032100FC738F /* OM_ConeScreen.cpp */,
+				3AE4956C0E27ACB000FE443B /* ElumSphere.cpp */,
+				3ACEAD7F0DC38DB000AFBEC1 /* OmniMapQuartz.cpp */,
+				3ACEACEE0DC3849700AFBEC1 /* OM_PartialDomeScreen.cpp */,
+				3ACEACE70DC3846F00AFBEC1 /* ProtectorImpl.cpp */,
+				3AE56C810D60DDFE00FF6732 /* OmniMapAppTextureOGL.cpp */,
+				3AE56C820D60DDFE00FF6732 /* OM_CylinderScreen.cpp */,
+				3AE56C830D60DDFE00FF6732 /* OM_DomeScreen.cpp */,
+				3AE56C840D60DDFE00FF6732 /* OM_ToroidScreen.cpp */,
+				3AE56C850D60DDFE00FF6732 /* ScreenRendererBase.cpp */,
+				3AE56C860D60DDFE00FF6732 /* ScreenRendererOGL.cpp */,
+				3AE56C870D60DDFE00FF6732 /* screenshapefactory.cpp */,
+				3AE56C880D60DDFE00FF6732 /* GraphicsPrimitives.cpp */,
+				3AE56C890D60DDFE00FF6732 /* backbuffertexture.cpp */,
+				3AE56C8A0D60DDFE00FF6732 /* FrameBufferObject.cpp */,
+				3AE56C8B0D60DDFE00FF6732 /* GLShader.cpp */,
+				3AE56C8C0D60DDFE00FF6732 /* PBuffer.cpp */,
+				3AE56C8D0D60DDFE00FF6732 /* quad.cpp */,
+				3AE56C8E0D60DDFE00FF6732 /* RenderChannel.cpp */,
+				3AE56C8F0D60DDFE00FF6732 /* simple_matrix.cpp */,
+				3AE56C900D60DDFE00FF6732 /* ViewerPosition.cpp */,
+				3AE56C910D60DDFE00FF6732 /* omnimap.cpp */,
+				3AE56C920D60DDFE00FF6732 /* privatePrimitives.cpp */,
+				3AE56C930D60DDFE00FF6732 /* Property.cpp */,
+				3AE56C940D60DDFE00FF6732 /* cLua.cpp */,
+				3AE56C950D60DDFE00FF6732 /* omnimap_luatable.cpp */,
+				3AE56C960D60DDFE00FF6732 /* OmniMapBase.cpp */,
+				3AE56C970D60DDFE00FF6732 /* OmnimapIncludePropertySet.cpp */,
+				32BAE0B70371A74B00C91783 /* OmniMapAPI_Prefix.pch */,
+				3ADB190913BBBD17006F1844 /* OmniMap_MirrorBallShader.h */,
+				3ADB190A13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		3A1BC47C0FC1DEB000FC738F /* OmniMapUnityPI */ = {
+			isa = PBXGroup;
+			children = (
+				3A1BC47D0FC1DEEA00FC738F /* OmniMapUnityOGL.cpp */,
+				3A1BC47E0FC1DEEA00FC738F /* OmniMapUnityOGL.h */,
+				3A1BC47F0FC1DEEA00FC738F /* OmniMapUnitPI.cpp */,
+			);
+			name = OmniMapUnityPI;
+			sourceTree = "<group>";
+		};
+		3AE143941450E00400947CA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AE143981450E00500947CA5 /* libLua.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AE56C1C0D60DD9B00FF6732 /* defaults */ = {
+			isa = PBXGroup;
+			children = (
+				3AE56C1D0D60DD9B00FF6732 /* FullDomeDefaults.lua */,
+				3AE56C1E0D60DD9B00FF6732 /* GeoDomeSlammedDefaults.lua */,
+				3AE56C1F0D60DD9B00FF6732 /* HorizontalDomeDefaults.lua */,
+				3AE56C200D60DD9B00FF6732 /* PanoramicDefaults.lua */,
+				3AE56C210D60DD9B00FF6732 /* VerticalDomeDefaults.lua */,
+			);
+			name = defaults;
+			sourceTree = "<group>";
+		};
+		3AE56C280D60DDC300FF6732 /* defaults */ = {
+			isa = PBXGroup;
+			children = (
+				3AE56C290D60DDC300FF6732 /* FullDomeDefaults.lua */,
+				3AE56C2A0D60DDC300FF6732 /* GeoDomeSlammedDefaults.lua */,
+				3AE56C2B0D60DDC300FF6732 /* HorizontalDomeDefaults.lua */,
+				3AE56C2C0D60DDC300FF6732 /* PanoramicDefaults.lua */,
+				3AE56C2D0D60DDC300FF6732 /* VerticalDomeDefaults.lua */,
+			);
+			name = defaults;
+			sourceTree = "<group>";
+		};
+		3AE56C4F0D60DDDD00FF6732 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				3AE56C500D60DDDD00FF6732 /* omnimap_fragmentOSX.frag */,
+				3AE56C510D60DDDD00FF6732 /* omnimap_vertex.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		3AE56C540D60DDE600FF6732 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3A1BC28D0FBE034000FC738F /* OM_ConeScreen.h */,
+				3AE4956A0E27ACA100FE443B /* ElumSphere.h */,
+				3ACEAD7D0DC38D9D00AFBEC1 /* OmniMapQuartz.h */,
+				3ACEACEC0DC3848A00AFBEC1 /* OM_PartialDomeScreen.h */,
+				3ACEACE50DC3845F00AFBEC1 /* OM_Protector.h */,
+				3A1D92A70D6A50990028F6FE /* FrameBufferObject.h */,
+				3A1D92A80D6A50990028F6FE /* renderchannel.h */,
+				3A1D92A90D6A50990028F6FE /* simple_matrix.h */,
+				3A1D92AA0D6A50990028F6FE /* ViewerPosition.h */,
+				3AA3C6F20D69F734005B0676 /* IncludePropertySet.h */,
+				3AE56C550D60DDE600FF6732 /* OmniMapAppTextureOGL.h */,
+				3AE56C560D60DDE600FF6732 /* OM_CylinderScreen.h */,
+				3AE56C570D60DDE600FF6732 /* OM_DomeScreen.h */,
+				3AE56C580D60DDE600FF6732 /* OM_ToroidScreen.h */,
+				3AE56C5A0D60DDE700FF6732 /* ScreenGeometryBase.h */,
+				3AE56C5B0D60DDE700FF6732 /* ScreenRendererOGL.h */,
+				3AE56C5C0D60DDE700FF6732 /* screenshapefactory.h */,
+				3AE56C5D0D60DDE700FF6732 /* BackBufferTexture.h */,
+				3AE56C5E0D60DDE700FF6732 /* pbuffer.h */,
+				3AE56C5F0D60DDE700FF6732 /* FragShader.h */,
+				3AE56C600D60DDE700FF6732 /* VertShader.h */,
+				3AE56C620D60DDE700FF6732 /* omnimap.h */,
+				3AE56C630D60DDE700FF6732 /* GraphicsPrimitives.h */,
+				3AE56C640D60DDE700FF6732 /* privatePrimitives.h */,
+				3AE56C650D60DDE700FF6732 /* omnimap_luatable.h */,
+				3AE56C660D60DDE700FF6732 /* Property.h */,
+				3AE56C670D60DDE700FF6732 /* cLua.h */,
+				3AE56C680D60DDE700FF6732 /* omnimap_defines.h */,
+				3AE56C690D60DDE700FF6732 /* OmniMapBase.h */,
+				3AE56C6A0D60DDE700FF6732 /* omnitypedefs.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D07F2BD0486CC7A007CD1D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D07F2BE0486CC7A007CD1D0 /* OmniMapAPI_Prefix.pch in Headers */,
+				3AE56C6B0D60DDE700FF6732 /* OmniMapAppTextureOGL.h in Headers */,
+				3AE56C6C0D60DDE700FF6732 /* OM_CylinderScreen.h in Headers */,
+				3AE56C6D0D60DDE700FF6732 /* OM_DomeScreen.h in Headers */,
+				3AE56C6E0D60DDE700FF6732 /* OM_ToroidScreen.h in Headers */,
+				3AE56C700D60DDE700FF6732 /* ScreenGeometryBase.h in Headers */,
+				3AE56C710D60DDE700FF6732 /* ScreenRendererOGL.h in Headers */,
+				3AE56C720D60DDE700FF6732 /* screenshapefactory.h in Headers */,
+				3AE56C730D60DDE700FF6732 /* BackBufferTexture.h in Headers */,
+				3AE56C740D60DDE700FF6732 /* pbuffer.h in Headers */,
+				3AE56C750D60DDE700FF6732 /* FragShader.h in Headers */,
+				3AE56C760D60DDE700FF6732 /* VertShader.h in Headers */,
+				3AE56C780D60DDE700FF6732 /* omnimap.h in Headers */,
+				3AE56C790D60DDE700FF6732 /* GraphicsPrimitives.h in Headers */,
+				3AE56C7A0D60DDE700FF6732 /* privatePrimitives.h in Headers */,
+				3AE56C7B0D60DDE700FF6732 /* omnimap_luatable.h in Headers */,
+				3AE56C7C0D60DDE700FF6732 /* Property.h in Headers */,
+				3AE56C7D0D60DDE700FF6732 /* cLua.h in Headers */,
+				3AE56C7E0D60DDE700FF6732 /* omnimap_defines.h in Headers */,
+				3AE56C7F0D60DDE700FF6732 /* OmniMapBase.h in Headers */,
+				3AE56C800D60DDE700FF6732 /* omnitypedefs.h in Headers */,
+				3AA3C6F30D69F734005B0676 /* IncludePropertySet.h in Headers */,
+				3A1D92AB0D6A50990028F6FE /* FrameBufferObject.h in Headers */,
+				3A1D92AC0D6A50990028F6FE /* renderchannel.h in Headers */,
+				3A1D92AD0D6A50990028F6FE /* simple_matrix.h in Headers */,
+				3A1D92AE0D6A50990028F6FE /* ViewerPosition.h in Headers */,
+				3ACEACE60DC3845F00AFBEC1 /* OM_Protector.h in Headers */,
+				3ACEACED0DC3848A00AFBEC1 /* OM_PartialDomeScreen.h in Headers */,
+				3ACEAD7E0DC38D9D00AFBEC1 /* OmniMapQuartz.h in Headers */,
+				3AE4956B0E27ACA100FE443B /* ElumSphere.h in Headers */,
+				3A1BC28E0FBE034000FC738F /* OM_ConeScreen.h in Headers */,
+				3ADB190B13BBBD17006F1844 /* OmniMap_MirrorBallShader.h in Headers */,
+				3AE142DF1450B90D00947CA5 /* OM_PlaneScreen.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A1BC48F0FC1E1DD00FC738F /* OmniMapUnityPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A1BC4980FC1E1DE00FC738F /* Build configuration list for PBXNativeTarget "OmniMapUnityPI" */;
+			buildPhases = (
+				3A1BC48C0FC1E1DD00FC738F /* Resources */,
+				3A1BC48D0FC1E1DD00FC738F /* Sources */,
+				3A1BC48E0FC1E1DD00FC738F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OmniMapUnityPI;
+			productName = OmniMapUnityPI;
+			productReference = 3A1BC4900FC1E1DD00FC738F /* OmniMapUnityPI.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D07F2BC0486CC7A007CD1D0 /* OmniMapAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FADC24208B4156D00ABE55E /* Build configuration list for PBXNativeTarget "OmniMapAPI" */;
+			buildPhases = (
+				3ACEACCC0DC382DD00AFBEC1 /* ShellScript */,
+				8D07F2BD0486CC7A007CD1D0 /* Headers */,
+				8D07F2BF0486CC7A007CD1D0 /* Resources */,
+				8D07F2C10486CC7A007CD1D0 /* Sources */,
+				8D07F2C30486CC7A007CD1D0 /* Frameworks */,
+				8D07F2C50486CC7A007CD1D0 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AE1439A1450E05900947CA5 /* PBXTargetDependency */,
+			);
+			name = OmniMapAPI;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = OmniMapAPI;
+			productReference = 8D07F2C80486CC7A007CD1D0 /* OmniMapAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "OmniMapAPI" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* OmniMapAPI */;
+			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3AE143941450E00400947CA5 /* Products */;
+					ProjectRef = 3AE143931450E00400947CA5 /* libLua.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D07F2BC0486CC7A007CD1D0 /* OmniMapAPI */,
+				3ABA1A640D626DA100A67E0B /* CopyGlew */,
+				3ABA1A6A0D626E5E00A67E0B /* Install */,
+				3A1BC48F0FC1E1DD00FC738F /* OmniMapUnityPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3AE143981450E00500947CA5 /* libLua.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libLua.dylib;
+			remoteRef = 3AE143971450E00500947CA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A1BC48C0FC1E1DD00FC738F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1BC55B0FC301C900FC738F /* InfoPlist.strings in Resources */,
+				3A1BC4E60FC1FCC800FC738F /* FullDomeDefaults.lua in Resources */,
+				3A1BC4D90FC1FCB400FC738F /* omnimap_audience.lua in Resources */,
+				3A1BC4DA0FC1FCB400FC738F /* omnimap_channel_interface.lua in Resources */,
+				3A1BC4DC0FC1FCB400FC738F /* omnimap_helperfunctions.lua in Resources */,
+				3A1BC4DD0FC1FCB400FC738F /* omnimap_hud.lua in Resources */,
+				3A1BC4DE0FC1FCB400FC738F /* omnimap_math.lua in Resources */,
+				3A1BC4DF0FC1FCB400FC738F /* omnimap_matrix3x3.lua in Resources */,
+				3A1BC4E00FC1FCB400FC738F /* omnimap_matrix4x4.lua in Resources */,
+				3A1BC4E10FC1FCB400FC738F /* omnimap_projector.lua in Resources */,
+				3A1BC4E20FC1FCB400FC738F /* omnimap_renderchannel.lua in Resources */,
+				3A1BC4E30FC1FCB400FC738F /* omnimap_screen.lua in Resources */,
+				3A1BC4E40FC1FCB400FC738F /* omnimap_todo_functions.lua in Resources */,
+				3A1BC4E50FC1FCB400FC738F /* omnimap_vector.lua in Resources */,
+				3A1BC50C0FC1FDB600FC738F /* omnimap_user_edit.lua in Resources */,
+				3A1BC50D0FC1FDB600FC738F /* U3DLensInterface.lua in Resources */,
+				3A1BC50E0FC1FDB600FC738F /* U3DOmniMapStartup.lua in Resources */,
+				3A1BC50F0FC1FDB600FC738F /* U3DPortalDomeDefaults.lua in Resources */,
+				3A1BC5100FC1FDB600FC738F /* U3DTheaterDomeDefaults.lua in Resources */,
+				3A3585B70FD5800400181502 /* U3DOmniMapConfigureDomes.lua in Resources */,
+				3A3585B80FD5800400181502 /* U3DOmniMapDomeWizAI.lua in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D07F2BF0486CC7A007CD1D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */,
+				3AE56C180D60DD8E00FF6732 /* omnimap_startup.lua in Resources */,
+				3AE56C190D60DD8E00FF6732 /* omnimap_user_edit.lua in Resources */,
+				3AE56C220D60DD9B00FF6732 /* FullDomeDefaults.lua in Resources */,
+				3AE56C230D60DD9B00FF6732 /* GeoDomeSlammedDefaults.lua in Resources */,
+				3AE56C240D60DD9B00FF6732 /* HorizontalDomeDefaults.lua in Resources */,
+				3AE56C250D60DD9B00FF6732 /* PanoramicDefaults.lua in Resources */,
+				3AE56C260D60DD9B00FF6732 /* VerticalDomeDefaults.lua in Resources */,
+				3AE56C3C0D60DDC300FF6732 /* FullDomeDefaults.lua in Resources */,
+				3AE56C3D0D60DDC300FF6732 /* GeoDomeSlammedDefaults.lua in Resources */,
+				3AE56C3E0D60DDC300FF6732 /* HorizontalDomeDefaults.lua in Resources */,
+				3AE56C3F0D60DDC300FF6732 /* PanoramicDefaults.lua in Resources */,
+				3AE56C400D60DDC300FF6732 /* VerticalDomeDefaults.lua in Resources */,
+				3AE56C410D60DDC300FF6732 /* omnimap_audience.lua in Resources */,
+				3AE56C420D60DDC300FF6732 /* omnimap_channel_interface.lua in Resources */,
+				3AE56C440D60DDC300FF6732 /* omnimap_helperfunctions.lua in Resources */,
+				3AE56C450D60DDC300FF6732 /* omnimap_hud.lua in Resources */,
+				3AE56C460D60DDC300FF6732 /* omnimap_lens_interface.lua in Resources */,
+				3AE56C470D60DDC300FF6732 /* omnimap_math.lua in Resources */,
+				3AE56C480D60DDC300FF6732 /* omnimap_matrix3x3.lua in Resources */,
+				3AE56C490D60DDC300FF6732 /* omnimap_matrix4x4.lua in Resources */,
+				3AE56C4A0D60DDC300FF6732 /* omnimap_projector.lua in Resources */,
+				3AE56C4B0D60DDC300FF6732 /* omnimap_renderchannel.lua in Resources */,
+				3AE56C4C0D60DDC300FF6732 /* omnimap_screen.lua in Resources */,
+				3AE56C4D0D60DDC300FF6732 /* omnimap_todo_functions.lua in Resources */,
+				3AE56C4E0D60DDC300FF6732 /* omnimap_vector.lua in Resources */,
+				3AE56C520D60DDDD00FF6732 /* omnimap_fragmentOSX.frag in Resources */,
+				3AE56C530D60DDDD00FF6732 /* omnimap_vertex.vert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D07F2C50486CC7A007CD1D0 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ABA1A630D626DA100A67E0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\nmkdir -p $DSTROOT/opt $DSTROOT/opt/local $DSTROOT/opt/local/lib\ncp /opt/local/lib/libGLEW.1.4.0.dylib $DSTROOT/opt/local/lib\nexit 0";
+		};
+		3ACEACCC0DC382DD00AFBEC1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "od -A n -v -t x1 ../omnimap/Shaders/omnimap_fragmentOSX.frag | sed -f ../omnimap/Shaders/sedfile_OSX.fs > ../omnimap/Shaders/FragShader.h\nod -A n -v -t x1 ../omnimap/Shaders/omnimap_vertex.vert | sed -f ../omnimap/Shaders/sedfile_OSX.vs > ../omnimap/Shaders/VertShader.h";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A1BC48D0FC1E1DD00FC738F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1BC4C80FC1E47A00FC738F /* OmniMapUnityOGL.cpp in Sources */,
+				3A1BC4C90FC1E47A00FC738F /* OmniMapUnitPI.cpp in Sources */,
+				3A1BC4990FC1E25E00FC738F /* OM_ConeScreen.cpp in Sources */,
+				3A1BC49A0FC1E25E00FC738F /* ElumSphere.cpp in Sources */,
+				3A1BC49B0FC1E25E00FC738F /* OmniMapQuartz.cpp in Sources */,
+				3A1BC49C0FC1E25E00FC738F /* OM_PartialDomeScreen.cpp in Sources */,
+				3A1BC49D0FC1E25E00FC738F /* ProtectorImpl.cpp in Sources */,
+				3A1BC49E0FC1E25E00FC738F /* OmniMapAppTextureOGL.cpp in Sources */,
+				3A1BC49F0FC1E25E00FC738F /* OM_CylinderScreen.cpp in Sources */,
+				3A1BC4A00FC1E25E00FC738F /* OM_DomeScreen.cpp in Sources */,
+				3A1BC4A10FC1E25E00FC738F /* OM_ToroidScreen.cpp in Sources */,
+				3A1BC4A20FC1E25E00FC738F /* ScreenRendererBase.cpp in Sources */,
+				3A1BC4A30FC1E25E00FC738F /* ScreenRendererOGL.cpp in Sources */,
+				3A1BC4A40FC1E25E00FC738F /* screenshapefactory.cpp in Sources */,
+				3A1BC4A50FC1E25E00FC738F /* GraphicsPrimitives.cpp in Sources */,
+				3A1BC4A60FC1E25E00FC738F /* backbuffertexture.cpp in Sources */,
+				3A1BC4A70FC1E25E00FC738F /* FrameBufferObject.cpp in Sources */,
+				3A1BC4A80FC1E25E00FC738F /* GLShader.cpp in Sources */,
+				3A1BC4A90FC1E25E00FC738F /* PBuffer.cpp in Sources */,
+				3A1BC4AA0FC1E25E00FC738F /* quad.cpp in Sources */,
+				3A1BC4AB0FC1E25E00FC738F /* RenderChannel.cpp in Sources */,
+				3A1BC4AC0FC1E25E00FC738F /* simple_matrix.cpp in Sources */,
+				3A1BC4AD0FC1E25E00FC738F /* ViewerPosition.cpp in Sources */,
+				3A1BC4AE0FC1E25E00FC738F /* omnimap.cpp in Sources */,
+				3A1BC4AF0FC1E25E00FC738F /* privatePrimitives.cpp in Sources */,
+				3A1BC4B00FC1E25E00FC738F /* Property.cpp in Sources */,
+				3A1BC4B10FC1E25E00FC738F /* cLua.cpp in Sources */,
+				3A1BC4B20FC1E25E00FC738F /* omnimap_luatable.cpp in Sources */,
+				3A1BC4B30FC1E25E00FC738F /* OmniMapBase.cpp in Sources */,
+				3A1BC4B40FC1E25E00FC738F /* OmnimapIncludePropertySet.cpp in Sources */,
+				3A1BC4B50FC1E25E00FC738F /* OmniMapAPI_Prefix.pch in Sources */,
+				3ADB190D13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp in Sources */,
+				3AE142DE1450B90D00947CA5 /* OM_PlaneScreen.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D07F2C10486CC7A007CD1D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE56C980D60DDFE00FF6732 /* OmniMapAppTextureOGL.cpp in Sources */,
+				3AE56C990D60DDFE00FF6732 /* OM_CylinderScreen.cpp in Sources */,
+				3AE56C9A0D60DDFE00FF6732 /* OM_DomeScreen.cpp in Sources */,
+				3AE56C9B0D60DDFE00FF6732 /* OM_ToroidScreen.cpp in Sources */,
+				3AE56C9C0D60DDFE00FF6732 /* ScreenRendererBase.cpp in Sources */,
+				3AE56C9D0D60DDFE00FF6732 /* ScreenRendererOGL.cpp in Sources */,
+				3AE56C9E0D60DDFE00FF6732 /* screenshapefactory.cpp in Sources */,
+				3AE56C9F0D60DDFE00FF6732 /* GraphicsPrimitives.cpp in Sources */,
+				3AE56CA00D60DDFE00FF6732 /* backbuffertexture.cpp in Sources */,
+				3AE56CA10D60DDFE00FF6732 /* FrameBufferObject.cpp in Sources */,
+				3AE56CA20D60DDFE00FF6732 /* GLShader.cpp in Sources */,
+				3AE56CA30D60DDFE00FF6732 /* PBuffer.cpp in Sources */,
+				3AE56CA40D60DDFE00FF6732 /* quad.cpp in Sources */,
+				3AE56CA50D60DDFE00FF6732 /* RenderChannel.cpp in Sources */,
+				3AE56CA60D60DDFE00FF6732 /* simple_matrix.cpp in Sources */,
+				3AE56CA70D60DDFE00FF6732 /* ViewerPosition.cpp in Sources */,
+				3AE56CA80D60DDFE00FF6732 /* omnimap.cpp in Sources */,
+				3AE56CA90D60DDFE00FF6732 /* privatePrimitives.cpp in Sources */,
+				3AE56CAA0D60DDFE00FF6732 /* Property.cpp in Sources */,
+				3AE56CAB0D60DDFE00FF6732 /* cLua.cpp in Sources */,
+				3AE56CAC0D60DDFE00FF6732 /* omnimap_luatable.cpp in Sources */,
+				3AE56CAD0D60DDFE00FF6732 /* OmniMapBase.cpp in Sources */,
+				3AE56CAE0D60DDFE00FF6732 /* OmnimapIncludePropertySet.cpp in Sources */,
+				3ACEACE80DC3846F00AFBEC1 /* ProtectorImpl.cpp in Sources */,
+				3ACEACEF0DC3849700AFBEC1 /* OM_PartialDomeScreen.cpp in Sources */,
+				3ACEAD800DC38DB000AFBEC1 /* OmniMapQuartz.cpp in Sources */,
+				3AE4956D0E27ACB000FE443B /* ElumSphere.cpp in Sources */,
+				3A1BC28C0FBE032100FC738F /* OM_ConeScreen.cpp in Sources */,
+				3ADB190C13BBBD17006F1844 /* OmniMap_MirrorBallShader.cpp in Sources */,
+				3AE142DD1450B90D00947CA5 /* OM_PlaneScreen.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3ABA1A6E0D626E6400A67E0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D07F2BC0486CC7A007CD1D0 /* OmniMapAPI */;
+			targetProxy = 3ABA1A6D0D626E6400A67E0B /* PBXContainerItemProxy */;
+		};
+		3ABA1A700D626E6600A67E0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3ABA1A640D626DA100A67E0B /* CopyGlew */;
+			targetProxy = 3ABA1A6F0D626E6600A67E0B /* PBXContainerItemProxy */;
+		};
+		3AE1439A1450E05900947CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libLua;
+			targetProxy = 3AE143991450E05900947CA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A1BC2700FBDDDE300FC738F /* ReleaseWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_MODE_FLAG = "a-w,a+rX,u+w";
+				PREBINDING = NO;
+				SDKROOT = "";
+				VALID_ARCHS = x86_64;
+			};
+			name = ReleaseWithOmnity;
+		};
+		3A1BC2710FBDDDE300FC738F /* ReleaseWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				DSTROOT = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OmniMapAPI_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../common,
+					../../include,
+					../../include/EasyBMP,
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = Frameworks;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/OSXBuild/libLua/build/Debug\"",
+				);
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = OmniMapAPI;
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../../OmniMapUnityPI/OSX_Build/build;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = ReleaseWithOmnity;
+		};
+		3A1BC2720FBDDDE300FC738F /* ReleaseWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$PROJECT_DIR/$(PROJECT_NAME).dst";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_MODE_FLAG = "a-w,a+rX,u+w";
+				PRODUCT_NAME = CopyGlew;
+				ZERO_LINK = NO;
+			};
+			name = ReleaseWithOmnity;
+		};
+		3A1BC2730FBDDDE300FC738F /* ReleaseWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Install;
+				ZERO_LINK = NO;
+			};
+			name = ReleaseWithOmnity;
+		};
+		3A1BC4950FC1E1DE00FC738F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "OmniMapUnityPI-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = OmniMapUnityPI;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3A1BC4960FC1E1DE00FC738F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "OmniMapUnityPI-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = OmniMapUnityPI;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		3A1BC4970FC1E1DE00FC738F /* ReleaseWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../omnimap,
+					../../../OmniMapUnityPI/OSX_Build,
+					../common,
+					../../include,
+					../../include/EasyBMP,
+				);
+				INFOPLIST_FILE = "OmniMapUnityPI-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = OmniMapUnityPI;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = ReleaseWithOmnity;
+		};
+		3A1BC5240FC2FC2500FC738F /* DebugWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "";
+				VALID_ARCHS = x86_64;
+			};
+			name = DebugWithOmnity;
+		};
+		3A1BC5250FC2FC2500FC738F /* DebugWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				DSTROOT = "$PROJECT_DIR/$(PROJECT_NAME).dst";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OmniMapAPI_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../common,
+					../../include,
+					../../include/EasyBMP,
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_MODE_FLAG = "a-w,a+rX,u+w";
+				INSTALL_PATH = /Library/Frameworks;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/OSXBuild/libLua/build/Debug\"",
+				);
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = OmniMapAPI;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = DebugWithOmnity;
+		};
+		3A1BC5260FC2FC2500FC738F /* DebugWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(PROJECT_DIR)/$(PROJECT_NAME).dst";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = CopyGlew;
+			};
+			name = DebugWithOmnity;
+		};
+		3A1BC5270FC2FC2500FC738F /* DebugWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Install;
+			};
+			name = DebugWithOmnity;
+		};
+		3A1BC5280FC2FC2500FC738F /* DebugWithOmnity */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../omnimap,
+					../../../OmniMapUnityPI/OSX_Build,
+					../common,
+					../../include,
+					../../include/EasyBMP,
+				);
+				INFOPLIST_FILE = "OmniMapUnityPI-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = OmniMapUnityPI;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = DebugWithOmnity;
+		};
+		3ABA1A650D626DA200A67E0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(PROJECT_DIR)/$(PROJECT_NAME).dst";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = CopyGlew;
+			};
+			name = Debug;
+		};
+		3ABA1A660D626DA200A67E0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$PROJECT_DIR/$(PROJECT_NAME).dst";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_MODE_FLAG = "a-w,a+rX,u+w";
+				PRODUCT_NAME = CopyGlew;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		3ABA1A6B0D626E5E00A67E0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Install;
+			};
+			name = Debug;
+		};
+		3ABA1A6C0D626E5E00A67E0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Install;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		4FADC24308B4156D00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				DSTROOT = "$PROJECT_DIR/$(PROJECT_NAME).dst";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OmniMapAPI_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../common,
+					../../include,
+					../../include/EasyBMP,
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_MODE_FLAG = "a-w,a+rX,u+w";
+				INSTALL_PATH = /Library/Frameworks;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/OSXBuild/libLua/build/Debug\"",
+				);
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = OmniMapAPI;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4FADC24408B4156D00ABE55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$PROJECT_DIR/$(PROJECT_NAME).dst";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OmniMapAPI_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../common,
+					../../include,
+					../../include/EasyBMP,
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Library/Frameworks;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/src\"",
+					"\"$(SRCROOT)/../../../cLua/lua dist/lua-5.1/OSXBuild/libLua/build/Debug\"",
+				);
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = OmniMapAPI;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		4FADC24708B4156D00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "";
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		4FADC24808B4156D00ABE55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_MODE_FLAG = "a-w,a+rX,u+w";
+				PREBINDING = NO;
+				SDKROOT = "";
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A1BC4980FC1E1DE00FC738F /* Build configuration list for PBXNativeTarget "OmniMapUnityPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1BC4950FC1E1DE00FC738F /* Debug */,
+				3A1BC5280FC2FC2500FC738F /* DebugWithOmnity */,
+				3A1BC4960FC1E1DE00FC738F /* Release */,
+				3A1BC4970FC1E1DE00FC738F /* ReleaseWithOmnity */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ABA1A690D626DBE00A67E0B /* Build configuration list for PBXAggregateTarget "CopyGlew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ABA1A650D626DA200A67E0B /* Debug */,
+				3A1BC5260FC2FC2500FC738F /* DebugWithOmnity */,
+				3ABA1A660D626DA200A67E0B /* Release */,
+				3A1BC2720FBDDDE300FC738F /* ReleaseWithOmnity */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ABA1A720D626E8800A67E0B /* Build configuration list for PBXAggregateTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ABA1A6B0D626E5E00A67E0B /* Debug */,
+				3A1BC5270FC2FC2500FC738F /* DebugWithOmnity */,
+				3ABA1A6C0D626E5E00A67E0B /* Release */,
+				3A1BC2730FBDDDE300FC738F /* ReleaseWithOmnity */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FADC24208B4156D00ABE55E /* Build configuration list for PBXNativeTarget "OmniMapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC24308B4156D00ABE55E /* Debug */,
+				3A1BC5250FC2FC2500FC738F /* DebugWithOmnity */,
+				4FADC24408B4156D00ABE55E /* Release */,
+				3A1BC2710FBDDDE300FC738F /* ReleaseWithOmnity */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "OmniMapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC24708B4156D00ABE55E /* Debug */,
+				3A1BC5240FC2FC2500FC738F /* DebugWithOmnity */,
+				4FADC24808B4156D00ABE55E /* Release */,
+				3A1BC2700FBDDDE300FC738F /* ReleaseWithOmnity */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

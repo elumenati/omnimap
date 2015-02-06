@@ -1,3 +1,10 @@
 SourceCode/src/Win32_Build/ReleaseDLL/
 SourceCode/src/Win32_Build/Debug/
 *.user
+SourceCode/OmniMap/src/Win32_BuildD3D/ReleaseDLL/
+SourceCode/OmniMap/examples/Win32_Build/OMExamples_2005.suo
+SourceCode/OmniMap/examples/Direct3D/Direct3D9/MultiAnimation/Debug/
+SourceCode/OmniMap/examples/Direct3D/Direct3D9/MultiAnimation/Release/
+SourceCode/OmniMap/examples/hallway/hallway_dome_enabled/Source/Release/
+SourceCode/OmniMap/examples/Direct3D/Direct3D10/BasicHLSL10/Release/
+SourceCode/OmniMap/examples/hallway/hallway_original/Source/Game.suo

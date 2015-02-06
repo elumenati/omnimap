@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>OmniMap API Release Notes</title>
+</head>
+<body>
+<table style="width: 100%; height: 77px;" border="0" cellpadding="4"
+ cellspacing="3">
+  <thead><tr valign="top">
+    <td style="width: 50%;">
+    <p> <a href="http://www.elumenati.com/"> <img src="elumenati.jpg"
+ border="0" height="45" width="313"></a><br>
+    <a href="http://www.elumenati.com/"> </a> </p>
+    </td>
+    <td
+ style="text-align: right; width: 50%; font-family: helvetica,arial,sans-serif;">
+    <br>
+    </td>
+  </tr>
+  </thead>
+</table>
+<small><br>
+</small>
+<h1 style="text-align: center;">OmniMap API Real-Time Geometry
+Correction Library</h1>
+
+
+<h2 style="text-align: center;">Release Notes for Release 2.4.0</h2>
+<span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;">Changes for Release 2.4.0</span><br>
+<ol>
+  <li>OmniMap version numbering system is changed. "2.4" is the version ".0" is the minor version.</li>
+
+  <li>The water mark can be removed by registering Omnimap.  Please contact support@elumenati.com for more info.</li>
+
+  <li>New update of OmniMap should be dll compatible with previous Omnimap Releases</li>
+
+  <li>FEATURE REMOVED/BUG FIX: The windows registry is no longer used to set dome screen type.  Edit omnimap_user_edit.lua to change screens.</li>
+
+  <li>CHANGE: 
+<pre>
+Newly compiled Omnimap will now default to look in the follow directories:
+
+startup directory/OmniMapConfig/
+startup directory/OmniMapConfig/Resources
+
+startup directory/OmniMapD3DConfig/
+startup directory/OmniMapD3DConfig/Resources
+
+startup directory/OmniMapD3D10Config/
+startup directory/OmniMapD3D10Config/Resources
+</pre>
+
+the resource directory used to be hard coded to look in  "c:\program files\elumenati\omnimap\..." so this needs a re-compile to benifit from this change.  If it is not recompiled, it may look in the elumenati/omnimap directory.  If your program crashes after upgrading OmniMap, check the log for where it is looking for its Lua files.<BR> Developers can change it if they want to, but otherwise omnimap will be configured on a per installation basis.  Another benifit is that you could create two directories, "SLAMMED DEMOS" and have all of your applications ready to go on a slammed unit, and "FULLDOME" and have everything configured for that...  and breaking one will not break the rest.</li>
+
+
+
+
+  <li>Experimental integration with NAVGAR's Dome View. Please contact support@elumenati.com for more info.</li>
+  <li>Poor looking triangle tessellation.  I "tweaked" the tessellation code to add more triangles around the edge of dome, and also also the bottom edge of slammed at the cost of removing some triangle density at the dome apex.  This should look much better. Feedback is welcome.</li>
+
+  <li>BUG:  Since windows vista and windows 7, we can't write error logs to the program files directory during runtime.  To generate a log, run 
+
+the application(for example demo.exe) with administrative privileges by right clicking on it and selecting "Run as administrator".  This will be 
+
+fixed in a future minor release.</li>
+  
+
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 style="text-align: center;">Release Notes for Release 2.0.3</h2>
+<span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;">Changes for Release 2.0.3</span><br>
+<ol>
+  <li>New dome screen tesselation eliminates rendering artifacts on
+upper right and left hand sides of dome screen output.&nbsp; This new
+dome tesselation is now the default dome screen.</li>
+  <li>Support for OmniConfig, graphical configuration tool added.</li>
+  <li>Added Elumenati logo to the off screen background of the output.<br>
+  </li>
+</ol>
+<span style="font-weight: bold;">Known Problems in&nbsp; 2.0.0:</span><br>
+1) Does not maintain source code compatibility with 1.x releases or
+previous 2.0.0 betas.&nbsp;
+Requires a recomplilation.<br>
+2) There is not an OmniMapAppTextureD3D10 class yet.<br>
+3) We can only guarantee that OmniMap works with NVIDIA grahics
+hardware that has at least 128 MB of video memory.&nbsp; ATI hardware
+has not been tested.<br>
+4) OmniMapD3D10 only works on Windows Vista with graphics cards that
+support DirectX 10, because DirectX 10 only works on such cards on
+systems with Windows Vista.<br>
+<br>
+<span style="font-weight: bold;">Changes for Release 2.0.0 </span><br>
+<ol>
+  <li>Added support for Direct3D 9 and Direct3D 10.<br>
+  </li>
+  <li>Support for loading external shader through a Lua parameter.</li>
+  <li>Reorganization of Lua scripts for increased ease of use.</li>
+  <li><span style="font-style: italic;">OmniMapAppTextureD3D </span>and
+    <span style="font-style: italic;">OmniMapChannelATD3D </span>classes
+added for
+applications that want to supply their own channel rendering&nbsp; in
+D3D.</li>
+  <li>Added support for panormic shaped screen class: <span
+ style="font-style: italic;">OM_ToroidScreen</span>.&nbsp; To learn
+more about screen shapes, see the OmniMap Configuration documentation.<br>
+  </li>
+  <li>Added support for&nbsp; cylinder shaped screen class: <span
+ style="font-style: italic;">OM_CylinderScreen</span>. To learn more
+about screen shapes, see the OmniMap Configuration documentation.</li>
+  <li>Alpha mask support added.</li>
+  <li>Run-time extensible screen geometry support added.</li>
+  <li>Numerous new convenience methods added to OmniMapBase for setting
+and getting channel camera orientation and frustum values.&nbsp;
+Includes removing access to OmniMapChannelBase::cam_info. All of the
+information previously contained in this class can be accessed via the
+new convenience methods.&nbsp; See the OmniMapChannelBase class for
+more information.<br>
+  </li>
+  <li>OmniMapAppTextureOGL, and OmniMapChannelATOGL classes added for
+applications that want to supply their own channel rendering.</li>
+  <li>Added support for non-square non-power-of-2 channel
+resolutions.&nbsp; Application programmes can now set an x and y
+dimenstion for the channel rendering canvas.&nbsp; This is done in the
+file OmniMapConfig/omnimap_dome_wiz_ai.lua.&nbsp; The line :</li>
+  <dl>
+    <dd>&nbsp;&nbsp;&nbsp;<span style="font-style: italic;"> channelRes
+= 1024</span></dd>
+    <dd>has been replaced with :<br>
+    </dd>
+    <dd>&nbsp;&nbsp;&nbsp;<span style="font-style: italic;">
+channelResX = 1024</span></dd>
+    <dd style="font-style: italic;">&nbsp;&nbsp;&nbsp; channelResY =
+1024</dd>
+  </dl>
+  <li>To create a non-square window just set these values to the values
+you
+want to use.&nbsp; Non square windows are only supported in back buffer
+and pbuffer rendering modes.(See #11)</li>
+  <li>References to OpenGL have been removed from all base&nbsp;
+classes.</li>
+  <li>A new method for setting up the channel callbacks has been
+added:<br>
+    <span style="font-style: italic;">&nbsp; void
+OmniMapBase::ForEachChannel(void
+fun(OmniMapChannelBase *chan, void *userData), void *userData);</span><br>
+This method allows the application developer to pass a void * to
+the
+channel rendering method.&nbsp; This can be a reference to an object or
+data that is needed by the application for rendering.<br>
+  </li>
+  <li>Numerous bug fixes.</li>
+  <li>Added a watermark that is the Elumenati logo.&nbsp; Please
+contact Elumenati, LLC at 612-605-0826 or support@elumenati.com to have
+the watermark removed.<br>
+  </li>
+</ol>
+<span style="font-weight: bold;">
+</span><br>
+<br>
+</body>
+</html>
