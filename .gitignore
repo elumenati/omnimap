@@ -8,3 +8,8 @@ SourceCode/OmniMap/examples/Direct3D/Direct3D9/MultiAnimation/Release/
 SourceCode/OmniMap/examples/hallway/hallway_dome_enabled/Source/Release/
 SourceCode/OmniMap/examples/Direct3D/Direct3D10/BasicHLSL10/Release/
 SourceCode/OmniMap/examples/hallway/hallway_original/Source/Game.suo
+SourceCode/OmniMap/lib/OmniMap.lib
+SourceCode/OmniMap/src/Win32_BuildD3D/omnimapdllD3D.ncb
+SourceCode/OmniMap/src/Win32_BuildD3D/omnimapdllD3D.suo
+SourceCode/OmniMap/src/Win32_BuildD3D/omnimapdllD3D.vcproj
+SourceCode/OmniMap/bin/OmniMap.dll
