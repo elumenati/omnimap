@@ -77,6 +77,9 @@
 ** MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 */
 
+
+
+#include <windows.h>
 #ifndef __glew_h__
 #define __glew_h__
 #define __GLEW_H__

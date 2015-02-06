@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../include ;../omnimap"
+				AdditionalIncludeDirectories="../../include ;../omnimap;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\shared"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;OMNIMAP_EXPORTS; GLEW_BUILD ;_CRT_SECURE_NO_DEPRECATE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -171,7 +171,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="../../include"
+				AdditionalIncludeDirectories="../../include ;../omnimap;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\shared"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;OMNIMAP_EXPORTS;GLEW_BUILD;_CRT_SECURE_NO_DEPRECATE"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
@@ -192,11 +192,11 @@
 			<Tool
 				Name="VCLinkerTool"
 				RegisterOutput="false"
-				AdditionalDependencies="glew32s.lib"
+				AdditionalDependencies="glew32s.lib &quot;AdvAPI32.Lib glew32s.lib"
 				ShowProgress="0"
 				OutputFile="ReleaseDLL/OmniMap.dll"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="../../lib"
+				AdditionalLibraryDirectories="../../lib;C:\Elumenati-Dev\OmniMap\NeededDependencies\glew-1.12.0-win32\glew-1.12.0\lib\Release\Win32;C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86;C:\Elumenati-Dev\OmniMap\NeededDependencies\lib"
 				GenerateManifest="true"
 				IgnoreDefaultLibraryNames="libc.lib"
 				GenerateDebugInformation="false"
