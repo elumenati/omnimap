@@ -111,10 +111,10 @@ RenderChannel::RenderChannel(int _Resolution, bool use_frame_buffer_object )
 	//transform = new AffMatrix();
 
 	// BUILD SPOUT
-	if(useSpoutInRenderChannels ){
-			LogSystem()->ReportMessage("useSpoutInRenderChannels");
+	if(useSpoutInRenderChannels) {
+		LogSystem()->ReportMessage("useSpoutInRenderChannels");
 		omniSpout = new OmniSpout("RenderChannel");
-	}else{
+	} else {
 		omniSpout =0;
 	}
 }
@@ -199,20 +199,17 @@ void RenderChannel::UpdateSpout(){
 	}
 }
 
-void
-RenderChannel::bindTexture()
-{
+void RenderChannel::bindTexture() {
 #ifdef USE_PBUFFER
-	if(target == OmniMapChannelBase::PBUFFER)
+	if(target == OmniMapChannelBase::PBUFFER) {
 		pbuffer->bindTexture();
-	else 
+	} else 
 #endif
-	if (target == OmniMapChannelBase::FRAME_BUFFER_OBJECT)
+	if (target == OmniMapChannelBase::FRAME_BUFFER_OBJECT) {
 		fbuffer->BindImageToTexture(image_id);
-	else if (target == OmniMapChannelBase::BACK_BUFFER)
+	} else if (target == OmniMapChannelBase::BACK_BUFFER) {
 		backBuffer->BindTexture();
-
-	
+	}
 }
 
 

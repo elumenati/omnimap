@@ -1509,8 +1509,14 @@ void OmniMap::PostRender()
 
 #endif
 	/// SPOUT
-	if(omniSpout!=0){
+	if(omniSpout!=0) {
 		omniSpout->UpdateSpoutGL(resWidth,resHeight);
+	}
+	for (int i = 0; i < this->GetNumChannels(); i++) {
+		OmniMap_Channel *channel = (OmniMap_Channel*)this->GetChannel(i);
+		if(channel !=0 && channel->prc_RenderChannel!=0) {
+			channel->prc_RenderChannel->UpdateSpout();
+		}
 	}
 }
 

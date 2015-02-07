@@ -30,8 +30,9 @@ public:
 		if(fbindex ==0){
 			sprintf(sendername,"%s",name);
 		}else{
-			sprintf(sendername,"%s%d",name,fbindex++);
+			sprintf(sendername,"%s%d",name,fbindex);
 		}
+		fbindex++;
 	}
 
 	~OmniSpout(){
