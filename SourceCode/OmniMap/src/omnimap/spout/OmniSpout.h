@@ -14,7 +14,6 @@ class OmniSpout
 {
 public:
 	SpoutSender *spoutsender  ;        // A sender object
-	char sendername[256];            // Shared memory name
 	bool bInitialized;                // Initialization result
 	bool bMemoryShare;                // Texture share compatibility
 	static int fbindex;
@@ -28,7 +27,11 @@ public:
 		sendertextureH=0;
 		bInitialized=false;                // Initialization result
 		bMemoryShare=false;
-		sprintf(sendername,"clement%d",fbindex++);
+		if(fbindex ==0){
+			sprintf(sendername,"%s",name);
+		}else{
+			sprintf(sendername,"%s%d",name,fbindex++);
+		}
 	}
 
 	~OmniSpout(){
@@ -41,9 +44,6 @@ public:
 
 	}
 
-	void SetName(char *name){
-		sprintf(sendername,name);
-	}
 	void Send(GLuint  texID, int width, int height){
 
 		if(!bInitialized) {
@@ -68,9 +68,7 @@ public:
 			spoutsender->SendTexture(texID, GL_TEXTURE_2D, width, height);
 		}
 	}
-	GLuint sendertexture;  // Local OpenGL texture used for sharing main view
-	int sendertextureW;
-	int sendertextureH;
+
 	void UpdateSpoutGL(int width, int height){
 		if(width!=sendertextureW||height!=sendertextureH){
 			sendertextureH=height;
@@ -104,4 +102,9 @@ public:
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
+	private:
+	GLuint sendertexture;  // Local OpenGL texture used for sharing main view
+	int sendertextureW;
+	int sendertextureH;
+	char sendername[256];            // Shared memory name
 };

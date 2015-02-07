@@ -9,6 +9,7 @@
 #include "../GraphicsPrimitives.h"
 #include "PBuffer.h"
 #include "OmniMapBase.h"
+#include "../spout/OmniSpout.h"
 //#include "GraphicsTools/Frustum.h"
 
 class BackBufferTexture;

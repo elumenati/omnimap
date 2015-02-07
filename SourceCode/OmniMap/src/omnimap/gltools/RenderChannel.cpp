@@ -3,8 +3,8 @@
 #include "../omnimap.h"
 #include "BackBufferTexture.h"
 
+extern bool useSpoutInRenderChannels;
 
- bool useSpoutInRenderChannels = false;
 	int RenderChannel::getTextureId()
 	{
 		if(!usepbuffer)
@@ -68,7 +68,7 @@
 	// BUILD SPOUT
 	if(useSpoutInRenderChannels ){
 			LogSystem()->ReportMessage("useSpoutInRenderChannels");
-		omniSpout = new OmniSpout();
+		omniSpout = new OmniSpout("RenderChannel");
 	}else{
 		omniSpout =0;
 	}
@@ -113,7 +113,7 @@ RenderChannel::RenderChannel(int _Resolution, bool use_frame_buffer_object )
 	// BUILD SPOUT
 	if(useSpoutInRenderChannels ){
 			LogSystem()->ReportMessage("useSpoutInRenderChannels");
-		omniSpout = new OmniSpout();
+		omniSpout = new OmniSpout("RenderChannel");
 	}else{
 		omniSpout =0;
 	}

@@ -70,6 +70,9 @@ vec3 ProjectorRayUp = vec3(%f,%f,%f);\n\
 
 bool SaveStringList(std::string filename , stringList *List);
 
+/////// extern spout ////////////////////
+extern OmniSpout *omniSpout;
+extern bool useSpoutInFinalPassCamera;
 /////////////////////////////////////////////////
 
 #include <stdarg.h>
@@ -94,7 +97,6 @@ static GLuint wwwLogoTextureID;
 
 
 
-OmniSpout *omniSpout =0;
 
 
 
@@ -992,8 +994,12 @@ LogSystem()->ReportMessage("loading shader %s",fragShader.c_str());
 		LogSystem()->ReportMessage("---------------------------------------------------------------------");
 	}
 #endif
-	if(omniSpout == 0){
-		omniSpout = new OmniSpout();
+
+	if(useSpoutInFinalPassCamera){
+		LogSystem()->ReportMessage("loading OmniSpout...");
+		if(omniSpout == 0){
+			omniSpout = new OmniSpout("OmniMap");
+		}
 	}
 }
 

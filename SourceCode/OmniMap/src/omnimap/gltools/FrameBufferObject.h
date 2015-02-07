@@ -13,7 +13,6 @@
 #include <vector> 
 #include "Spout.h"    // Spout SDK
 
-#include "../spout/OmniSpout.h"
 //-------ImageObject structure-------------
 //
 //  This object stores information relative to the image

@@ -67,6 +67,12 @@ std::string preprocessorMacroGlobal("");
 #endif
 
 
+/////// spout ////////////////////
+#include "../omnimap/spout/OmniSpout.h"
+OmniSpout *omniSpout =0;
+bool useSpoutInRenderChannels = false;
+bool useSpoutInFinalPassCamera = false;
+///////////////////////////////////
 
 std::string GetResourcesDirectory_toString(OmniMapBase *b, char const *suggestion)
 {
@@ -826,6 +832,8 @@ void OmniMapBase::SetUpPropertyAccess()
 	/// cobra
 	access.Register("CobraWarpWithTrueDimension", &CobraWarpWithTrueDimension);
 	
+	access.Register("useSpoutInRenderChannels",&useSpoutInRenderChannels);
+	access.Register("useSpoutInFinalPassCamera",&useSpoutInFinalPassCamera);
 }
 
 CLua *OmniMapBase::GetCLuaRef()
