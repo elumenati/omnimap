@@ -9,27 +9,16 @@
 
 
 
-static bool useSpout =true;
 FrameBufferObject::FrameBufferObject()
 {
 	glewInit();
 	glGenFramebuffersEXT(1, &framebuffer_id);
 	
-	// BUILD SPOUT
-
-	if(useSpout){
-		omniSpout = new OmniSpout();
-	}else{
-		omniSpout =0;
-	}
 }
 
 FrameBufferObject::~FrameBufferObject()
 {
-	if(omniSpout!=0){
-		delete(omniSpout);
-		omniSpout = 0;
-	}
+	
 	//delete the image objects
 	for (unsigned int i = 0; i < image_objects.size(); i++)
 	{
@@ -246,9 +235,7 @@ FrameBufferObject::EndRenderToFrameBuffer()
 {
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0); 
 	
-	if(useSpout&&omniSpout!=0){
-		omniSpout->Send(getOpenGL_TextureID(0),width,height);
-	}
+
 }
 
 void

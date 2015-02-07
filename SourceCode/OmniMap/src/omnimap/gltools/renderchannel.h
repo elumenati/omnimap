@@ -78,6 +78,11 @@ private:
 	BackBufferTexture *backBuffer;
 	OmniMapChannelBase::TargetType target;
 
+private:
+	OmniSpout *omniSpout;
+	
+public:
+	void RenderChannel::UpdateSpout();
 };
 
 #endif

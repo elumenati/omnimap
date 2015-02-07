@@ -35,6 +35,7 @@ extern unsigned int logow;
 extern unsigned int logoh;
 extern char logoDataGL[];
 
+extern bool useSpoutInRenderChannels;
 #ifdef USE_DOMEVIEW
 #include "../IPC_Domeview/IPCDomeView.h"
 static int ApplicationCode;
@@ -1493,6 +1494,19 @@ void OmniMap::PostRender()
 
 
 #endif
+	/// SPOUT
+	if(useSpoutInRenderChannels){
+		for (int i = 0; i < this->GetNumChannels(); i++)
+		{
+			OmniMap_Channel *c= (OmniMap_Channel *)this->GetChannel(i);
+			if(c!=0){
+				RenderChannel *channel = c->prc_RenderChannel;
+				if(channel!=0){
+					channel->UpdateSpout();
+				}
+			}
+		}
+	}
 }
 
 

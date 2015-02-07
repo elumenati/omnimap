@@ -42,7 +42,6 @@ class FrameBufferObject {
 
 public:
 
-	OmniSpout *omniSpout;
 
 	//Default constructor - allocates a framebufferobject with no attached textures or renderBuffers
 	FrameBufferObject();

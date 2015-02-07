@@ -4,6 +4,7 @@
 #include "BackBufferTexture.h"
 
 
+ bool useSpoutInRenderChannels = true;
 	int RenderChannel::getTextureId()
 	{
 		if(!usepbuffer)
@@ -64,6 +65,13 @@
 
 
 
+	// BUILD SPOUT
+	if(useSpoutInRenderChannels ){
+			LogSystem()->ReportMessage("useSpoutInRenderChannels");
+		omniSpout = new OmniSpout();
+	}else{
+		omniSpout =0;
+	}
 	//transform = new AffMatrix();
 
 }
@@ -102,10 +110,21 @@ RenderChannel::RenderChannel(int _Resolution, bool use_frame_buffer_object )
 
 	//transform = new AffMatrix();
 
+	// BUILD SPOUT
+	if(useSpoutInRenderChannels ){
+			LogSystem()->ReportMessage("useSpoutInRenderChannels");
+		omniSpout = new OmniSpout();
+	}else{
+		omniSpout =0;
+	}
 }
 
 RenderChannel::~RenderChannel()
 {
+	if(omniSpout!=0){
+		delete(omniSpout);
+		omniSpout = 0;
+	}
 	if (fbuffer)
 		delete fbuffer;
 //	delete frustum;
@@ -166,7 +185,19 @@ RenderChannel::endRenderToChannel()
 		backBuffer->CopyFB2Texture();
 }
 
+void RenderChannel::UpdateSpout(){
+	if(omniSpout!=0){
+		if(target == OmniMapChannelBase::FRAME_BUFFER_OBJECT){
+			omniSpout->Send(fbuffer->getOpenGL_TextureID(0),fbuffer->GetWidth(),fbuffer->GetHeight());
+		} else if(target == OmniMapChannelBase::PBUFFER){
+			LogSystem()->ReportMessage("Testing PBUFFER\n");
+			omniSpout->Send(pbuffer->texture_object,pbuffer->getWidth(),pbuffer->getHeight());
+		} else if (target == OmniMapChannelBase::BACK_BUFFER){
 
+			LogSystem()->ReportMessage("BACK_BUFFER not yet supported\n");
+		}
+	}
+}
 
 void
 RenderChannel::bindTexture()
