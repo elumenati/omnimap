@@ -9,7 +9,10 @@
 #include <OpenGL/gl.h>
 #endif
 
+
 #include <vector> 
+
+#include "Spout.h"    // Spout SDK
 
 //-------ImageObject structure-------------
 //
@@ -36,6 +39,12 @@ typedef struct ImageObject {
 class FrameBufferObject {
 
 public:
+
+    SpoutSender *spoutsender  ;        // A sender object
+    char sendername[256];            // Shared memory name
+    GLuint sendertexture;            // Local OpenGL texture used for sharing
+    bool bInitialized;                // Initialization result
+    bool bMemoryShare;                // Texture share compatibility
 
 	//Default constructor - allocates a framebufferobject with no attached textures or renderBuffers
 	FrameBufferObject();
