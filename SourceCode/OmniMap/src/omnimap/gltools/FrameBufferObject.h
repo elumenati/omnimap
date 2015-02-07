@@ -11,9 +11,9 @@
 
 
 #include <vector> 
-
 #include "Spout.h"    // Spout SDK
 
+#include "../spout/OmniSpout.h"
 //-------ImageObject structure-------------
 //
 //  This object stores information relative to the image
@@ -36,15 +36,13 @@ typedef struct ImageObject {
 } ImageObject;
 
 
+	
+
 class FrameBufferObject {
 
 public:
 
-    SpoutSender *spoutsender  ;        // A sender object
-    char sendername[256];            // Shared memory name
-    GLuint sendertexture;            // Local OpenGL texture used for sharing
-    bool bInitialized;                // Initialization result
-    bool bMemoryShare;                // Texture share compatibility
+	OmniSpout *omniSpout;
 
 	//Default constructor - allocates a framebufferobject with no attached textures or renderBuffers
 	FrameBufferObject();
