@@ -10,14 +10,15 @@
 
 
 static int fbindex=0;
-
+static bool useSpout =true;
 FrameBufferObject::FrameBufferObject()
 {
 	glewInit();
 	glGenFramebuffersEXT(1, &framebuffer_id);
 	
 	// BUILD SPOUT
-	{
+
+	if(useSpout){
 		LogSystem()->ReportMessage("Building Spout");
 		LogSystem()->ReportError("Building Spout");
 		spoutsender = new SpoutSender;        // A sender object
@@ -31,9 +32,12 @@ FrameBufferObject::FrameBufferObject()
 
 FrameBufferObject::~FrameBufferObject()
 {
-	spoutsender->ReleaseSender();
-	delete(spoutsender);
-	spoutsender =0;
+	
+	if(useSpout){
+		spoutsender->ReleaseSender();
+		delete(spoutsender);
+		spoutsender =0;
+	}
 	//delete the image objects
 	for (unsigned int i = 0; i < image_objects.size(); i++)
 	{
@@ -249,35 +253,30 @@ void
 FrameBufferObject::EndRenderToFrameBuffer()
 {
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0); 
-    LogSystem()->ReportMessage("Postrender");
-    if(!bInitialized) {
-    LogSystem()->ReportMessage("Spout . init");
-    char buff[512];
-    sprintf(buff,"spout %s %d %d", sendername, width, height);
-        bInitialized = spoutsender->CreateSender(sendername, width, height);
-        
-    LogSystem()->ReportMessage(buff);
-        // Detect texture share compatibility (optional)
-        bMemoryShare = spoutsender->GetMemoryShareMode();
-    }
-    if(bInitialized) {
-    LogSystem()->ReportMessage("Spout . bind");
-     
-        //
-        // Send the texture out for all receivers to use
-        //
-        // Notes :
-        // (1)    If a host calls SendTexture with a framebuffer object bound,
-        //        include the FBO id in the SendTexture call so that the binding is restored
-        //        afterwards because Spout makes use of its own FBO for intermediate rendering.
-        // (2)    openGL/DirectX coordinates make our texture come out inverted so the texture
-        //        is inverted    when transferring it to the shared texture. You can specify false
-        //        to disable this default then the result comes out apparently inverted.
-        //
-    LogSystem()->ReportMessage("Spout . send");
-        spoutsender->SendTexture(getOpenGL_TextureID(0), GL_TEXTURE_2D, width, height);
-    LogSystem()->ReportMessage("Spout . send done ");
-    }
+	
+	if(useSpout){
+		if(!bInitialized) {
+			char buff[512];
+			sprintf(buff,"spout init %s %d %d", sendername, width, height);
+			bInitialized = spoutsender->CreateSender(sendername, width, height);
+			LogSystem()->ReportMessage(buff);
+			// Detect texture share compatibility (optional)
+			bMemoryShare = spoutsender->GetMemoryShareMode();
+		}
+		if(bInitialized) {
+			// Send the texture out for all receivers to use
+			//
+			// Notes :
+			// (1)    If a host calls SendTexture with a framebuffer object bound,
+			//        include the FBO id in the SendTexture call so that the binding is restored
+			//        afterwards because Spout makes use of its own FBO for intermediate rendering.
+			// (2)    openGL/DirectX coordinates make our texture come out inverted so the texture
+			//        is inverted    when transferring it to the shared texture. You can specify false
+			//        to disable this default then the result comes out apparently inverted.
+			//
+			spoutsender->SendTexture(getOpenGL_TextureID(0), GL_TEXTURE_2D, width, height);
+		}
+	}
 }
 
 void
