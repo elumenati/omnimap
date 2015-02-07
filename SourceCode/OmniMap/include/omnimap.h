@@ -504,8 +504,6 @@ protected:
 	//void RenderBG(unsigned int tid, float x, float y, float w, float h, float r, float s);
 	void RenderBG(float x, float y, float w, float h, float r, float s);
 
-
-
 };
 
 

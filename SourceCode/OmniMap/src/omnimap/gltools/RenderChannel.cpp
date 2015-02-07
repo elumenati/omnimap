@@ -4,7 +4,7 @@
 #include "BackBufferTexture.h"
 
 
- bool useSpoutInRenderChannels = true;
+ bool useSpoutInRenderChannels = false;
 	int RenderChannel::getTextureId()
 	{
 		if(!usepbuffer)

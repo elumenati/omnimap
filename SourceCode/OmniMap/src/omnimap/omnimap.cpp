@@ -94,6 +94,7 @@ static GLuint wwwLogoTextureID;
 
 
 
+OmniSpout *omniSpout =0;
 
 
 
@@ -559,6 +560,10 @@ void OmniMap_Shader::deinit()
 	delete _glsl_StencilMask;
 #endif
 	zero();
+	if(omniSpout != 0){
+		delete(omniSpout);
+		omniSpout=0;
+	}
 }
 
 void OmniMap_Shader::initFirstTime()
@@ -987,6 +992,9 @@ LogSystem()->ReportMessage("loading shader %s",fragShader.c_str());
 		LogSystem()->ReportMessage("---------------------------------------------------------------------");
 	}
 #endif
+	if(omniSpout == 0){
+		omniSpout = new OmniSpout();
+	}
 }
 
 
@@ -1495,17 +1503,8 @@ void OmniMap::PostRender()
 
 #endif
 	/// SPOUT
-	if(useSpoutInRenderChannels){
-		for (int i = 0; i < this->GetNumChannels(); i++)
-		{
-			OmniMap_Channel *c= (OmniMap_Channel *)this->GetChannel(i);
-			if(c!=0){
-				RenderChannel *channel = c->prc_RenderChannel;
-				if(channel!=0){
-					channel->UpdateSpout();
-				}
-			}
-		}
+	if(omniSpout!=0){
+		omniSpout->UpdateSpoutGL(resWidth,resHeight);
 	}
 }
 
