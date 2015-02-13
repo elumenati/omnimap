@@ -1,0 +1,560 @@
+//////////////////////////////
+////   needs 
+////   // make sure to link to static glew and define glewbuild
+////   //use glew_s.lib
+////   // avoid glew.dll glew.lib	
+////
+// OmniMap Geometry Correction Libs
+// (c)2006 Elumenati
+
+
+#pragma once
+#include "OmniMapBase.h"
+#include <GL/glew.h>   // make sure to link to static glew and define glewbuild
+#include <windows.h>
+#include <GL/gl.h>
+#include <string>
+#if defined(USE_VC7)
+#define sprintf_s sprintf
+#define vsprintf_s vsprintf
+#endif
+
+
+
+/*
+#ifdef OMNIMAP_EXPORTS
+#define OMNIMAP_API __declspec(dllexport)
+#else
+#pragma comment (lib, "OmniMap.lib")
+#define OMNIMAP_API __declspec(dllimport)
+#endif
+*/
+#pragma comment(lib, "opengl32.lib")
+#pragma comment(lib, "glu32.lib")
+
+
+//// MUST INCLUDE ////
+#define OMNIMAP_DEFAULT_SHADER_VERTEXSHADER "omnimap_vertex.vert"
+#define OMNIMAP_DEFAULT_SHADER_FRAGMENTSHADER "omnimap_fragment.frag"
+
+
+#define OMNIMAP_DEFAULT_glViewportsettings0 0
+#define OMNIMAP_DEFAULT_glViewportsettings1 0
+#define OMNIMAP_DEFAULT_glViewportsettings2 100
+#define OMNIMAP_DEFAULT_glViewportsettings3 100
+
+
+#define OMNIMAP_DEFAULT_GL_STATE_CLEAR_AT_STARTFRAME true
+#define OMNIMAP_DEFAULT_GL_STATE_glDisable_GL_DEPTH_TEST false
+#define OMNIMAP_DEFAULT_GL_STATE_glDepthMask_FALSE false
+
+#define OMNIMAP_maxChannelFaces 6
+
+
+#define OMNIMAP_DEFAULT_CHANNEL_USE_FBO true
+/////////////////////////////////
+///////////////////////
+/////////////////////////////////
+/////////////////////////////////
+
+
+
+
+/////////////////////////////////
+/////////////////////////////////
+/////////////////////////////////
+
+class GLFragmentShader;  // nondll exported from glshader.h
+class GLVertexShader;
+class GLShader;
+class GLProgram;
+class GLAttributeVar;
+class GLUniformVar;
+class RenderChannel;
+class displayHyperbola;
+class OmniMap_Screen;
+class OmniMap_Channel;
+class OmniMap;
+
+
+/**
+ * \brief The OpenGL implementation of OmniMapShaderBase.
+ *
+ * This is the OpenGL implementation of the abstract class OmniMapShaderBase.  
+ */
+class OMNIMAP_API   OmniMap_Shader : public OmniMapShaderBase
+{
+	friend class OmniMap;
+
+private:
+
+	//GLSL Shaders
+	GLProgram* OmniMap_ShaderCombo;
+	GLVertexShader* OmniMap_VertexShader;
+	GLFragmentShader* OmniMap_FragmentShader;
+
+	// Fragment Parameters
+	GLUniformVar*  glsl_Plane_Eq_XYZ;
+	GLUniformVar*  glsl_Plane_Eq_U;
+	GLUniformVar*  glsl_Plane_Eq_V;
+	GLUniformVar*  glsl_channelTextures;
+	GLUniformVar*  glsl_userposition;
+
+	// todo add a map of lua definible GLUniformVar*
+
+public:
+	/**
+	 * Construct an OmniMap_Shader object.
+	 */
+	OmniMap_Shader::OmniMap_Shader();
+	OmniMap_Shader::~OmniMap_Shader();
+	void OmniMap_Shader::reload();
+	void OmniMap_Shader::init();
+	void OmniMap_Shader::deinit();
+	void OmniMap_Shader::initFirstTime();
+	bool OmniMap_Shader::TestIfShadersAreSupported();
+	void OmniMap_Shader::zero();
+	void OmniMap_Shader::EnableShader();
+	void OmniMap_Shader::DisableShader();
+	void SetTextureIds(int numChannels, int *ids);
+	void SetPlaneEquations(int numChannels, float *plane_Eq_XYZ,
+		float *plane_Eq_U, float *plane_Eq_V);
+	void SetUserPosition(OmniVec3 position);
+
+	/////////// export /////////
+
+};
+
+
+
+
+
+/**
+ * \brief The OmniMap dome screen.
+ *
+ * Provides an implementation of composition and projection of the channel images to
+ * the OmniMap display.
+ *
+ * The OmniMap dome screen.
+ * This class has the following LUA-scriptable properties:
+ * <ul>
+ *  <li>Dome_Radius : The radius of the dome</li>
+ *  <li>Dome_tesselation : The level of tesselation for the screen geometry.  Default is 100.  A
+ *      larger number yields a more fine tesselation, a smaller number yields a more coarse
+ *      tesselation.
+ *  </li>
+ *  <li>Dome_Center.x : The center of the dome's x position</li>
+ *  <li>Dome_Center.y : The center of the dome's y position</li>
+ *  <li>Dome_Center.z : The center of the dome's z position</li>
+ *  <li>Dome_ApexDirection.x : The x value for the vector defining the direction of the apex of the dome </li>
+ *  <li>Dome_ApexDirection.y : The y value for the vector defining the direction of the apex of the dome </li>
+ *  <li>Dome_ApexDirection.z : The z value for the vector defining the direction of the apex of the dome </li>
+ * </ul>
+ */
+class OMNIMAP_API   OmniMap_Screen_Dome : public OmniMap_Screen
+{
+private:
+	
+	displayHyperbola *dome;
+	virtual	void OmniMap_Screen_Dome::Render();
+	virtual	void OmniMap_Screen_Dome::SetUpPropertyAccess();
+	//void OmniMap_Screen::BaseInit();
+	//void OmniMap_Screen::BaseDestroy();
+	bool needsrecompile;
+	int DisplayList;
+	void BaseInit();
+	void BaseDestroy();
+
+
+public:
+	/**
+	 * \brief Construct an OmniMap_Screen_Dome obect.
+	 *
+	 * The OmniMap dome geometry.
+	 */
+	OmniMap_Screen_Dome::OmniMap_Screen_Dome();
+	/**
+	 * \brief Destroy an OmniMap_Screen_Dome.
+	 */
+	OmniMap_Screen_Dome::~OmniMap_Screen_Dome();
+
+	
+	/**
+	 * Project the scene generated by the channels onto the display.
+	 */
+	virtual void Display();
+
+	/////////// export /////////
+};
+
+
+
+
+
+#ifdef OmniMap_QUAD_UPGRADE
+class OMNIMAP_API   OmniMap_Screen_Quad : public OmniMap_Screen
+{
+private:
+	OmniQuad *OmniQuad;
+	int quad_tesselation;
+	virtual	void OmniMap_Screen_Quad::Render();
+	virtual	void OmniMap_Screen_Quad::SetUpPropertyAccess();
+public:
+	OmniMap_Screen_Quad::OmniMap_Screen_Quad();
+	OmniMap_Screen_Quad::~OmniMap_Screen_Quad();
+
+	////////// export ///////
+
+};
+#endif
+
+
+/**
+ * \brief Defines a single render channel for rendering a portion of the final composited 
+ * screen image.  This is the OpenGL implementaion derived from the abstract class OmniMapChannelBase.
+ *
+ * The OmniMap API's final rendered image is a composite of 1 to 4 render channels.  Those
+ * channels' attributes are defined by the OmniMap_Channel class.  The primary attributes of
+ * a channel are the camera frustum, and viewing angle which are defined in the cam_info 
+ * public member.  It is also possible to have each channel displayed in an inset (heads up display)
+ * on the final rendered image.  
+ * 
+ * The channel attributes are LUA-scriptable.  The parameters that can be configure via
+ * LUA script are:
+ * <ul>
+ *	<li>
+ *		<b>HeadsUpDisplay_Quad.bl.x, HeadsUpDisplay_Quad.bl.y, HeadsUpDisplay_Quad.bl.z</b> : The 
+ *		bottom left position of the heads up display for this channel.
+ *	</li>
+ *  <li>
+ *		<b>HeadsUpDisplay_Quad.br.x, HeadsUpDisplay_Quad.br.y, HeadsUpDisplay_Quad.br.z</b> : The 
+ *		bottom right position of the heads up display for this channel.
+ *	</li>
+ *  <li>
+ *		<b>HeadsUpDisplay_Quad.tl.x, HeadsUpDisplay_Quad.tl.y, HeadsUpDisplay_Quad.tl.z</b> : The 
+ *		top left position of the heads up display for this channel.
+ *	</li>
+ *  <li>
+ *		<b>HeadsUpDisplay_Quad.tr.x, HeadsUpDisplay_Quad.tr.y, HeadsUpDisplay_Quad.tr.z</b> : The 
+ *		top right position of the heads up display for this channel.
+ *	</li>
+ *  <li>
+ *		<b>ViewWindow_Quad.bl.x, ViewWindow_Quad.bl.y, ViewWindow_Quad.bl.z</b> : The
+ *		bottom left positon of the view window for this channel.
+ *	</li>
+ *  <li>
+ *		<b>ViewWindow_Quad.br.x, ViewWindow_Quad.br.y, ViewWindow_Quad.br.z</b> : The
+ *		bottom right positon of the view window for this channel
+ *	</li>
+ *  <li>
+ *		<b>ViewWindow_Quad.tl.x, ViewWindow_Quad.tl.y, ViewWindow_Quad.tl.z</b> : The
+ *		top left positon of the view window for this channel
+ *	</li>
+ *  <li>
+ *		<b>ViewWindow_Quad.tr.x, ViewWindow_Quad.tr.y, ViewWindow_Quad.tr.z</b> : The
+ *		top right positon of the view window for this channel.
+ *	</li>
+ *	<li>
+ *		<b>cam_info.ClipTop</b> : The top of this channel's vertical clipping plane.
+ *	</li>
+ *	<li>
+ *		<b>cam_info.ClipBottom</b> : The bottom of this channel's vertical clipping plane.
+ *	</li>
+ *	<li>
+ *		<<b>cam_info.ClipLeft</b> : The left side of this channel's horizontal clipping plane.
+ *	</li>
+ *  <li>
+ *		<b>cam_info.ClipNear</b> : The distance from the viewer to the near clipping 
+ *			plane (always positive).
+ *	</li>
+ *	<li>
+ *		<b>cam_info.ClipFar</b> : The distance from the viewer to the far clipping 
+ *			plane (always positive).
+ *	</li>
+ *	<li>
+ *		<b>Matrix_WorldView.0.0, Matrix_WorldView.0.1, Matrix_WorldView.0.2, Matrix_WorldView.0.3,
+ *			Matrix_WorldView.1.0, Matrix_WorldView.1.1, Matrix_WorldView.1.2, Matrix_WorldView.1.3,
+ *			Matrix_WorldView.2.0, Matrix_WorldView.2.1, Matrix_WorldView.2.2, Matrix_WorldView.2.3,
+ *			Matrix_WorldView.3.0, Matrix_WorldView.3.1, Matrix_WorldView.3.2, Matrix_WorldView.3.3</b> :
+ *			The matrix defining the rotation of the camera.
+ *	</li>
+ * </ul>
+ */
+class OMNIMAP_API   OmniMap_Channel : public OmniMapChannelBase
+{
+
+public: 
+
+	friend OmniMap;
+
+public:
+	/**
+	 * Construct an OmniMap_Channel Object.
+	 * @param use_fbo True to use Frame Buffer Objects, use pbuffers if false.
+	 * @param _res The resolution of the channel being constructed in pixels.
+	 */
+	OmniMap_Channel::OmniMap_Channel();
+	/**
+	 * Destroy this channel
+	 */
+	OmniMap_Channel::~OmniMap_Channel();
+private:
+	RenderChannel *prc_RenderChannel;
+	void OmniMap_Channel::PushSetupMatricies();
+	void OmniMap_Channel::PopSetupMatricies();
+	void SetUpPropertyAccess();
+	int resolution;
+
+	
+	/**
+	 * \brief True to put camera rotation into OpenGL projection matrix.
+	 *
+	 * True to maintain SPI matrix compatibility. 
+	 * defaults to false
+	 * see http://www.sjbaker.org/steve/omniv/projection_abuse.html for more information
+	 */
+	bool ConsolidateCameraIntoProjectionMatrix;
+public:
+	/**
+	 * \brief Initialize the channel.
+	 *
+	 * It is required that the resolution of the channel be set before calling this method.
+	 */
+	void Initialize();
+	/**
+	 * \brief Make the texture unit for this channel the active texture unit.
+	 *
+	 * Makes the texture unit for this channel the active texture unit(glActiveTextureARB)
+	 * and then binds the texture id that contains the content for this channel to that
+	 * active texture unit(glBindTexture).
+	 */
+	void BindTexture(int index);
+	/**
+	 * \brief Unbind the texture for this channel.
+	 */
+	void UnbindTexture(int index);
+	/**
+	 * \brief Draw the contents of this channel to the heads up display.
+	 */
+	void DrawHeadsUpDisplay();
+	void OmniMap_Channel::beginRenderToChannel();
+	void OmniMap_Channel::endRenderToChannel();
+
+};
+
+typedef  OmniMap_Screen  * pOmniMap_Screen;
+typedef  OmniMap_Channel * pOmniMap_Channel;
+
+
+/**
+ * \brief The primary class for integrating the OmniMap spherical projection library into
+ * an OpenGL application
+ *
+ * This is the primary class for integrating the OmniMap spherical projection library into
+ * an OpenGL application.  The OmniMap class creates the individual render channels specified
+ * by calls to the Create_Channel method.  Those channels are
+ * rendered by the application via the callback from ForEachChannel. Prior to executing the
+ * callback for each channel, the OmniMap library sets up the OpenGL projection matrix 
+ * with the camera frustum
+ * and the OpenGL model view matrix with the camera rotation for the channel being rendered.  
+ * Once all of the channels are rendered,
+ * they are composited into one image and projected onto the screen or screens defined by the
+ * list of screens specified with the Create_ScreenShapeDome method.
+ *
+ * Dome configuration parameters
+ * scriptable from LUA are owned by the OmniMap class. 
+ * Channel and screen specifics can also be configured using LUA scripts. See the OmniMap_Screen_Dome
+ * and OmniMap_Channel documentation for details on those parameters.
+ * The LUA-scriptable parameters for the OmniMap class are:<br>
+ * From OmniMapBase:
+ * 	<ul>
+ *		<li><b>clearcolor_r,clearcolor_g,clearcolor_b,clearcolor_a</b> : 
+ *			The clear color to be used to clear the frame before the final compositing of the
+ *			 channel images into the final spherical projection.
+ *		</li>
+ *		<li><b>AudiencePosition_x, AudiencePosition_y, AudiencePosition_z</b> : The audience position
+ *		</li>
+ *		<li><b>ProjectorPosition.lookAtpos.x, ProjectorPosition.lookAtpos.y, ProjectorPosition.lookAtpos.z</b> :
+ *			The direction in which the projecter is pointed.
+ *		</li>
+ *		<li><b>ProjectorPosition.headsUp.x, ProjectorPosition.headsUp.y, ProjectorPosition.headsUp.z</b> :
+ *			The up vector for the projector.
+ *		</li>
+ *		<li><b>ProjectorPosition.pos.x, ProjectorPosition.pos.y, ProjectorPosition.pos.z</b> :
+ *			The position of the projector.
+ *		</li>
+ *		<li><b>displayHUD</b> : True to show the results of the render channels in a heads up
+ *			display, False to not show them.
+ *		</li>
+ *		<li><b>resWidth</b> : The width of the projector screen
+ *		</li>
+ *		<li><b>resHeight</b> : The height of the projector screen.
+ *		</li>
+ * </ul>
+ * From OmniMap :
+ * <ul>
+ *		<li><b>glViewportX</b> : The X value of the lower left corner of the OpenGL viewport rectangle, in pixels.
+ *		</li>
+ *		<li><b>glViewportY</b> : The y value of the lower left hand corner of the OpenGL viewport
+ *		</li>
+ *		<li><b>glViewportWidth</b> : The width of the OpenGL viewport
+ *		</li>
+ *		<li><b>glViewportHeight</b> : The height of the OpenGL viewport
+ *		</li>
+ *		<li><b>GL_STATE_CLEAR_AT_STARTFRAME</b> : True to have the OmniMap library clear
+ *			the screen before calling the applications render function.
+ *		</li>
+ *		<li><b>GL_STATE_glDisable_GL_DEPTH_TEST</b> : True to have the OmniMap library disable OpenGL
+ *			depth testing.
+ *		</li>
+ *		<li><b>GL_STATE_glDepthMask_FALSE</b> : True to have the OpenGL depth mask set to false.
+ *		</li>
+ *		<li><b>SAVE_AFTER_EVERY_MESSAGE</b>
+ *		</li>
+ *	</ul>
+ */
+class OMNIMAP_API  OmniMap : public OmniMapBase
+{
+public:
+
+
+protected:
+	void OmniMap::SetUpPropertyAccess();
+
+	/*
+	void LogCppProperties(std::string precursor)
+	{
+		typedef std::list<HashTable<Property>::HashTableNode<Property> > Omnimap_CPP_PropertyList ;
+		typedef std::list<HashTable<Property>::HashTableNode<Property> > * pOmnimap_CPP_PropertyList ;
+		typedef Omnimap_CPP_PropertyList::iterator Omnimap_CPP_PropertyListItor;
+		for(int i =0; i != m_properties.GetTableSize(); i++)
+			for(Omnimap_CPP_PropertyListItor itor = m_properties.GetHashTable()[i].begin(); itor != m_properties.GetHashTable()[i].end(); itor++)
+				LogSystem()->ReportMessage("%s%s",precursor.c_str(),itor->m_key.c_str());
+	}
+	*/
+	
+
+
+
+public: // lua needs access to this
+	/**
+	 * True to have the OmniMap library clear
+	 * the screen before compositing the channel images to the spherical projection.
+	 */
+	bool GL_STATE_CLEAR_AT_STARTFRAME;
+	/**
+	 * True to have the OmniMap library disable OpenGL depth testing.
+	 */
+	bool GL_STATE_glDisable_GL_DEPTH_TEST; 
+	/**
+	 * True to have the OmniMap librarydisable OpenGL depth buffer writing.
+	 */
+	bool GL_STATE_glDepthMask_FALSE; 
+
+	/**
+	 * The X value of the lower left corner of the OpenGL viewport rectangle, in pixels.
+	 */
+	float glViewportsettings0;
+	/**
+	 * The Y value of the lower left corner of the OpenGL viewport rectangle, in pixels.
+	 */
+	float glViewportsettings1;
+	/**
+	 * The width of the OpenGL viewport rectangle, in pixels.
+	 */
+	float glViewportsettings2;
+	/**
+	 * The height of the OpenGL viewport rectangle, in pixels.
+	 */
+	float glViewportsettings3; 
+
+
+public:
+	void SetupScriptingCommands();
+	/**
+	 * Create a channel for rendering a portion of the final composited, projected image into.
+	 * In this OpenGL implementation, OmniMapChannelBase::Create_Channel returns a pointer to
+	 * an OmniMap_Channel object.
+	 * 
+	 * @param name The name of the channel.
+	 * @param res The resolution of the channel.  Default is 512.
+	 */
+	OmniMapChannelBase *Create_Channel(const char * name);
+
+
+	/**
+	 * \brief Create a screen shape for compositing and projecting the rendered channels to
+	 * the display.
+	 * 
+	 * For this implementation of the absract class OmniMapBase, 
+	 * this method creates an OmniMap_Screen_Dome object.
+	 * This enables derived implementations of the OmniMapBase
+	 * class to create customm screens derived from OmniMap_Screen.
+	 */
+	virtual OmniMap_Screen *Create_ScreenShape(const char * name);
+
+
+#ifdef OmniMap_QUAD_UPGRADE
+	void OmniMap::Create_ScreenShapeQuad(std::string name);
+#endif
+
+
+public:
+
+	/**
+	 * Construct an OmniMap object.
+	 * 
+	 * @param _resW The width of the final rendered image.
+	 * @param _resH The height of the final rendered image.
+	 * @param strStartUpScriptFile The name of the file containing the startup script for
+	 *			the OmniMap library.  On Win32 systems, the default is OmniMapConfig/omnimap_startup.lua.
+	 *			The startup file loads some Lua Support files.  The location of these files is given by the luaResDir
+	 *			parameter.  It also inlcudes two installation-specific files: omnimap_user_edit.lua, and omnimap_dome_wiz_ai.lua.
+	 *			If you decide to move the startup file, you must make sure it includes these files from the correct
+	 *			location.
+	 * @param luaResDir This is the directory that contains Lua support files.  The default is NULL, in which case
+	 *		the directory is determined by getting the Windows registry value "LuaResources" in the key 
+	 *		"SOFTWARE\Elumenati\Elumenati OmniMap API\OmniMapAPI".  In the OmniMap API release this directory is
+	 *		OmniMapAPI/LuaResources.  If the application developer whishes to move these files, this argument needs to
+	 *		be passed to the OmniMap constructor.  The path must use forward slashes as the directory separator.
+	 */
+	OmniMap::OmniMap(int _resW, int _resH, const char* strStartUpScriptFile = OMNIMAP_DEFAULT_STARTUPSCRIPT,
+		const char *luaResDir = NULL);
+	/**
+	 * Destroys an OmniMap object.  
+	 */
+	OmniMap::~OmniMap();
+	/**
+	 * Composite and draw the images rendered to the channels into the final image.  Draw the
+	 * Heads up display if displayHUD is true. When finished, PostRender
+	 * resets the OpenGL context to the way it was found before channel rendering began.
+	 */
+	void OmniMap::PostRender(); 
+
+protected:
+	void OmniMap::SetupAllShaderVaribles();
+	/**
+	 * \brief Draws the heads up display.
+	 *
+	 * The heads up display shows the each channel without projection warping 
+	 * in a small window.
+	 */
+	virtual void OmniMap::DrawHeadsUpDisplay();
+	virtual void OmniMap::LoadAndPush_HUD_Matricies();
+	virtual void OmniMap::LoadAndPush_ProjectiveTexturing_Matricies();
+	virtual void OmniMap::PopMatricies();
+	virtual void OmniMap::Clear();
+	///////////////////////////////////////
+};
+
+
+OMNIMAP_API  OmniMap_Log*  LogSystem();
+/////////////////////////////////////////////////////////////////////////////////
+
+//////////
+// todo add a map of lua definible GLUniformVar*
+//////////
+
+
+
+

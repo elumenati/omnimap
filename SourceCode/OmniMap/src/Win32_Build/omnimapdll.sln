@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual C++ Express 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OmnimapDLL", "omnimapdll.vcproj", "{12EAF859-CD75-411B-A85C-E06EDCC67726}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "omnimapdll", "omnimapdll.vcxproj", "{12EAF859-CD75-411B-A85C-E06EDCC67726}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassDocs", "ClassDocs.vcproj", "{31F711FF-938B-4CBB-823A-B8EA06683128}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassDocs", "ClassDocs.vcxproj", "{31F711FF-938B-4CBB-823A-B8EA06683128}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
