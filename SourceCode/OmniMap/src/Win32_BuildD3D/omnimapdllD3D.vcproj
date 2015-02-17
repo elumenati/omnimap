@@ -47,7 +47,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="../../include;../../include/easybmp;../common"
+				AdditionalIncludeDirectories="../../include;../../include/easybmp;../common;../../../../NeededDependencies\Spout\SpoutSDK\Source"
 				PreprocessorDefinitions="WIN32;_NDEBUG;_WINDOWS;OMNIMAP_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_UNICODE;UNICODE;GLEW_BUILD;VERTEX_BUFFER;USE_PBUFFER"
 				BasicRuntimeChecks="0"
 				RuntimeLibrary="2"
@@ -70,7 +70,7 @@
 				Name="VCLinkerTool"
 				RegisterOutput="false"
 				AdditionalOptions="/NOENTRY"
-				AdditionalDependencies="msvcrt.lib Delayimp.lib dxerr.lib dxguid.lib d3dx10.lib d3d10.lib  d3dx9.lib d3d9.lib glew32s.lib  opengl32.lib glu32.lib"
+				AdditionalDependencies="msvcrt.lib Delayimp.lib dxerr.lib dxguid.lib d3dx10.lib d3d10.lib  d3dx9.lib d3d9.lib glew32s.lib  opengl32.lib glu32.lib ../../../../NeededDependencies\Spout\SpoutSDK\lib\spout.lib"
 				ShowProgress="0"
 				OutputFile="ReleaseDLL/OmniMap.dll"
 				LinkIncremental="1"
@@ -1174,6 +1174,18 @@
 					>
 				</File>
 			</Filter>
+		</Filter>
+		<Filter
+			Name="Spout"
+			>
+			<File
+				RelativePath="..\omnimap\spout\OmniSpout.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\omnimap\spout\OmniSpout.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

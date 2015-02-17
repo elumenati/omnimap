@@ -239,7 +239,7 @@ void myprint(std::string p)
 	
 	LogSystem()->ReportMessage(p.c_str());
 }
-LuaGlue( Debug_Print)//extern "C" int Debug_Print(lua_State *L) 
+LuaGlue( Debug_Print)
 {
 	int n = (int)LuaReference->GetNumberArgument(0,0);
 	for(int i = 1; i<=n ;i++)
