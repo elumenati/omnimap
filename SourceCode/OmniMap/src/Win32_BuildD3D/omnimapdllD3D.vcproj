@@ -998,6 +998,10 @@
 				Name="Resource Files"
 				>
 				<File
+					RelativePath="..\omnimap\Shaders\Frag6Shader.h"
+					>
+				</File>
+				<File
 					RelativePath="..\omnimap\shaders\MirrorFragShader.h"
 					>
 				</File>
@@ -1076,6 +1080,28 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath="..\omnimap\Shaders\omnimap_fragment6.frag"
+					>
+					<FileConfiguration
+						Name="ReleaseDLL|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="bash -c &quot;od -v -A n -t x1 ../omnimap/Shaders/omnimap_fragment6.frag | sed -f ../omnimap/Shaders/sedfile6.fs &gt; ../omnimap/Shaders/Frag6Shader.h&quot;&#x0D;&#x0A;"
+							Outputs="../omnimap/Shaders/Frag6Shader.h"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="DebugDLL|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="bash -c &quot;od -v -A n -t x1 ../omnimap/Shaders/omnimap_fragment6.frag | sed -f ../omnimap/Shaders/sedfile6.fs &gt; ../omnimap/Shaders/Frag6Shader.h&quot;&#x0D;&#x0A;"
+							Outputs="../omnimap/Shaders/Frag6Shader.h"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
 					RelativePath="..\omnimap\Shaders\omnimap_fragmentCobra.frag"
 					>
 					<FileConfiguration
@@ -1128,6 +1154,28 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath="..\omnimap\Shaders\omnimap_vertex6.vert"
+					>
+					<FileConfiguration
+						Name="ReleaseDLL|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="bash -c &quot;od -v -A n -t x1 ../omnimap/Shaders/omnimap_vertex6.vert | sed -f ../omnimap/Shaders/sedfile6.vs  &gt; ../omnimap/Shaders/Vert6Shader.h&quot;&#x0D;&#x0A;"
+							Outputs="../omnimap/Shaders/Vert6Shader.h"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="DebugDLL|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="bash -c &quot;od -v -A n -t x1 ../omnimap/Shaders/omnimap_vertex6.vert | sed -f ../omnimap/Shaders/sedfile6.vs  &gt; ../omnimap/Shaders/Vert6Shader.h&quot;&#x0D;&#x0A;"
+							Outputs="../omnimap/Shaders/Vert6Shader.h"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
 					RelativePath="..\omnimap\Shaders\omnimap_vertexCobra.vert"
 					>
 					<FileConfiguration
@@ -1171,6 +1219,10 @@
 				</File>
 				<File
 					RelativePath="..\omnimap\Shaders\sedfileCobra.vs"
+					>
+				</File>
+				<File
+					RelativePath="..\omnimap\Shaders\Vert6Shader.h"
 					>
 				</File>
 			</Filter>

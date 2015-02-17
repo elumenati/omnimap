@@ -113,6 +113,8 @@ public:
 
 	void setUseMirror(bool _useMirror) { useMirror = _useMirror; }
 
+	void setUse6Channel(bool _use6Channel) { use6Channel = _use6Channel; }
+
 	
 
 #ifdef ELUMENATI_INTERNAL
@@ -153,6 +155,7 @@ protected:
 	bool StencilMask_enable;
 
 	bool useMirror;
+	bool use6Channel;
 
 	
 
@@ -395,6 +398,7 @@ public: // lua needs access to this
 	OmniVec3 mirrorProjectorUp;
 	
 
+	bool use6Channel;
 
 
 public:
