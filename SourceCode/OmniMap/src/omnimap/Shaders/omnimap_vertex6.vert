@@ -41,8 +41,8 @@ void main()
 		gl_TexCoord[1] = (gl_TextureMatrix[1]) * gl_Vertex;
 		gl_TexCoord[2] = (gl_TextureMatrix[2]) * gl_Vertex;
 		gl_TexCoord[3] = (gl_TextureMatrix[3]) * gl_Vertex;
-		gl_TexCoord[4] = (gl_TextureMatrix[4]) * gl_Vertex;
-		gl_TexCoord[5] = (gl_TextureMatrix[5]) * gl_Vertex;
+		//gl_TexCoord[4] = (gl_TextureMatrix[4]) * gl_Vertex;
+		//gl_TexCoord[5] = (gl_TextureMatrix[5]) * gl_Vertex;
 	}
 	else// (2) b
 	{
@@ -85,8 +85,8 @@ void main()
 		gl_TexCoord[1] = (gl_TextureMatrix[1]) * gl_Vertex;
 		gl_TexCoord[2] = (gl_TextureMatrix[2]) * gl_Vertex;
 		gl_TexCoord[3] = (gl_TextureMatrix[3]) * gl_Vertex;
-		gl_TexCoord[4] = (gl_TextureMatrix[4]) * gl_Vertex;
-		gl_TexCoord[5] = (gl_TextureMatrix[5]) * gl_Vertex;
+		//gl_TexCoord[4] = (gl_TextureMatrix[4]) * gl_Vertex;
+		//gl_TexCoord[5] = (gl_TextureMatrix[5]) * gl_Vertex;
 
 }
 

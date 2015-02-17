@@ -540,6 +540,8 @@ OmniMapBase::OmniMapBase(int _resW, int _resH,const char* strStartUpScriptFile, 
 	shaders = NULL;
 	char *defaultConfig = NULL;
 	CobraWarpWithTrueDimension=0;
+	
+	MaxFPCChannels = 4;
 	//shaderPreprocessorMacros="";
 	//protector.unlock("TheElumenati","5dd87a69");
 	
@@ -990,7 +992,9 @@ void OmniMapBase::BindAllChannelTextures()
 	int index=0 ;
 	for(String_OmniMap_Channel_Map_itor itr = OmniMap_GLOBAL_Channels.begin();	itr != OmniMap_GLOBAL_Channels.end();itr++, index++)
 	{
-		itr->second->BindTexture(index);
+		if(index<MaxFPCChannels){
+			itr->second->BindTexture(index);
+		}
 	}
 }
 
@@ -999,7 +1003,9 @@ void OmniMapBase::UnBindAllChannelTextures()
 	int index=0;
 	for(String_OmniMap_Channel_Map_itor itr = OmniMap_GLOBAL_Channels.begin();	itr != OmniMap_GLOBAL_Channels.end();itr++, index++)
 	{
-		itr->second->UnbindTexture(index);
+		if(index<MaxFPCChannels){
+			itr->second->UnbindTexture(index);
+		}
 	}
 }
 
