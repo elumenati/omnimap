@@ -17,6 +17,7 @@ public:
 	bool bInitialized;                // Initialization result
 	bool bMemoryShare;                // Texture share compatibility
 	static int fbindex;
+	bool needsNewName;
 	OmniSpout(char * name){
 		LogSystem()->ReportMessage("Building Spout");
 		LogSystem()->ReportError("Building Spout");
@@ -32,6 +33,7 @@ public:
 		}else{
 			sprintf(sendername,"%s%d",name,fbindex);
 		}
+		needsNewName=true;
 		fbindex++;
 	}
 
@@ -102,6 +104,10 @@ public:
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glBindTexture(GL_TEXTURE_2D, 0);
+	}
+	void SetSenderName(const char *newsenderName){
+			sprintf(sendername,"%s",newsenderName);
+			needsNewName = false;
 	}
 	private:
 	GLuint sendertexture;  // Local OpenGL texture used for sharing main view

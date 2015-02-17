@@ -873,7 +873,8 @@ void OmniMapBase::BaseCreateChannel(const char * name)
 	}
 
 	OmniMap_GLOBAL_Channels[name] = Create_Channel(name);
-
+	OmniMap_GLOBAL_Channels[name]->ChannelMetaData.AddSTRING("MYNAME");
+	OmniMap_GLOBAL_Channels[name]->ChannelMetaData.IndexDataMap("MYNAME")->Set(name);
 }
 
 

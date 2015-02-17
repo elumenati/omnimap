@@ -1515,7 +1515,7 @@ void OmniMap::PostRender()
 	for (int i = 0; i < this->GetNumChannels(); i++) {
 		OmniMap_Channel *channel = (OmniMap_Channel*)this->GetChannel(i);
 		if(channel !=0 && channel->prc_RenderChannel!=0) {
-			channel->prc_RenderChannel->UpdateSpout();
+			channel->prc_RenderChannel->UpdateSpout(channel);
 		}
 	}
 }

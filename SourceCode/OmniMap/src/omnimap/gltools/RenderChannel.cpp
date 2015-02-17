@@ -67,7 +67,7 @@ extern bool useSpoutInRenderChannels;
 
 	// BUILD SPOUT
 	if(useSpoutInRenderChannels ){
-			LogSystem()->ReportMessage("useSpoutInRenderChannels");
+		LogSystem()->ReportMessage("useSpoutInRenderChannels");
 		omniSpout = new OmniSpout("RenderChannel");
 	}else{
 		omniSpout =0;
@@ -185,8 +185,14 @@ RenderChannel::endRenderToChannel()
 		backBuffer->CopyFB2Texture();
 }
 
-void RenderChannel::UpdateSpout(){
+void RenderChannel::UpdateSpout(OmniMapChannelBase * channel){
 	if(omniSpout!=0){
+		if(omniSpout->needsNewName){
+			LogSystem()->ReportMessage("BACK_BUFFER not yet supported\n");
+			omniSpout->SetSenderName(channel->ChannelMetaData.IndexDataMap("MYNAME")->GetSTRING());
+		}
+
+
 		if(target == OmniMapChannelBase::FRAME_BUFFER_OBJECT){
 			omniSpout->Send(fbuffer->getOpenGL_TextureID(0),fbuffer->GetWidth(),fbuffer->GetHeight());
 		} else if(target == OmniMapChannelBase::PBUFFER){

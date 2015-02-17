@@ -83,7 +83,7 @@ private:
 	OmniSpout *omniSpout;
 	
 public:
-	void RenderChannel::UpdateSpout();
+	void RenderChannel::UpdateSpout(OmniMapChannelBase * channel);
 };
 
 #endif
