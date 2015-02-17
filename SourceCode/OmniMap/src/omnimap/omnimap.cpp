@@ -19,8 +19,7 @@
 
 #include "Shaders/VertShader.h"
 #include "Shaders/FragShader.h"
-#include "Shaders/Vert6Shader.h"
-#include "Shaders/Frag6Shader.h"
+
 
 #include "Shaders/VertShaderCobra.h"
 #include "Shaders/FragShaderCobra.h"
@@ -321,19 +320,11 @@ if(CobraWarpWithTrueDimension >0){
 				vertexShaderSrc[i] = (char) vsCobra[i];
 			}
 		} else {
-			 if (use6Channel){
-				vertexShaderSrc = new char[(sizeof(vs6)/sizeof(int))+1];	
-				for (i = 0; i < sizeof(vs6)/sizeof(int); i++)
-				{
-					vertexShaderSrc[i] = (char) vs6[i];
-				}
-			 }else{
-				vertexShaderSrc = new char[(sizeof(vs)/sizeof(int))+1];	
-				for (i = 0; i < sizeof(vs)/sizeof(int); i++)
-				{
-					vertexShaderSrc[i] = (char) vs[i];
-				}
-			 }
+			vertexShaderSrc = new char[(sizeof(vs)/sizeof(int))+1];	
+			for (i = 0; i < sizeof(vs)/sizeof(int); i++)
+			{
+				vertexShaderSrc[i] = (char) vs[i];
+			}
 		}
 		vertexShaderSrc[i] = (char) 0;
 
@@ -368,26 +359,17 @@ if(CobraWarpWithTrueDimension >0){
 					fragmentShaderSrc[i] = (char) mirror_fs[i];	
 				}
 			} else if(1 <= CobraWarpWithTrueDimension ){
-fragmentShaderSrc = new char[(sizeof(fsCobra)/sizeof(int))+1];
+				fragmentShaderSrc = new char[(sizeof(fsCobra)/sizeof(int))+1];
 				for (i = 0; i < sizeof(fsCobra)/sizeof(int); i++)
 				{
 					fragmentShaderSrc[i] = (char) fsCobra[i];	
 				}
 
 			} else {
-
-				 if (use6Channel){
-					fragmentShaderSrc = new char[(sizeof(fs6)/sizeof(int))+1];
-					for (i = 0; i < sizeof(fs6)/sizeof(int); i++)
-					{
-						fragmentShaderSrc[i] = (char) fs6[i];
-					}
-				}else{
-					fragmentShaderSrc = new char[(sizeof(fs)/sizeof(int))+1];
-					for (i = 0; i < sizeof(fs)/sizeof(int); i++)
-					{
-						fragmentShaderSrc[i] = (char) fs[i];
-					}
+				fragmentShaderSrc = new char[(sizeof(fs)/sizeof(int))+1];
+				for (i = 0; i < sizeof(fs)/sizeof(int); i++)
+				{
+					fragmentShaderSrc[i] = (char) fs[i];
 				}
 			}
 
@@ -413,7 +395,7 @@ fragmentShaderSrc = new char[(sizeof(fsCobra)/sizeof(int))+1];
 					fragmentShaderSrc[i] = (char) mirror_fs[i];	
 				}
 			} else if(1 <= CobraWarpWithTrueDimension ){
-fragmentShaderSrc = new char[(sizeof(fsCobra)/sizeof(int))+1];
+				fragmentShaderSrc = new char[(sizeof(fsCobra)/sizeof(int))+1];
 				for (i = 0; i < sizeof(fsCobra)/sizeof(int); i++)
 				{
 					fragmentShaderSrc[i] = (char) fsCobra[i];	
@@ -878,7 +860,6 @@ void OmniMap::SetUpPropertyAccess()
 	access.Register("MirrorProjectorUp_y", &mirrorProjectorUp.y);
 	access.Register("MirrorProjectorUp_z", &mirrorProjectorUp.z);
 
-	access.Register("Use6Channel", &use6Channel);
 	
 #ifdef USE_DOMEVIEW
 	access.Register("ApplicationCode", &ApplicationCode);
@@ -964,7 +945,6 @@ LogSystem()->ReportMessage("loading shader %s",fragShader.c_str());
 	std::string preludeStr = prelude;
 	shaders->setShadersPrelude(preludeStr.c_str(), preludeStr.c_str());
 	((OmniMap_Shader *) shaders)->setUseMirror(useMirror);
-	((OmniMap_Shader *) shaders)->setUse6Channel(use6Channel);
 	shaders->init();
 
 	this->LoadBGTexture();
@@ -1045,7 +1025,6 @@ OmniMap::OmniMap(int _resW, int _resH,const char* strStartUpScriptFile, const ch
 	GL_STATE_glDisable_GL_DEPTH_TEST =OMNIMAP_DEFAULT_GL_STATE_glDisable_GL_DEPTH_TEST;
 	GL_STATE_glDepthMask_FALSE = OMNIMAP_DEFAULT_GL_STATE_glDepthMask_FALSE;
 	useMirror = false;
-	use6Channel = false;
 
 	SetUpPropertyAccess();
 	glGetError();
