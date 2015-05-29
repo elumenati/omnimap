@@ -48,5 +48,7 @@ pages = {},
 }
 ```
 # Where to find more information
-[http://www.elumenati.com/](http://www.elumenati.com/)
-![Logo](http://www.elumenati.com/wp-content/themes/elumenati/images/logo.png)
+For more information on pmmersive projection systems please visit the Elumenati homepage.
+<a href="http://www.elumenati.com/" rel="Elumenati Logo">![Logo](http://www.elumenati.com/wp-content/themes/elumenati/images/logo.png)</a>
+http://www.elumenati.com/
+
