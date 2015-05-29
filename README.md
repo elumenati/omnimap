@@ -1,4 +1,4 @@
-![Panorama](http://www.clementshimizu.com/wp-content/uploads/2008/12/4mpanodome1.jpg)
+﻿![Panorama](http://www.clementshimizu.com/wp-content/uploads/2008/12/4mpanodome1.jpg)
 # Elumenati OmniMap™ Perspective Projection Mapping toolkit for Fisheye based projection systems
 By Dr. Clement Shimizu, Dr. D'nardo Colucci, and Jim Terhorst
 
@@ -9,7 +9,6 @@ Typical video projection systems display rectangular images on flat screens. Opt
 # Attention Unity3D Developers
 ![Unity3D Projection Mapping](http://www.clementshimizu.com/wp-content/uploads/2014/08/Pacman-3D-Projection-Mapped-1024x576.jpg)
 Elumenati built a special projection mapping kit for Unity3D based applications that is available on the asset store.
-*     If you are building a new application, this is the easiest path to dome enabled visualizations.
 *     Find out more here: http://www.elumenati.com/products/software/omnity/
 *     Asset store link: http://u3d.as/content/the-elumenati/omnity-projection-mapping-for-immersive-environments/4u3
 *     Intro and tutorial video
@@ -19,6 +18,8 @@ Elumenati built a special projection mapping kit for Unity3D based applications 
 
 # What version of Elumenati OmniMap should I use? 
 This repository contains the source code needed to build the Omnity.dll.  You will only need to do this if you need to get access to the way Omnity works under the hood or need to recompile it.
+
+If you are a Unity3D developer or are building a new application with we recommend using Omnity for Unity3D linked in the previous section.  This is the easiest path to dome enabled visualizations.
 
 Most OpenGL and DirectX developers should the prebuilt binary Omnity.DLL in thier project along with the needed runtime environment.  This works for most application developers.
 * Download the installer here:
