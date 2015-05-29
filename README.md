@@ -1,4 +1,4 @@
-![Panorama](https://dl.dropboxusercontent.com/content_link/BdZaT6B3zL56VUIG0xsQCzKYFzbLCFLW7omj2OUL9aF6OidIOyVE5uxt1ig8teDw)
+![Panorama](http://www.clementshimizu.com/wp-content/uploads/2008/12/4mpanodome1.jpg)
 # Elumenati OmniMap™ Perspective Projection Mapping
 By Clement Shimizu, D'nardo Colucci, and Jim Terhorst
 
