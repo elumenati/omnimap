@@ -21,8 +21,10 @@ This repository contains the source code needed to build the Omnity.dll.  You wi
 
 If you are a Unity3D developer or are building a new application with we recommend using Omnity for Unity3D linked in the previous section.  This is the easiest path to dome enabled visualizations.
 
-Most OpenGL and DirectX developers should the prebuilt binary Omnity.DLL in thier project along with the needed runtime environment.  This works for most application developers.
+Most OpenGL and DirectX developers should the prebuilt binary Omnity.dll in thier project along with the needed runtime environment.  This works for most application developers.
 * Download the installer here:
+  * http://www.elumenati.com/files/OmniMapAPI_2_0_3Final.zip
+* More Info
   * http://www.elumenati.com/products/software/omnimap-api/
   * Make sure to read the Omnimap API integration guide
 
