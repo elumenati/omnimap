@@ -1,8 +1,7 @@
 
 ![Omnimap](http://www.clementshimizu.com/wp-content/uploads/2008/12/Elumenati-Magic-Planet-Dome-Spin.gif)
 # Elumenati OmniMap™ Perspective Projection Mapping
-Clement Shimizu, Jim Terhorst
-Done under D'nardo Colucci for the Elumenati
+By Clement Shimizu, D'nardo Colucci, and Jim Terhorst
 
 Typical video projection systems display rectangular images on flat screens. Optical and perspective correction techniques must be employed to produce undistorted output on non-planar display surfaces. A two-pass algorithm, called projective perspective mapping, is a solution well suited for use with commodity graphics hardware. This algorithm is implemented in the OmniMap API providing an extensible, reusable C++ interface for porting 3D engines to wide field-of-view, non-planar displays. This API can be easily integrated into a wide variety of 3D applications.
 
@@ -34,20 +33,21 @@ To help you get on the correct track, we list a few options here:
 publication that describes the Perspective Projection Mapping algorthim 
 
 # Note for Accedemic Researchers
-For those intrested in learning more about the Projective Perspective Mapping algorithm can learn more from our accedimic publication:
+For those intrested in learning more about the algorithm can learn more from our academic publication:
 
+Projective Perspective Mapping
 [http://www.clementshimizu.com/wp-content/uploads/2014/08/Omnimap-Projection-Mapping-Using-Fisheye-Lens.pdf](http://www.clementshimizu.com/wp-content/uploads/2014/08/Omnimap-Projection-Mapping-Using-Fisheye-Lens.pdf)
 
-Accedemic researchers looking to cite the work please use the following BIBTEX citation of the ISVC Publication.
-`BIBTEX CITATION
+BIBTEX CITATION
+```
 @InProceedings{shimizu0009,
 title = {OmniMap: Projective Perspective Mapping API for Non-planar Immersive Display Surfaces},
 author = {Clement Shimizu and Jim Terhorst and David McConville},
 booktitle = {ISVC '08},
 year = {2008},
 pages = {},
-}`
-
+}
+```
 # What OmniMap doesn't work for us?
 If 
 * Please contact Elumenati with your custom need
