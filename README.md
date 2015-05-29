@@ -1,4 +1,3 @@
-
 ![Omnimap](http://www.clementshimizu.com/wp-content/uploads/2008/12/Elumenati-Magic-Planet-Dome-Spin.gif)
 # Elumenati OmniMap™ Perspective Projection Mapping
 By Clement Shimizu, D'nardo Colucci, and Jim Terhorst
@@ -48,8 +47,5 @@ year = {2008},
 pages = {},
 }
 ```
-# What OmniMap doesn't work for us?
-If 
-* Please contact Elumenati with your custom need
-* Roll your own from scratch
-  * If you are looking to rebuild the features of Omnimap without using Omnity, you can benifit from reading the accedemic 
+# Where to find more information
+[http://www.elumenati.com/](http://www.elumenati.com/)
