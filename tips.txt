@@ -1,0 +1,20 @@
+A few notes
+
+Check out the documenation
+* Docs\BuildingOmniMap.pdf : how to build the dll from source code
+* Docs\Omnimap_API_Integration.pdf : an integration guide (how to add the dll to a project)
+* Docs\Omnimap_API_Configuration.pdf : how to configure settings
+* Docs\ISVC_Omnimap_Perspective_Projection_Mapping.pdf : the research paper that describes the algorithm
+
+An installer for the last release (a bit out of date) can be found here:
+Packaged\installer\OmniMapAPI_2_0_3Final.zip
+
+the rest of the packaged folder has the latest dll, header, and lua files
+Packaged\
+
+
+There are a few project solutions for various platforms, but you probabbly want to use:
+OmniMap\src\Win32_BuildD3D\omnimapdllD3D.sln
+Even though it says D3D it builds the dll that works in D3D and OpenGL for windows.
+
+In the past when I do development work I will run the installer and then if I want to modify the DLL or LUA config files I will test it in the installed folder.
