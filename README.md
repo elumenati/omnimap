@@ -29,6 +29,8 @@ Most OpenGL and DirectX developers should the prebuilt binary Omnity.DLL in thie
 If the above doesn't work, for example your application uses custom rendering loops and manages it's own camera/render textures, then the process of dome enabling will require the developer to take additional steps.  One option is to use the pre built Omnimap.dll/Omnimap.h from the installer and derive a custom OmniMap class from one of the exposed classes in the application's source code.
 
 # The Perspective Projection Mapping Algorthim
+![Overview Image](http://www.clementshimizu.com/wp-content/uploads/2008/12/overview_image.jpg)
+
 For those interested in learning more about the Perspective Projection Mapping algorthim can learn more from our academic publication.  See the citation below.
 
 [http://www.clementshimizu.com/wp-content/uploads/2014/08/Omnimap-Projection-Mapping-Using-Fisheye-Lens.pdf](http://www.clementshimizu.com/wp-content/uploads/2014/08/Omnimap-Projection-Mapping-Using-Fisheye-Lens.pdf)
