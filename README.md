@@ -1,6 +1,6 @@
 ![Panorama](http://www.clementshimizu.com/wp-content/uploads/2008/12/4mpanodome1.jpg)
 # Elumenati OmniMap™ Perspective Projection Mapping toolkit for Fisheye based projection systems
-By Clement Shimizu, D'nardo Colucci, and Jim Terhorst
+By Dr. Clement Shimizu, Dr. D'nardo Colucci, and Jim Terhorst
 
 Typical video projection systems display rectangular images on flat screens. Optical and perspective correction techniques must be employed to produce undistorted output on non-planar display surfaces. A two-pass algorithm, called projective perspective mapping, is a solution well suited for use with commodity graphics hardware. This algorithm is implemented in the OmniMap API providing an extensible, reusable C++ interface for porting 3D engines to wide field-of-view, non-planar displays. This API can be easily integrated into a wide variety of 3D applications.
 <p align="center">
@@ -18,19 +18,17 @@ Elumenati built a special projection mapping kit for Unity3D based applications 
 *     Advanced multiprojector edge blending upgrades available.
 
 # What version of Elumenati OmniMap should I use? 
+This repository contains the source code needed to build the Omnity.dll.  You will only need to do this if you need to get access to the way Omnity works under the hood or need to recompile it.
+
 Most OpenGL and DirectX developers should the prebuilt binary Omnity.DLL in thier project along with the needed runtime environment.  This works for most application developers.
 * Download the installer here:
   * http://www.elumenati.com/products/software/omnimap-api/
   * Make sure to read the Omnimap API integration guide
 
-If the above doesn't work, for example your application uses custom rendering loops and manages it's own camera/render textures, then the process of dome enabling will require the developer to take additional steps.
+If the above doesn't work, for example your application uses custom rendering loops and manages it's own camera/render textures, then the process of dome enabling will require the developer to take additional steps.  One option is to use the pre built Omnimap.dll/Omnimap.h from the installer and derive a custom OmniMap class from one of the exposed classes in the application's source code.
 
-Another option is to use the pre built Omnimap.dll/Omnimap.h from the installer and derive a custom OmniMap class from one of the exposed classes in the application's source code.
-
-This repository contains the source code needed to build the Omnity.dll.  You will only need to do this if you need to get deep access to the way Omnity works.
-
-# Attention Academic Researchers
-For those interested in learning more about the Perspective Projection Mapping algorthim can learn more from our academic publication:
+# The Perspective Projection Mapping Algorthim
+For those interested in learning more about the Perspective Projection Mapping algorthim can learn more from our academic publication.  See the citation below.
 
 [http://www.clementshimizu.com/wp-content/uploads/2014/08/Omnimap-Projection-Mapping-Using-Fisheye-Lens.pdf](http://www.clementshimizu.com/wp-content/uploads/2014/08/Omnimap-Projection-Mapping-Using-Fisheye-Lens.pdf)
 
