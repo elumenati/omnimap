@@ -3,7 +3,8 @@
 By Clement Shimizu, D'nardo Colucci, and Jim Terhorst
 
 Typical video projection systems display rectangular images on flat screens. Optical and perspective correction techniques must be employed to produce undistorted output on non-planar display surfaces. A two-pass algorithm, called projective perspective mapping, is a solution well suited for use with commodity graphics hardware. This algorithm is implemented in the OmniMap API providing an extensible, reusable C++ interface for porting 3D engines to wide field-of-view, non-planar displays. This API can be easily integrated into a wide variety of 3D applications.
-![Omnimap](http://www.clementshimizu.com/wp-content/uploads/2008/12/Elumenati-Magic-Planet-Dome-Spin.gif)
+
+<img align="center" src="http://www.clementshimizu.com/wp-content/uploads/2008/12/Elumenati-Magic-Planet-Dome-Spin.gif" >
 # Note to Unity3D developers
 ![Unity3D Projection Mapping](http://www.clementshimizu.com/wp-content/uploads/2014/08/Pacman-3D-Projection-Mapped-1024x576.jpg)
 Elumenati built a special projection mapping kit that is availble on the Unity3D asset store
@@ -48,7 +49,8 @@ pages = {},
 }
 ```
 # Where to find more information
-For more information on pmmersive projection systems please visit the Elumenati homepage.
+For more information on immersive projection systems please visit the Elumenati homepage:
 <a href="http://www.elumenati.com/" rel="Elumenati Logo">![Logo](http://www.elumenati.com/wp-content/themes/elumenati/images/logo.png)</a>
+
 http://www.elumenati.com/
 
