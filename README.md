@@ -53,6 +53,7 @@ pages = {},
 For more information on immersive projection systems please visit the Elumenati homepage:
 <p align="center">
 <a href="http://www.elumenati.com/" rel="Elumenati Logo">![Logo](http://www.elumenati.com/wp-content/themes/elumenati/images/logo.png)</a>
-
+</p>
+<p align="center">
 http://www.elumenati.com/
 </p>
