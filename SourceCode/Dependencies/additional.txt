@@ -1,3 +1,19 @@
-Omnimap also depends on:
-DirectX SDK -> http://msdn.microsoft.com/en-us/library/ee663275.aspx
-Effects11 -> https://github.com/Microsoft/FX11
+==============================
+===Omnimap also depends on ===
+==============================
+* DirectX SDK -> http://msdn.microsoft.com/en-us/library/ee663275.aspx
+(Using june 2010)
+https://www.microsoft.com/en-us/download/confirmation.aspx?id=6812
+
+* Effects11 -> https://github.com/Microsoft/FX11
+(You may not need this.)
+
+==============================
+===Visual Studio 2008 users===
+==============================
+
+* ALSO Download Visual Studio 2008 Feature Pack
+https://www.microsoft.com/en-us/download/confirmation.aspx?id=6922
+
+* ALSO Download Visual Studio 2008 Service Pack 1
+https://www.microsoft.com/en-us/download/confirmation.aspx?id=10986
