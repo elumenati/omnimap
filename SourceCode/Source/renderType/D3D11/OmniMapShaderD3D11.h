@@ -4,6 +4,11 @@
 #include <d3dx9math.h>
 #include <d3d11.h>
 #include <d3dx11.h>
+// ADD TO INCLUDE PATH
+//C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Samples\C++\Effects11\Inc 
+// ADD TO LIB PATH
+//C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Samples\C++\Effects11\Release
+// also you must compile the sln file in effects 11 as release
 #include <d3dx11effect.h>
 #include <dxerr.h>
 

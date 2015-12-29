@@ -1,0 +1,12 @@
+#Ignore files build by Visual Studio
+SourceCode/OmniMap/src/Win32_BuildD3D/DebugDLL/
+SourceCode/OmniMap/src/Win32_BuildD3D/ReleaseDLL/
+SourceCode/Projects/Win/VS2008/Debug/
+SourceCode/Projects/Win/VS2008/Release/
+SourceCode/Projects/Win/VS2008/OmniMap.ncb
+SourceCode/Projects/Win/VS2008/OmniMap.suo
+SourceCode/Projects/Win/VS2008/OmniMap.vcproj.MBCS.clement.user
+SourceCode/OmniMap/src/Win32_BuildD3D/ClassDocs.vcproj.MBCS.clement.user
+SourceCode/OmniMap/src/Win32_BuildD3D/omnimapdllD3D.ncb
+SourceCode/OmniMap/src/Win32_BuildD3D/omnimapdllD3D.suo
+SourceCode/OmniMap/src/Win32_BuildD3D/omnimapdllD3D.vcproj.MBCS.clement.user

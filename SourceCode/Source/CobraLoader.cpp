@@ -2,8 +2,6 @@
 #include <OM_ErrorHandling.h>
 #include <string>
 
-
-
 static HMODULE _cobraModule = NULL;
 
 NFMemoryAccessInit_Typedef NFMemoryAccessInitFunc = NULL;
@@ -22,9 +20,10 @@ int loadCobraInterface(char *pathToDll) {
   EH_DECLARE;
 
   if (pathToDll == NULL) finalPath = ".\\";
-  else finalPath = pathToDll + "\\";
+  else finalPath = std::string(pathToDll)+ "\\";
 
-  EH_Ptr(_cobraModule = LoadLibrary(pathToDll + "NFDistorterInterface.dll"));
+  /*
+  EH_Ptr(_cobraModule = LoadLibrary(finalPath + "NFDistorterInterface.dll"));
   EH_Ptr(NFMemoryAccessInitFunc = (NFMemoryAccessInit_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessInit"));
   EH_Ptr(NFMemoryAccessCloseFunc = (NFMemoryAccessClose_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessClose"));
   EH_Ptr(NFMemoryAccessTestChangeFunc = (NFMemoryAccessTestChange_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessTestChange"));
@@ -34,7 +33,7 @@ int loadCobraInterface(char *pathToDll) {
   EH_Ptr(NFMemoryAccessReleaseLockFunc = (NFMemoryAccessReleaseLock_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessReleaseLock"));
 
   EH_OnError() {}
-
+*/
   return EH_ERRORCODE;
 }
 

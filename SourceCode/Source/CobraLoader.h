@@ -1,5 +1,5 @@
 #pragma once
-
+#include <windows.h>
 #include <NFDistorterInterface.h>
 
 extern NFMemoryAccessInit_Typedef NFMemoryAccessInitFunc;
