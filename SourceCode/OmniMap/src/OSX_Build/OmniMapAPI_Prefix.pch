@@ -1,5 +1,0 @@
-//
-// Prefix header for all source files of the 'OmniMapAPI' target in the 'OmniMapAPI' project.
-//
-
-#include <Carbon/Carbon.h>

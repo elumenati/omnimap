@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{12EAF859-CD75-411B-A85C-E06EDCC67726}</ProjectGuid>
+    <RootNamespace>OmniMap</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Properties\DllRelease32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Properties\DllDebug32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Properties\DllRelease64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Properties\DllDebug64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../../../../Sdk/Bin/Win/32Bits/\</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>../../../../Sdk/Bin/Win/64Bits/\</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../../../../Sdk/Bin/Win/32Bits/\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../../../../Sdk/Bin/Win/64Bits/\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../Source;../../../Source/propertySet;../../../Source/shapes;../../../Source/renderType;../../../Dependencies;../../../Dependencies/Glew-1.9.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OMNIMAP_EXPORTS;GLEW_STATIC;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2008/32Bits/$(ProjectName)D.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40echo off
+set SOURCE_PATH=..\..\..\Source
+set DEST_PATH=..\..\..\..\Sdk\Include
+
+xcopy "%25SOURCE_PATH%25\OmniMapBase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\cSharpGlue\omnimapGLue.cs"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\..\Dependencies\clua\clua.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\propertySet\IncludePropertySet.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\shapes\screengeometrybase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\OGL\omnimap.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\OGL\OmniMapAppTextureOGL.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\omnimapd3d.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\OmniMapAppTextureD3D.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\Omnimapd3d10.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\OmniMapChannelD3D10.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\Omnimapd3d11.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%25/Y
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../Source;../../../Source/propertySet;../../../Source/shapes;../../../Source/renderType;../../../Dependencies;../../../Dependencies/Glew-1.9.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OMNIMAP_EXPORTS;GLEW_STATIC;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2008/64Bits/$(ProjectName)D.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40echo off
+set SOURCE_PATH=..\..\..\Source
+set DEST_PATH=..\..\..\..\Sdk\Include
+
+xcopy "%25SOURCE_PATH%25\OmniMapBase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\cSharpGlue\omnimapGLue.cs"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\..\Dependencies\clua\clua.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\propertySet\IncludePropertySet.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\shapes\screengeometrybase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\OGL\omnimap.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\OGL\OmniMapAppTextureOGL.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\omnimapd3d.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\OmniMapAppTextureD3D.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\Omnimapd3d10.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\OmniMapChannelD3D10.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\Omnimapd3d11.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%25/Y
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../Source;../../../Source/propertySet;../../../Source/shapes;../../../Source/renderType;../../../Dependencies;../../../Dependencies/Glew-1.9.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OMNIMAP_EXPORTS;GLEW_STATIC;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2008/32Bits/$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40echo off
+set SOURCE_PATH=..\..\..\Source
+set DEST_PATH=..\..\..\..\Sdk\Include
+
+xcopy "%25SOURCE_PATH%25\OmniMapBase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\cSharpGlue\omnimapGLue.cs"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\..\Dependencies\clua\clua.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\propertySet\IncludePropertySet.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\shapes\screengeometrybase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\OGL\omnimap.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\OGL\OmniMapAppTextureOGL.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\omnimapd3d.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\OmniMapAppTextureD3D.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\Omnimapd3d10.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\OmniMapChannelD3D10.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\Omnimapd3d11.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%25/Y
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../Source;../../../Source/propertySet;../../../Source/shapes;../../../Source/renderType;../../../Dependencies;../../../Dependencies/Glew-1.9.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OMNIMAP_EXPORTS;GLEW_STATIC;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2008/64Bits/$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40echo off
+set SOURCE_PATH=..\..\..\Source
+set DEST_PATH=..\..\..\..\Sdk\Include
+
+xcopy "%25SOURCE_PATH%25\OmniMapBase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\cSharpGlue\omnimapGLue.cs"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\..\Dependencies\clua\clua.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\propertySet\IncludePropertySet.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\shapes\screengeometrybase.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\OGL\omnimap.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\OGL\OmniMapAppTextureOGL.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\omnimapd3d.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D9\OmniMapAppTextureD3D.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\Omnimapd3d10.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D10\OmniMapChannelD3D10.h"  %25DEST_PATH%25 /Y
+
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\Omnimapd3d11.h"  %25DEST_PATH%25 /Y
+xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%25/Y
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Dependencies\cLua\cLua.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lapi.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lauxlib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lbaselib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lcode.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldblib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldebug.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldo.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldump.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lfunc.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lgc.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\linit.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\liolib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\llex.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lmathlib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lmem.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\loadlib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lobject.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lopcodes.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\loslib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lparser.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lstate.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lstring.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lstrlib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ltable.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ltablib.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ltm.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lundump.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lvm.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lzio.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\print.c" />
+    <ClCompile Include="..\..\..\Dependencies\cLua\stdafx.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\Glew-1.9.0\src\glew.c" />
+    <ClCompile Include="..\..\..\Dependencies\lodePNG\lodepng.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutDirectX.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLDXinterop.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLextensions.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutMemoryShare.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutReceiver.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSDK.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSender.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSenderNames.cpp" />
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSharedMemory.cpp" />
+    <ClCompile Include="..\..\..\Source\GraphicsPrimitives.cpp" />
+    <ClCompile Include="..\..\..\Source\OmniMapBase.cpp" />
+    <ClCompile Include="..\..\..\Source\omnimap_luatable.cpp" />
+    <ClCompile Include="..\..\..\Source\privatePrimitives.cpp" />
+    <ClCompile Include="..\..\..\Source\propertySet\OmnimapIncludePropertySet.cpp" />
+    <ClCompile Include="..\..\..\Source\propertySet\Property.cpp" />
+    <ClCompile Include="..\..\..\Source\quad.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\OmniMapChannelD3D10.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\OmniMapD3D10.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\OmniMapShaderD3D10.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\ScreenRendererD3D10.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\OmniMapChannelD3D11.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\OmniMapD3D11.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\OmniMapShaderD3D11.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\ScreenRendererD3D11.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\OmniMapAppTextureD3D.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\omnimapChannelD3D.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\omnimapd3d.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\OmniMapShaderD3D.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\ScreenRendererD3D.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\omnimap.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\OmniMapAppTextureOGL.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\omnimapChannelGL.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\omnimapShaderGL.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\ScreenRendererOGL.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\spout\OmniSpout.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\backbuffertexture.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\FrameBufferObject.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\GLShader.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\PBuffer.cpp" />
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\RenderChannel.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\ElumSphere.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\OM_ConeScreen.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\OM_CylinderScreen.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\OM_DomeScreen.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\OM_PartialDomeScreen.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\OM_PlaneScreen.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\OM_ToroidScreen.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\ScreenRendererBase.cpp" />
+    <ClCompile Include="..\..\..\Source\shapes\screenshapefactory.cpp" />
+    <ClCompile Include="..\..\..\Source\ViewerPosition.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Dependencies\cLua\cLua.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\lauxlib.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\lua.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\lualib.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lapi.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lauxlib.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lcode.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ldebug.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ldo.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lfunc.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lgc.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\llex.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\llimits.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lmem.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lobject.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lopcodes.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lparser.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lstate.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lstring.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ltable.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ltm.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lua.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\luaconf.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lualib.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lundump.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lvm.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lzio.h" />
+    <ClInclude Include="..\..\..\Dependencies\cLua\stdafx.h" />
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP.h" />
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP_BMP.h" />
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP_DataStructures.h" />
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP_VariousBMPutilities.h" />
+    <ClInclude Include="..\..\..\Dependencies\Glew-1.9.0\include\GL\glew.h" />
+    <ClInclude Include="..\..\..\Dependencies\Glew-1.9.0\include\GL\glxew.h" />
+    <ClInclude Include="..\..\..\Dependencies\Glew-1.9.0\include\GL\wglew.h" />
+    <ClInclude Include="..\..\..\Dependencies\lodePNG\lodepng.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\Spout.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutCommon.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutDirectX.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLDXinterop.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLextensions.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutMemoryShare.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutReceiver.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSDK.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSender.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSenderNames.h" />
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSharedMemory.h" />
+    <ClInclude Include="..\..\..\Source\OmniMapBase.h" />
+    <ClInclude Include="..\..\..\Source\omnimap_luatable.h" />
+    <ClInclude Include="..\..\..\Source\omnitypedefs.h" />
+    <ClInclude Include="..\..\..\Source\OM_ErrorHandling.h" />
+    <ClInclude Include="..\..\..\Source\privatePrimitives.h" />
+    <ClInclude Include="..\..\..\Source\propertySet\HashTable.h" />
+    <ClInclude Include="..\..\..\Source\propertySet\IncludePropertySet.h" />
+    <ClInclude Include="..\..\..\Source\propertySet\Property.h" />
+    <ClInclude Include="..\..\..\Source\quad.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\OmniMapChannelD3D10.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\OmniMapD3D10.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\OmniMapShaderD3D10.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\ScreenRendererD3D10.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\OmniMapChannelD3D11.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\OmniMapD3D11.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\OmniMapShaderD3D11.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\ScreenRendererD3D11.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\OmniMapAppTextureD3D.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\omnimapD3D.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\OmniMapShaderD3D.h" />
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\ScreenRendererD3D.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\omnimap.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\OmniMapAppTextureOGL.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\ScreenRendererOGL.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\spout\OmniSpout.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\BackBufferTexture.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\FrameBufferObject.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\glshader.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\pbuffer.h" />
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\renderchannel.h" />
+    <ClInclude Include="..\..\..\Source\shapes\ElumSphere.h" />
+    <ClInclude Include="..\..\..\Source\shapes\OM_ConeScreen.h" />
+    <ClInclude Include="..\..\..\Source\shapes\OM_CylinderScreen.h" />
+    <ClInclude Include="..\..\..\Source\shapes\OM_DomeScreen.h" />
+    <ClInclude Include="..\..\..\Source\shapes\OM_PartialDomeScreen.h" />
+    <ClInclude Include="..\..\..\Source\shapes\OM_PlaneScreen.h" />
+    <ClInclude Include="..\..\..\Source\shapes\OM_ToroidScreen.h" />
+    <ClInclude Include="..\..\..\Source\shapes\ScreenGeometryBase.h" />
+    <ClInclude Include="..\..\..\Source\shapes\screenshapefactory.h" />
+    <ClInclude Include="..\..\..\Source\ViewerPosition.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

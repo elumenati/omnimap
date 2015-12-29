@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Direct3DRelease64"
+	InheritedPropertySheets="Direct3DInclude.vsprops"
+	>
+	<Tool
+		Name="VCLibrarianTool"
+		AdditionalLibraryDirectories="$(DIRECTX_LIB_PATH)\x64"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalLibraryDirectories="$(DIRECTX_LIB_PATH)\x64"
+	/>
+</VisualStudioPropertySheet>

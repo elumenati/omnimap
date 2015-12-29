@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <DIRECTX_SDK_PATH>$(DEV_SDK_PATH)\DirectX\DirectXJune2010</DIRECTX_SDK_PATH>
+    <DIRECTX_INC_PATH>$(DIRECTX_SDK_PATH)\Include</DIRECTX_INC_PATH>
+    <DIRECTX_LIB_PATH>$(DIRECTX_SDK_PATH)\Lib</DIRECTX_LIB_PATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="DIRECTX_SDK_PATH">
+      <Value>$(DIRECTX_SDK_PATH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DIRECTX_INC_PATH">
+      <Value>$(DIRECTX_INC_PATH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DIRECTX_LIB_PATH">
+      <Value>$(DIRECTX_LIB_PATH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+Omnimap also depends on:
+DirectX SDK -> http://msdn.microsoft.com/en-us/library/ee663275.aspx
+Effects11 -> https://github.com/Microsoft/FX11

@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\propertySet">
+      <UniqueIdentifier>{9147afab-75a2-4b20-9ec1-a5124ef7db97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType">
+      <UniqueIdentifier>{da08be7a-00c0-4961-a649-4848d86ac17e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\D3D9">
+      <UniqueIdentifier>{d436cd9b-9da0-4e3e-a6e6-1dd5e13040fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\D3D10">
+      <UniqueIdentifier>{0116f18d-4976-4fe3-adb5-dfa32b3c7add}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\D3D11">
+      <UniqueIdentifier>{3dee3b0d-0d8f-4bbd-bee2-e1623d8cba5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\OGL">
+      <UniqueIdentifier>{c2416418-f387-4314-882f-14d8b7be91eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\OGL\tools">
+      <UniqueIdentifier>{6aaedd73-c117-4064-a898-eaab4268447a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\OGL\spout">
+      <UniqueIdentifier>{6fa4d5e8-95f0-42d1-bacb-cce8a4feebcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shapes">
+      <UniqueIdentifier>{ea6b99b8-9543-4eb6-95c5-16663a28daef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\propertySet">
+      <UniqueIdentifier>{5339610e-a0e8-46cb-abe5-5c868e9e81ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType">
+      <UniqueIdentifier>{337f4f37-46f2-4b79-ac70-9333e3d5d0c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType\D3D9">
+      <UniqueIdentifier>{4b110521-11bb-4a52-ae9e-cabf64ac9ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType\D3D10">
+      <UniqueIdentifier>{ee8e7ec4-5454-4066-a65d-05f17c009264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType\D3D11">
+      <UniqueIdentifier>{462fa3c2-6343-4e3b-8e54-358cb0e8c69c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType\OGL">
+      <UniqueIdentifier>{b3f67d75-c282-40d6-8e11-c48ffe0b6d29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType\OGL\tools">
+      <UniqueIdentifier>{de89d048-f8d5-442e-bb52-c257ece5c8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderType\OGL\spout">
+      <UniqueIdentifier>{260fb652-e589-42a6-a690-326458247052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shapes">
+      <UniqueIdentifier>{24df7f00-b01a-4b2c-a37e-4421600b9b46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{f2d79f7e-4906-4f07-9c25-a6dd6eaec7b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\easyBMP">
+      <UniqueIdentifier>{f668b2f5-d7d7-4257-bebd-528c85628661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\lodePNG">
+      <UniqueIdentifier>{625d72a9-471f-4221-9895-13440999bfb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\Glew">
+      <UniqueIdentifier>{0168f17a-bc6e-4cdd-b679-1b11d8471ab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\SpoutSDK">
+      <UniqueIdentifier>{8d27d8fd-2919-4b5d-aeca-fd39c279373b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\cLua">
+      <UniqueIdentifier>{ce3325e4-7ef9-494d-aef5-6bbb7a3a05dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\cLua\source">
+      <UniqueIdentifier>{d993df93-bae3-4c79-b860-4c1e526cef72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\GraphicsPrimitives.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\omnimap_luatable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\OmniMapBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\privatePrimitives.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\quad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\ViewerPosition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\propertySet\OmnimapIncludePropertySet.cpp">
+      <Filter>Source Files\propertySet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\propertySet\Property.cpp">
+      <Filter>Source Files\propertySet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\OmniMapAppTextureD3D.cpp">
+      <Filter>Source Files\renderType\D3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\omnimapChannelD3D.cpp">
+      <Filter>Source Files\renderType\D3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\omnimapd3d.cpp">
+      <Filter>Source Files\renderType\D3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\OmniMapShaderD3D.cpp">
+      <Filter>Source Files\renderType\D3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D9\ScreenRendererD3D.cpp">
+      <Filter>Source Files\renderType\D3D9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\OmniMapChannelD3D10.cpp">
+      <Filter>Source Files\renderType\D3D10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\OmniMapD3D10.cpp">
+      <Filter>Source Files\renderType\D3D10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\OmniMapShaderD3D10.cpp">
+      <Filter>Source Files\renderType\D3D10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D10\ScreenRendererD3D10.cpp">
+      <Filter>Source Files\renderType\D3D10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\OmniMapChannelD3D11.cpp">
+      <Filter>Source Files\renderType\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\OmniMapD3D11.cpp">
+      <Filter>Source Files\renderType\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\OmniMapShaderD3D11.cpp">
+      <Filter>Source Files\renderType\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\D3D11\ScreenRendererD3D11.cpp">
+      <Filter>Source Files\renderType\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\omnimap.cpp">
+      <Filter>Source Files\renderType\OGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\OmniMapAppTextureOGL.cpp">
+      <Filter>Source Files\renderType\OGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\omnimapChannelGL.cpp">
+      <Filter>Source Files\renderType\OGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\omnimapShaderGL.cpp">
+      <Filter>Source Files\renderType\OGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\ScreenRendererOGL.cpp">
+      <Filter>Source Files\renderType\OGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\backbuffertexture.cpp">
+      <Filter>Source Files\renderType\OGL\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\FrameBufferObject.cpp">
+      <Filter>Source Files\renderType\OGL\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\GLShader.cpp">
+      <Filter>Source Files\renderType\OGL\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\PBuffer.cpp">
+      <Filter>Source Files\renderType\OGL\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\tools\RenderChannel.cpp">
+      <Filter>Source Files\renderType\OGL\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\renderType\OGL\spout\OmniSpout.cpp">
+      <Filter>Source Files\renderType\OGL\spout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\ElumSphere.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\OM_ConeScreen.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\OM_CylinderScreen.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\OM_DomeScreen.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\OM_PartialDomeScreen.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\OM_PlaneScreen.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\OM_ToroidScreen.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\ScreenRendererBase.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\shapes\screenshapefactory.cpp">
+      <Filter>Source Files\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\lodePNG\lodepng.cpp">
+      <Filter>Dependencies\lodePNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\Glew-1.9.0\src\glew.c">
+      <Filter>Dependencies\Glew</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutDirectX.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLDXinterop.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLextensions.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutMemoryShare.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutReceiver.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSDK.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSender.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSenderNames.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSharedMemory.cpp">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\cLua.cpp">
+      <Filter>Dependencies\cLua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\stdafx.cpp">
+      <Filter>Dependencies\cLua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lapi.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lauxlib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lbaselib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lcode.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldblib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldebug.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldo.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ldump.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lfunc.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lgc.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\linit.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\liolib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\llex.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lmathlib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lmem.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\loadlib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lobject.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lopcodes.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\loslib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lparser.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lstate.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lstring.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lstrlib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ltable.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ltablib.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\ltm.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lundump.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lvm.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\lzio.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\cLua\Source\print.c">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\OM_ErrorHandling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\omnimap_luatable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\OmniMapBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\omnitypedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\privatePrimitives.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\quad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\ViewerPosition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\propertySet\HashTable.h">
+      <Filter>Header Files\propertySet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\propertySet\IncludePropertySet.h">
+      <Filter>Header Files\propertySet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\propertySet\Property.h">
+      <Filter>Header Files\propertySet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\OmniMapAppTextureD3D.h">
+      <Filter>Header Files\renderType\D3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\omnimapD3D.h">
+      <Filter>Header Files\renderType\D3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\OmniMapShaderD3D.h">
+      <Filter>Header Files\renderType\D3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D9\ScreenRendererD3D.h">
+      <Filter>Header Files\renderType\D3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\OmniMapChannelD3D10.h">
+      <Filter>Header Files\renderType\D3D10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\OmniMapD3D10.h">
+      <Filter>Header Files\renderType\D3D10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\OmniMapShaderD3D10.h">
+      <Filter>Header Files\renderType\D3D10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D10\ScreenRendererD3D10.h">
+      <Filter>Header Files\renderType\D3D10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\OmniMapChannelD3D11.h">
+      <Filter>Header Files\renderType\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\OmniMapD3D11.h">
+      <Filter>Header Files\renderType\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\OmniMapShaderD3D11.h">
+      <Filter>Header Files\renderType\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\D3D11\ScreenRendererD3D11.h">
+      <Filter>Header Files\renderType\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\omnimap.h">
+      <Filter>Header Files\renderType\OGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\OmniMapAppTextureOGL.h">
+      <Filter>Header Files\renderType\OGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\ScreenRendererOGL.h">
+      <Filter>Header Files\renderType\OGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\BackBufferTexture.h">
+      <Filter>Header Files\renderType\OGL\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\FrameBufferObject.h">
+      <Filter>Header Files\renderType\OGL\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\glshader.h">
+      <Filter>Header Files\renderType\OGL\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\pbuffer.h">
+      <Filter>Header Files\renderType\OGL\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\tools\renderchannel.h">
+      <Filter>Header Files\renderType\OGL\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\renderType\OGL\spout\OmniSpout.h">
+      <Filter>Header Files\renderType\OGL\spout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\ElumSphere.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\OM_ConeScreen.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\OM_CylinderScreen.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\OM_DomeScreen.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\OM_PartialDomeScreen.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\OM_PlaneScreen.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\OM_ToroidScreen.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\ScreenGeometryBase.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\shapes\screenshapefactory.h">
+      <Filter>Header Files\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP.h">
+      <Filter>Dependencies\easyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP_BMP.h">
+      <Filter>Dependencies\easyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP_DataStructures.h">
+      <Filter>Dependencies\easyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\easyBMP\EasyBMP_VariousBMPutilities.h">
+      <Filter>Dependencies\easyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\lodePNG\lodepng.h">
+      <Filter>Dependencies\lodePNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\Glew-1.9.0\include\GL\glew.h">
+      <Filter>Dependencies\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\Glew-1.9.0\include\GL\glxew.h">
+      <Filter>Dependencies\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\Glew-1.9.0\include\GL\wglew.h">
+      <Filter>Dependencies\Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\Spout.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutCommon.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutDirectX.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLDXinterop.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutGLextensions.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutMemoryShare.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutReceiver.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSDK.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSender.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSenderNames.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\SpoutSDK\Source\SpoutSharedMemory.h">
+      <Filter>Dependencies\SpoutSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\cLua.h">
+      <Filter>Dependencies\cLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\lauxlib.h">
+      <Filter>Dependencies\cLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\lua.h">
+      <Filter>Dependencies\cLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\lualib.h">
+      <Filter>Dependencies\cLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\stdafx.h">
+      <Filter>Dependencies\cLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lapi.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lauxlib.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lcode.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ldebug.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ldo.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lfunc.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lgc.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\llex.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\llimits.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lmem.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lobject.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lopcodes.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lparser.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lstate.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lstring.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ltable.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\ltm.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lua.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\luaconf.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lualib.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lundump.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lvm.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\cLua\Source\lzio.h">
+      <Filter>Dependencies\cLua\source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

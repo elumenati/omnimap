@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="localDebug64Config"
+	InheritedPropertySheets="
+         ..\..\..\Properties\DllDebug64.vsprops;
+         ..\..\..\Properties\DirectXJune2010.vsprops; ..\..\..\Properties\Direct3DDebug64.vsprops"
+	>
+</VisualStudioPropertySheet>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="DllRelease64"
+	IntermediateDirectory="$(ConfigurationName)\$(PlatformName)"
+	BuildLogFile="$(IntDir)\BuildLog.htm"
+	InheritedPropertySheets="DirectXJune2010.vsprops;Direct3DRelease64.vsprops"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		Optimization="3"
+		InlineFunctionExpansion="2"
+		EnableIntrinsicFunctions="true"
+		FavorSizeOrSpeed="1"
+		OmitFramePointers="true"
+		EnableFiberSafeOptimizations="true"
+		WholeProgramOptimization="true"
+		PreprocessorDefinitions="WIN32;WIN64;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_BIND_TO_CURRENT_VCLIBS_VERSION=1"
+		RuntimeLibrary="2"
+		StringPooling="true"
+		MinimalRebuild="false"
+		WarningLevel="4"
+		WarnAsError="true"
+    DisableSpecificWarnings="4324"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		IgnoreDefaultLibraryNames="LIBC.lib;LIBCP.lib;LIBCMT.lib"
+		TargetMachine="17"
+		SubSystem="2"
+		OptimizeReferences="2"
+		EnableCOMDATFolding="2"
+		LinkTimeCodeGeneration="1"
+		SetChecksum="true"
+	/>
+</VisualStudioPropertySheet>

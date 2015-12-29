@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="DirectXJune2010"
+	>
+	<UserMacro
+		Name="DIRECTX_SDK_PATH"
+		Value="$(DEV_SDK_PATH)\DirectX\DirectXJune2010"
+		PerformEnvironmentSet="true"
+	/>
+	<UserMacro
+		Name="DIRECTX_INC_PATH"
+		Value="$(DIRECTX_SDK_PATH)\Include"
+		PerformEnvironmentSet="true"
+	/>
+	<UserMacro
+		Name="DIRECTX_LIB_PATH"
+		Value="$(DIRECTX_SDK_PATH)\Lib"
+		PerformEnvironmentSet="true"
+	/>
+</VisualStudioPropertySheet>
+
