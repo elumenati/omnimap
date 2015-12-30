@@ -5,9 +5,16 @@
 (Using june 2010)
 https://www.microsoft.com/en-us/download/confirmation.aspx?id=6812
 
-* Effects11 -> https://github.com/Microsoft/FX11
-(You may not need this.)
 
+
+==============================
+=== 64 bit omnimap         ===
+==============================
+Read this if it doens't even start compiling. You need to install the 64 bit compiler.
+
+https://social.msdn.microsoft.com/Forums/en-US/ea90fc84-2cc8-4cad-aaf5-19e4eedcfc3d/how-do-i-get-the-x64-bit-compiler-tools-for-vs2008?forum=netfx64bit
+http://blogs.msdn.com/b/heaths/archive/2009/02/02/feature-changes-in-visual-studio-2008-sp1-may-prompt-for-sqlsysclrtypes-msi.aspx
+http://blogs.msdn.com/b/heaths/archive/2008/05/14/how-to-download-all-of-visual-studio-2008-sp1.aspx
 ==============================
 ===Visual Studio 2008 users===
 ==============================
@@ -17,3 +24,19 @@ https://www.microsoft.com/en-us/download/confirmation.aspx?id=6922
 
 * ALSO Download Visual Studio 2008 Service Pack 1
 https://www.microsoft.com/en-us/download/confirmation.aspx?id=10986
+
+==============================
+=== ALSO RUN WINDOWS UPDATE AFTER INSTALLING ANYTHING HAVING TO DO WITH VISUAL STUDIO
+==============================
+
+==============================
+=== After all updates are done you will need to compile FX11
+==============================
+c:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Samples\C++\Effects11
+compile for 32bit and 64bit
+
+* alternative location is here, but it should be installed allready.
+* Effects11 -> https://github.com/Microsoft/FX11
+(You may not need this.)
+
+
