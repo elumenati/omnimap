@@ -6,86 +6,101 @@
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Source Files\propertySet">
-      <UniqueIdentifier>{9147afab-75a2-4b20-9ec1-a5124ef7db97}</UniqueIdentifier>
+      <UniqueIdentifier>{5c4bfc80-eb43-41a3-abf5-43190578df6e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType">
-      <UniqueIdentifier>{da08be7a-00c0-4961-a649-4848d86ac17e}</UniqueIdentifier>
+      <UniqueIdentifier>{6d14557b-8669-4087-8e0c-f5a1149dd128}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType\D3D9">
-      <UniqueIdentifier>{d436cd9b-9da0-4e3e-a6e6-1dd5e13040fa}</UniqueIdentifier>
+      <UniqueIdentifier>{c5b0d3b8-bfd9-4359-bebe-211636f2e193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\D3D9\Shaders">
+      <UniqueIdentifier>{66b9747b-f12a-4151-973f-0b8c8aa1938e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType\D3D10">
-      <UniqueIdentifier>{0116f18d-4976-4fe3-adb5-dfa32b3c7add}</UniqueIdentifier>
+      <UniqueIdentifier>{d97e1705-a092-4f1d-b547-ac9ed55c4e29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\D3D10\Shaders">
+      <UniqueIdentifier>{36ab344d-9fd9-4d93-aefb-d78b666d73b3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType\D3D11">
-      <UniqueIdentifier>{3dee3b0d-0d8f-4bbd-bee2-e1623d8cba5c}</UniqueIdentifier>
+      <UniqueIdentifier>{48a3ebe2-91fa-44c0-a03c-f3390821daa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\D3D11\Shaders">
+      <UniqueIdentifier>{aad09f90-9257-4d32-a836-c567085dbb27}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType\OGL">
-      <UniqueIdentifier>{c2416418-f387-4314-882f-14d8b7be91eb}</UniqueIdentifier>
+      <UniqueIdentifier>{98667a83-a208-4334-a4fa-46275ece6e28}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType\OGL\tools">
-      <UniqueIdentifier>{6aaedd73-c117-4064-a898-eaab4268447a}</UniqueIdentifier>
+      <UniqueIdentifier>{60ef25b8-8af7-480d-874a-898dd8416606}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\renderType\OGL\spout">
-      <UniqueIdentifier>{6fa4d5e8-95f0-42d1-bacb-cce8a4feebcd}</UniqueIdentifier>
+      <UniqueIdentifier>{b97258a3-d3c0-4b7b-84f7-a5581e8d93b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderType\OGL\Shaders">
+      <UniqueIdentifier>{a638f2e8-90ea-41fa-aa98-85d238f34d9c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\shapes">
-      <UniqueIdentifier>{ea6b99b8-9543-4eb6-95c5-16663a28daef}</UniqueIdentifier>
+      <UniqueIdentifier>{5aa3f178-31d3-4cb2-99eb-f8604dafde16}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Header Files\propertySet">
-      <UniqueIdentifier>{5339610e-a0e8-46cb-abe5-5c868e9e81ac}</UniqueIdentifier>
+      <UniqueIdentifier>{ace97fc4-e843-4754-849d-84df6bf1b26d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType">
-      <UniqueIdentifier>{337f4f37-46f2-4b79-ac70-9333e3d5d0c5}</UniqueIdentifier>
+      <UniqueIdentifier>{63647daa-e470-4043-b910-02416d6721ef}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType\D3D9">
-      <UniqueIdentifier>{4b110521-11bb-4a52-ae9e-cabf64ac9ce2}</UniqueIdentifier>
+      <UniqueIdentifier>{c1a36564-cfac-4579-b659-6380499dab62}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType\D3D10">
-      <UniqueIdentifier>{ee8e7ec4-5454-4066-a65d-05f17c009264}</UniqueIdentifier>
+      <UniqueIdentifier>{4a43c0e0-c906-481e-97a5-4c3389646558}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType\D3D11">
-      <UniqueIdentifier>{462fa3c2-6343-4e3b-8e54-358cb0e8c69c}</UniqueIdentifier>
+      <UniqueIdentifier>{3cdfae91-bc8d-402b-b390-f508fa61ff27}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType\OGL">
-      <UniqueIdentifier>{b3f67d75-c282-40d6-8e11-c48ffe0b6d29}</UniqueIdentifier>
+      <UniqueIdentifier>{05b4c189-5c8c-4f81-99b7-76ce5119f64d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType\OGL\tools">
-      <UniqueIdentifier>{de89d048-f8d5-442e-bb52-c257ece5c8e0}</UniqueIdentifier>
+      <UniqueIdentifier>{fa92b165-1ae4-43f1-89ea-735200dbe76d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\renderType\OGL\spout">
-      <UniqueIdentifier>{260fb652-e589-42a6-a690-326458247052}</UniqueIdentifier>
+      <UniqueIdentifier>{916738bc-7692-4cce-b6d6-2df33e396129}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shapes">
-      <UniqueIdentifier>{24df7f00-b01a-4b2c-a37e-4421600b9b46}</UniqueIdentifier>
+      <UniqueIdentifier>{4e78a674-e647-4eed-ab66-b47bc426e213}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies">
-      <UniqueIdentifier>{f2d79f7e-4906-4f07-9c25-a6dd6eaec7b8}</UniqueIdentifier>
+      <UniqueIdentifier>{b9693f33-4bb6-4f8e-b1f7-763e61eb6210}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\easyBMP">
-      <UniqueIdentifier>{f668b2f5-d7d7-4257-bebd-528c85628661}</UniqueIdentifier>
+      <UniqueIdentifier>{bb18a649-adb6-4d5f-9813-7368ca3e323d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\lodePNG">
-      <UniqueIdentifier>{625d72a9-471f-4221-9895-13440999bfb2}</UniqueIdentifier>
+      <UniqueIdentifier>{4d2b5078-acad-4376-abcc-da6af8a93763}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\Glew">
-      <UniqueIdentifier>{0168f17a-bc6e-4cdd-b679-1b11d8471ab7}</UniqueIdentifier>
+      <UniqueIdentifier>{96be3e63-2571-4106-a5b9-c7e1e1436bc0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\SpoutSDK">
-      <UniqueIdentifier>{8d27d8fd-2919-4b5d-aeca-fd39c279373b}</UniqueIdentifier>
+      <UniqueIdentifier>{0ec22ac3-0b6e-4d58-a479-b25934e3b9b3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\cLua">
-      <UniqueIdentifier>{ce3325e4-7ef9-494d-aef5-6bbb7a3a05dc}</UniqueIdentifier>
+      <UniqueIdentifier>{746d0400-529a-40ab-ae95-58727a9e02bc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\cLua\source">
-      <UniqueIdentifier>{d993df93-bae3-4c79-b860-4c1e526cef72}</UniqueIdentifier>
+      <UniqueIdentifier>{584c9e33-5f25-416c-8d41-def14bfcb156}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Source\CobraLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\Source\GraphicsPrimitives.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -340,6 +355,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Source\CobraLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\Source\OM_ErrorHandling.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -601,5 +619,43 @@
     <ClInclude Include="..\..\..\Dependencies\cLua\Source\lzio.h">
       <Filter>Dependencies\cLua\source</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Source\renderType\D3D9\Shaders\CobraWarp.fx">
+      <Filter>Source Files\renderType\D3D9\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\D3D9\Shaders\OmniMapDome.fx">
+      <Filter>Source Files\renderType\D3D9\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\D3D10\Shaders\CobraWarp10.fx">
+      <Filter>Source Files\renderType\D3D10\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\D3D10\Shaders\OmniMapDome10.fx">
+      <Filter>Source Files\renderType\D3D10\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\D3D11\Shaders\CobraWarp11.fx">
+      <Filter>Source Files\renderType\D3D11\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\D3D11\Shaders\OmniMapDome11.fx">
+      <Filter>Source Files\renderType\D3D11\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\OGL\Shaders\MirrorShaderFrag.frag">
+      <Filter>Source Files\renderType\OGL\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\OGL\Shaders\MirrorShaderVert.vert">
+      <Filter>Source Files\renderType\OGL\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\OGL\Shaders\omnimap_fragmentCobra.frag">
+      <Filter>Source Files\renderType\OGL\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\OGL\Shaders\omnimap_vertexCobra.vert">
+      <Filter>Source Files\renderType\OGL\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\OGL\Shaders\omnimap_fragment.frag">
+      <Filter>Source Files\renderType\OGL\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Source\renderType\OGL\Shaders\omnimap_vertex.vert">
+      <Filter>Source Files\renderType\OGL\Shaders</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

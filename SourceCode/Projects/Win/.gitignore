@@ -9,6 +9,8 @@ ehthumbs.db
 Thumbs.db
 
 #Ignore files build by Visual Studio
+*.sfd
+*.opensdf
 *.user
 *.obj
 *.exe
