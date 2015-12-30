@@ -369,13 +369,12 @@ void OmniMapD3D11::SetupAllShaderVaribles()
 	D3D11_VIEWPORT vp;
 	UINT one = 1;
 	d3dDeviceContext->RSGetViewports(&one, &vp);
-	//float yOffset2 = ((glViewportsettings3/2.0)/((float) vp.Height-(float) glViewportsettings1))/2.0;
 	float yOffset1, yOffset2, yScale;
 	if (((glViewportsettings0 + glViewportsettings2) <= vp.Width)
 		&& (glViewportsettings0 >= 0)
 		&& ((glViewportsettings1 + glViewportsettings3) <= vp.Height)
 		&& (glViewportsettings1 >= 0))
-	{
+	{	//if image circle is inside of the viewport, use opengl approach
 		vp.TopLeftX = glViewportsettings0;
 		vp.TopLeftY = glViewportsettings1;
 		vp.Width = glViewportsettings2;
@@ -384,10 +383,17 @@ void OmniMapD3D11::SetupAllShaderVaribles()
 		yOffset1 = 0.0;
 		yOffset2 = 0.0;
 		yScale = 1.0;
-	} else {
-		yOffset2 = ((glViewportsettings3/2.0f)/((float) vp.Height-(float) glViewportsettings1))/2.0f;
-		yScale = (((float) glViewportsettings2) / ((float) vp.Height));
-		yOffset1 = (((float) glViewportsettings1) / ((float) glViewportsettings3));
+	} else { // FIX FOR DX11 VIEWPORT if image circle is outside of the viewport
+		if (glViewportsettings2 <1.0f) glViewportsettings2 = (float)vp.Width; // UNTESTED
+		if(glViewportsettings3<1.0f) glViewportsettings3 = (float) vp.Height; // UNTESTED
+        float HeightImageCircle = glViewportsettings3;
+        // back out the offset from the lua... this 
+        float offsetSuggestedByLua = (glViewportsettings1 - .5f* vp.Height + .5f* vp.Width)/vp.Width;
+        float aspect = vp.Width/(float)vp.Height;
+        float offsetByDX11 =offsetSuggestedByLua*2.0f*aspect;
+        yScale = HeightImageCircle /((float)vp.Height);
+        yOffset1 = 0;
+        yOffset2 = offsetByDX11;
 	}
 
 
