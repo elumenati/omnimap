@@ -32,6 +32,7 @@ https://www.microsoft.com/en-us/download/confirmation.aspx?id=10986
 ==============================
 === After all updates are done you will need to compile FX11
 ==============================
+* this should be installed in
 c:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Samples\C++\Effects11
 compile for 32bit and 64bit
 
