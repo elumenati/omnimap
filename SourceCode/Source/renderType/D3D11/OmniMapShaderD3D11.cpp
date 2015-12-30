@@ -116,7 +116,6 @@ void OmniMapShaderD3D11::setShadersFilenames(const char * _fxShaderFilename ,	co
 
 void OmniMapShaderD3D11::init()
 {
-  char *effectStr = NULL;
   char numChanStr[3];
   ID3DBlob *errorBlob = NULL;
   ID3DBlob *effectBlob = NULL;
@@ -162,26 +161,14 @@ void OmniMapShaderD3D11::init()
   }
   else
   {
-    std::string effectTotal;
-    int *effectPtr = effectArr;
-    int effectPtrSize = sizeof(effectArr)/sizeof(int);
-
-    // warning this code has not been tested
-    EH_Log("Warning untested code in OmniMapShaderD3D11.cpp");
+    std::string effectTotal = preprocessorMacroGlobal;
 
     if (CobraWarpWithTrueDimension > 0) {
       EH_Log("Elumenati Warp for CobraSimulation enabled.");
-      effectPtr = effectArrCobra;
-      effectPtrSize = sizeof(effectArrCobra)/sizeof(int);
+      effectTotal += effectCobraWarp11;
+    } else {
+      effectTotal += effectOmniMapDome11;
     }
-
-    EH_Ptr(effectStr = new char[effectPtrSize+1]);
-    for (int i = 0; i < effectPtrSize; i++) {
-      effectStr[i] = (char) effectPtr[i];
-      effectStr[i+1] = 0;
-    }
-
-    effectTotal = preprocessorMacroGlobal + std::string(effectStr);
 
     EH_Test(D3DX11CompileFromMemory(effectTotal.c_str(), effectTotal.length(), NULL, mac, NULL, NULL, "fx_5_0", /*D3DCOMPILE_DEBUG|*/D3DCOMPILE_ENABLE_BACKWARDS_COMPATIBILITY, 0, NULL, &effectBlob, &errorBlob, NULL));
     EH_Test(D3DX11CreateEffectFromMemory(effectBlob->GetBufferPointer(), effectBlob->GetBufferSize(), 0, d3dDevice, &omnimapFX));
@@ -248,7 +235,6 @@ void OmniMapShaderD3D11::init()
 
 
 
-  if (effectStr) delete[] effectStr;
   SAFE_RELEASE(effectBlob);
   SAFE_RELEASE(errorBlob);
 }

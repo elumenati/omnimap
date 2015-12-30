@@ -90,7 +90,6 @@ void OmniMapShaderD3D::setShadersFilenames(
 
 void OmniMapShaderD3D::init()
 {
-  char *effectStr = NULL;
   char numChanStr[3];
   LPD3DXBUFFER ppErrorMsgs = NULL;
   DWORD dwShaderFlags = D3DXFX_NOT_CLONEABLE;
@@ -157,23 +156,14 @@ void OmniMapShaderD3D::init()
   }
   else
   {
-    std::string effectTotal;
-    int *effectPtr = effectArr;
-    int effectPtrSize = sizeof(effectArr)/sizeof(int);
+    std::string effectTotal = preprocessorMacroGlobal;
 
     if (CobraWarpWithTrueDimension > 0) {
       EH_Log("Elumenati Warp for CobraSimulation enabled.");
-      effectPtr = effectArrCobra;
-      effectPtrSize = sizeof(effectArrCobra)/sizeof(int);
+      effectTotal += effectCobraWarp;
+    } else {
+      effectTotal += effectOmniMapDome;
     }
-
-    EH_Ptr(effectStr = new char[effectPtrSize+1]);
-    for (int i = 0; i < effectPtrSize; i++) {
-      effectStr[i] = (char) effectPtr[i];
-      effectStr[i+1] = 0;
-    }
-
-    effectTotal = preprocessorMacroGlobal + std::string(effectStr);
 
     EH_Test(D3DXCreateEffect(d3dDevice, effectTotal.c_str(), (UINT) effectTotal.length(), mac, NULL, 0, NULL, &omnimapFX, &ppErrorMsgs));
   }
@@ -197,7 +187,6 @@ void OmniMapShaderD3D::init()
 
 
 
-  if (effectStr) delete[] effectStr;
   SAFE_RELEASE(ppErrorMsgs);
 }
 

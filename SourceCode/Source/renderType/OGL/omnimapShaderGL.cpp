@@ -10,15 +10,14 @@
 
 #include "tools/GLShader.h"
 
-#include "Shaders/MirrorVertShader.h"
-#include "Shaders/MirrorFragShader.h"
+#include "Shaders/MirrorShaderFrag.h"
+#include "Shaders/MirrorShaderVert.h"
 
-#include "Shaders/VertShader.h"
-#include "Shaders/FragShader.h"
+#include "Shaders/omnimap_vertex.h"
+#include "Shaders/omnimap_fragment.h"
 
-
-#include "Shaders/VertShaderCobra.h"
-#include "Shaders/FragShaderCobra.h"
+#include "Shaders/omnimap_vertexCobra.h"
+#include "Shaders/omnimap_fragmentCobra.h"
 
 #include "omnitypedefs.h"
 #include "OM_ErrorHandling.h"
@@ -132,8 +131,6 @@ void OmniMap_Shader::reload()
 void OmniMap_Shader::init()
 {
   const char *fragmentPreludePtr = fragmentPrelude ? fragmentPrelude : "";
-  char *fragmentShaderSrc = NULL;
-  char *vertexShaderSrc = NULL;
   GLUniformVar * glsl_CobraWarpWithTrueDimension = NULL;
   EH_DECLARE;
 
@@ -156,26 +153,15 @@ void OmniMap_Shader::init()
     EH_Ptr(OmniMap_VertexShader = new GLVertexShader(VertexShaderFilename));
 	} else
 	{
-    std::string vertexTotal;
-    int *shaderPtr = vs;
-    int shaderPtrSize = sizeof(vs)/sizeof(int);
+    std::string vertexTotal = preprocessorMacroGlobal;
 
     if (useMirror) {
-      shaderPtr = mirror_vs;
-      shaderPtrSize = sizeof(mirror_vs)/sizeof(int);
+      vertexTotal += effectMirrorShaderVert;
+    } else if (1 <= CobraWarpWithTrueDimension ) {
+      vertexTotal += effectomnimap_vertexCobra;
+    } else {
+      vertexTotal += effectomnimap_vertex;
     }
-    else if(1 <= CobraWarpWithTrueDimension ) {
-      shaderPtr = vsCobra;
-      shaderPtrSize = sizeof(vsCobra)/sizeof(int);
-    }
-
-    EH_Ptr(vertexShaderSrc = new char[shaderPtrSize+1]);
-    for (int i = 0; i < shaderPtrSize; i++) {
-      vertexShaderSrc[i] = (char) shaderPtr[i];
-      vertexShaderSrc[i+1] = 0;
-    }
-
-		vertexTotal = preprocessorMacroGlobal + std::string(vertexShaderSrc);
 
 		EH_Ptr(OmniMap_VertexShader = new GLVertexShader(NULL,vertexTotal.c_str() ));
 	}
@@ -189,26 +175,15 @@ void OmniMap_Shader::init()
     EH_Ptr(OmniMap_FragmentShader = new GLFragmentShader(FragmentShaderFilename, fragmentPreludePtr));
   } else
   {	
-    std::string fragTotal;
-    int *shaderPtr = fs;
-    int shaderPtrSize = sizeof(fs)/sizeof(int);
+    std::string fragTotal = preprocessorMacroGlobal + std::string(fragmentPreludePtr);
 
     if (useMirror) {
-      shaderPtr = mirror_fs;
-      shaderPtrSize = sizeof(mirror_fs)/sizeof(int);
+      fragTotal += effectMirrorShaderFrag;
+    } else if (1 <= CobraWarpWithTrueDimension ) {
+      fragTotal += effectomnimap_fragmentCobra;
+    } else {
+      fragTotal += effectomnimap_fragment;
     }
-    else if(1 <= CobraWarpWithTrueDimension ) {
-      shaderPtr = fsCobra;
-      shaderPtrSize = sizeof(fsCobra)/sizeof(int);
-    }
-
-    EH_Ptr(fragmentShaderSrc = new char[shaderPtrSize+1]);
-    for (int i = 0; i < shaderPtrSize; i++) {
-      fragmentShaderSrc[i] = (char) shaderPtr[i];
-      fragmentShaderSrc[i+1] = 0;
-    }
-
-    fragTotal = preprocessorMacroGlobal + std::string(fragmentPreludePtr) + std::string(fragmentShaderSrc);
 
     EH_Ptr(OmniMap_FragmentShader = new GLFragmentShader(NULL, fragTotal.c_str()));
   }
@@ -288,8 +263,6 @@ void OmniMap_Shader::init()
 
 
   if (glsl_CobraWarpWithTrueDimension) { delete glsl_CobraWarpWithTrueDimension; }
-  if (vertexShaderSrc) { delete[] vertexShaderSrc; }
-  if (fragmentShaderSrc) { delete[] fragmentShaderSrc; }
 }
 
 

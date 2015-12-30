@@ -12,4 +12,4 @@ FOR /F "usebackq tokens=* delims=" %%i IN (%INFILE%) DO (
   echo "%%i\n" >> %OUTFILE%
 )
 
-echo } >> %OUTFILE%
+echo }; >> %OUTFILE%

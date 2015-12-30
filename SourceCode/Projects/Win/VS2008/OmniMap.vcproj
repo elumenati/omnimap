@@ -358,6 +358,98 @@
 						RelativePath="..\..\..\Source\renderType\D3D9\ScreenRendererD3D.cpp"
 						>
 					</File>
+					<Filter
+						Name="Shaders"
+						>
+						<File
+							RelativePath="..\..\..\Source\renderType\D3D9\Shaders\CobraWarp.fx"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\D3D9\Shaders\OmniMapDome.fx"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+					</Filter>
 				</Filter>
 				<Filter
 					Name="D3D10"
@@ -378,6 +470,98 @@
 						RelativePath="..\..\..\Source\renderType\D3D10\ScreenRendererD3D10.cpp"
 						>
 					</File>
+					<Filter
+						Name="Shaders"
+						>
+						<File
+							RelativePath="..\..\..\Source\renderType\D3D10\Shaders\CobraWarp10.fx"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\D3D10\Shaders\OmniMapDome10.fx"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+					</Filter>
 				</Filter>
 				<Filter
 					Name="D3D11"
@@ -398,6 +582,98 @@
 						RelativePath="..\..\..\Source\renderType\D3D11\ScreenRendererD3D11.cpp"
 						>
 					</File>
+					<Filter
+						Name="Shaders"
+						>
+						<File
+							RelativePath="..\..\..\Source\renderType\D3D11\Shaders\CobraWarp11.fx"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\D3D11\Shaders\OmniMapDome11.fx"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+					</Filter>
 				</Filter>
 				<Filter
 					Name="OGL"
@@ -452,6 +728,274 @@
 						<File
 							RelativePath="..\..\..\Source\renderType\OGL\spout\OmniSpout.cpp"
 							>
+						</File>
+					</Filter>
+					<Filter
+						Name="Shaders"
+						>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\MirrorShaderFrag.frag"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\MirrorShaderVert.vert"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_fragmentCobra.frag"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_vertexCobra.vert"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_fragment.frag"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_vertex.vert"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
 						</File>
 					</Filter>
 				</Filter>

@@ -1,0 +1,32 @@
+
+#ignore thumbnails created by windows and Mac
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#Ignore files build by Visual Studio
+*.user
+*.obj
+*.exe
+*.pdb
+*.aps
+*.pch
+*.vspscc
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Dd]ebug*/
+*.lib
+*.sbr
+[Rr]elease*/
+*.dll
+#*.sys
