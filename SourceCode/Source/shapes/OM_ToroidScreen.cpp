@@ -223,16 +223,16 @@ void OM_ToroidScreen::createMeshGeometry(ScreenGeometryBase::SimpleVertex *verte
 			dist = torusRadius * cosPhi;
 
 			OmniVec3 p1(cosTheta1*dist, sinPhi*ringRadius, sinTheta1*dist);
-			simpleVB->x = p1.dot(NewI);
-			simpleVB->y = p1.dot(NewJ);
-			simpleVB->z = p1.dot(NewK);
+			simpleVB->x = p1.dot(NewI)+Center.x;
+			simpleVB->y = p1.dot(NewJ)+Center.y;
+			simpleVB->z = p1.dot(NewK)+Center.z;
 			simpleVB++;
 			vertexCounts[i]++;
 
 			OmniVec3 p2(cosTheta*dist, sinPhi*ringRadius, sinTheta*dist);
-			simpleVB->x = p2.dot(NewI);
-			simpleVB->y = p2.dot(NewJ);
-			simpleVB->z = p2.dot(NewK);
+			simpleVB->x = p2.dot(NewI)+Center.x;
+			simpleVB->y = p2.dot(NewJ)+Center.y;
+			simpleVB->z = p2.dot(NewK)+Center.z;
 			simpleVB++;
 			vertexCounts[i]++;
 			//if (i == 0)
