@@ -176,6 +176,13 @@
 
 
 
+enum {
+  OMNIMAP_COBRA_InterfaceFound = 1,
+  OMNIMAP_COBRA_RunningOnBackground = 2,
+  OMNIMAP_COBRA_WasWarping = 4,
+};
+
+
 
 class OmniMap_Scripting;
 class OmniMapChannelBase;

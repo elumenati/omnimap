@@ -301,17 +301,12 @@ void OmniMapD3D::SetupAllShaderVaribles()
 
   D3DVIEWPORT9 vp;
   d3dDevice->GetViewport(&vp);
-  //float yOffset2 = ((glViewportsettings3/2.0)/((float) vp.Height-(float) glViewportsettings1))/2.0;
   float yOffset1, yOffset2, yScale;
-
   if (((glViewportsettings0 + glViewportsettings2) <= vp.Width)
     && (glViewportsettings0 >= 0)
     && ((glViewportsettings1 + glViewportsettings3) <= vp.Height)
     && (glViewportsettings1 >= 0))
-  {
-    //xOffset1 = 0.0;
-    //xOffset2 = 0.0;
-    //xScale = ((float) glViewportsettings2)/ ((float) vp.Width);
+  {	//if image circle is inside of the viewport, use opengl approach
     vp.X = (DWORD) glViewportsettings0;
     vp.Y = (DWORD) glViewportsettings1;
     vp.Width = (DWORD) glViewportsettings2;
@@ -320,18 +315,22 @@ void OmniMapD3D::SetupAllShaderVaribles()
     yOffset1 = 0.0;
     yOffset2 = 0.0;
     yScale = 1.0;
-  } else {
-    yOffset2 = (float) ((glViewportsettings3/2.0f)/((float) vp.Height-(float) glViewportsettings1))/2.0f;
-    yScale = (((float) glViewportsettings2) / ((float) vp.Height));
-    yOffset1 = (((float) glViewportsettings1) / ((float) glViewportsettings3));
+  } else { // FIX FOR DX11 VIEWPORT if image circle is outside of the viewport
+    if (glViewportsettings2 <1.0f) glViewportsettings2 = (float)vp.Width; // UNTESTED
+    if(glViewportsettings3<1.0f) glViewportsettings3 = (float) vp.Height; // UNTESTED
+    float HeightImageCircle = glViewportsettings3;
+    // back out the offset from the lua... this 
+    float offsetSuggestedByLua = (glViewportsettings1 - .5f* vp.Height + .5f* vp.Width)/vp.Width;
+    float aspect = vp.Width/(float)vp.Height;
+    float offsetByDX11 =offsetSuggestedByLua*2.0f*aspect;
+    yScale = HeightImageCircle /((float)vp.Height);
+    yOffset1 = 0;
+    yOffset2 = offsetByDX11;
   }
-
-  //float xOffset1 = (((float) glViewportsettings0) / vp.Width);
-  //float xOffset2 = ((glViewportsettings2/2.0)/((float) vp.Width-(float) glViewportsettings0))/2.0;
-  //float xScale = (((float) glViewportsettings3) / ((float) vp.Width));
 
 
   if (yOffset1 != 0.0) yOffset2 = 0.0;
+
 
   ((OmniMapShaderD3D *) shaders)->omnimapFX->SetFloat( "yScale", yScale);
   ((OmniMapShaderD3D *) shaders)->omnimapFX->SetFloat( "yOffset1", yOffset1);

@@ -812,9 +812,30 @@ OmniMapBase::OmniMapBase(int _resW, int _resH,const char* strStartUpScriptFile, 
 
 
   if (loadCobraInterface(NULL) != 0) {
+    CobraWarpWithTrueDimension = 0;
     EH_Log("Cobra interface not found!");
   } else {
+    CobraWarpWithTrueDimension |= OMNIMAP_COBRA_InterfaceFound;
+    
     EH_Log("Cobra interface found!");
+    EH_Ptr(NFMemoryAccessInitFunc);
+    EH_Ptr(NFMemoryAccessGetWarpingFunc);
+    EH_Ptr(NFMemoryAccessSetWarpingFunc);
+
+    if (NFMemoryAccessInitFunc() != 0) {
+      EH_Log("Cobra is running!");
+      CobraWarpWithTrueDimension |= OMNIMAP_COBRA_RunningOnBackground;
+      if (NFMemoryAccessGetWarpingFunc() != 0) {
+        EH_Log("Cobra is warping!");
+        CobraWarpWithTrueDimension |= OMNIMAP_COBRA_WasWarping;
+        NFMemoryAccessSetWarpingFunc(FALSE);
+        EH_Log("Cobra now is not warping, job transfered to omnimap!");
+      } else {
+        EH_Log("Cobra is not warping!");
+      }
+    } else {
+      EH_Log("Cobra is not running!");
+    }
   }
 
 
@@ -871,6 +892,19 @@ OmniMapBase::OmniMapBase(int _resW, int _resH,const char* strStartUpScriptFile, 
     if (luaSupportDir) { delete[] luaSupportDir; luaSupportDir = NULL; }
     if (StartUpScript) { delete[] StartUpScript; StartUpScript = NULL; }
     if (ScriptingEngine) { delete ScriptingEngine; ScriptingEngine = NULL; }
+
+    if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_InterfaceFound) {
+      if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
+        if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_WasWarping) {
+          if (NFMemoryAccessSetWarpingFunc) NFMemoryAccessSetWarpingFunc(TRUE);
+        }
+        if (NFMemoryAccessCloseFunc) NFMemoryAccessCloseFunc();
+      }
+
+      closeCobraInterface();
+
+      CobraWarpWithTrueDimension = 0;
+    }
   }
 }
 
@@ -900,7 +934,18 @@ OmniMapBase::~OmniMapBase()
   if (StartUpScript) { delete[] StartUpScript; StartUpScript = NULL; }
 	if (StencilMask_filename) {	delete [] StencilMask_filename; StencilMask_filename = NULL;}
 
-  closeCobraInterface();
+  if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_InterfaceFound) {
+    if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
+      if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_WasWarping) {
+        if (NFMemoryAccessSetWarpingFunc) NFMemoryAccessSetWarpingFunc(TRUE);
+      }
+      if (NFMemoryAccessCloseFunc) NFMemoryAccessCloseFunc();
+    }
+    
+    closeCobraInterface();
+
+    CobraWarpWithTrueDimension = 0;
+  }
 }
 
 
@@ -973,10 +1018,6 @@ void OmniMapBase::SetUpPropertyAccess()
 	
 	access.Register("RendererType", &rendererType[0]);
 
-
-	/// cobra
-	access.Register("CobraWarpWithTrueDimension", &CobraWarpWithTrueDimension);
-	
 	access.Register("useSpoutInRenderChannels",&useSpoutInRenderChannels);
 	access.Register("useSpoutInFinalPassCamera",&useSpoutInFinalPassCamera);
 }

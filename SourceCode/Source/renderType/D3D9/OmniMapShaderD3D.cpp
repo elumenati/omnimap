@@ -158,8 +158,7 @@ void OmniMapShaderD3D::init()
   {
     std::string effectTotal = preprocessorMacroGlobal;
 
-    if (CobraWarpWithTrueDimension > 0) {
-      EH_Log("Elumenati Warp for CobraSimulation enabled.");
+    if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
       effectTotal += effectCobraWarp;
     } else {
       effectTotal += effectOmniMapDome;
@@ -170,10 +169,10 @@ void OmniMapShaderD3D::init()
 
 
   EH_Test(omnimapFX->SetTechnique("RenderScene"));
-  if(1 <= CobraWarpWithTrueDimension ){
+  /*if(1 <= CobraWarpWithTrueDimension ){
     omnimapFX->SetFloat("CobraWarpWithTrueDimension", (float)CobraWarpWithTrueDimension);
   }
-
+*/
 
   EH_OnError() {
     EH_Log("Cannot create effect from shader effect file or string");
@@ -291,31 +290,6 @@ void OmniMapShaderD3D::StencilMask_Load(char *StencilMask_FileName)
     EH_Log("Cannot load stencil mask.\n");
     StencilMask_Free();
   }
-
-#if 0
-  if(maskTexture != NULL)
-		{
-			StencilMask_Free();
-		}
-
-		StencilMask_enable = true;
-    // Convert to a wchar_t*
-    size_t origsize = strlen(StencilMask_FileName) + 1;
-		const size_t newsize = 1000;
-		size_t convertedChars = 0;
-		wchar_t wcstring[2048];
-#ifdef USE_VC7
-		convertedChars = mbstowcs(wcstring, StencilMask_FileName, origsize);
-#else
-		mbstowcs_s(&convertedChars, wcstring, origsize, StencilMask_FileName, _TRUNCATE);
-#endif
-		/*
-		HRESULT hr = D3DXCreateTextureFromFileEx(d3dDevice, wcstring, D3DX_FROM_FILE, D3DX_FROM_FILE, 1, 0,
-                                     D3DFMT_R8G8B8, D3DPOOL_SCRATCH,
-                                     D3DX_DEFAULT, D3DX_DEFAULT, 0, NULL, NULL, &maskTexture);
-									 */
-		HRESULT hr = D3DXCreateTextureFromFile(d3dDevice, wcstring,&maskTexture); 
-#endif
 }
 
 

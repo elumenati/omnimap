@@ -131,17 +131,11 @@ void OmniMap_Shader::reload()
 void OmniMap_Shader::init()
 {
   const char *fragmentPreludePtr = fragmentPrelude ? fragmentPrelude : "";
-  GLUniformVar * glsl_CobraWarpWithTrueDimension = NULL;
+  //GLUniformVar * glsl_CobraWarpWithTrueDimension = NULL;
   EH_DECLARE;
 
   EH_Log("OmniMap_OmniMapShader loading...");
   EH_GL_ASSERT("Error");
-
-
-  if(CobraWarpWithTrueDimension >0){
-    EH_Log("Elumenati Warp for CobraSimulation enabled.");
-  }
-
 
 	//Create the GLSL program
 	EH_Ptr(OmniMap_ShaderCombo = new GLProgram());
@@ -157,7 +151,7 @@ void OmniMap_Shader::init()
 
     if (useMirror) {
       vertexTotal += effectMirrorShaderVert;
-    } else if (1 <= CobraWarpWithTrueDimension ) {
+    } else if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
       vertexTotal += effectomnimap_vertexCobra;
     } else {
       vertexTotal += effectomnimap_vertex;
@@ -179,7 +173,7 @@ void OmniMap_Shader::init()
 
     if (useMirror) {
       fragTotal += effectMirrorShaderFrag;
-    } else if (1 <= CobraWarpWithTrueDimension ) {
+    } else if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
       fragTotal += effectomnimap_fragmentCobra;
     } else {
       fragTotal += effectomnimap_fragment;
@@ -223,18 +217,18 @@ void OmniMap_Shader::init()
 #else
 	EH_Ptr(glsl_channelTexture0= OmniMap_ShaderCombo->getUniformVar("channelTexture0"), "Error:\tglsl_channelTexture0 not found in shader\n");
 	EH_Ptr(glsl_channelTexture1= OmniMap_ShaderCombo->getUniformVar("channelTexture1"), "Error:\tglsl_channelTexture1 not found in shader\n");
-  if(CobraWarpWithTrueDimension <= 0 ) {
+  if(CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
     EH_Ptr(glsl_channelTexture2= OmniMap_ShaderCombo->getUniformVar("channelTexture2"), "Error:\tglsl_channelTexture2 not found in shader\n");
     EH_Ptr(glsl_channelTexture3= OmniMap_ShaderCombo->getUniformVar("channelTexture3"), "Error:\tglsl_channelTexture3 not found in shader\n");
   }
 #endif
 
-
+/*
   if(1 <= CobraWarpWithTrueDimension ){
     EH_Ptr(glsl_CobraWarpWithTrueDimension = OmniMap_ShaderCombo->getUniformVar  ("CobraWarpWithTrueDimension"), "Error:CobraWarpWithTrueDimension not found in shader\n");
     glsl_CobraWarpWithTrueDimension->set((float)CobraWarpWithTrueDimension);
   }
-
+*/
 
   EH_GL_ASSERT("Error");
 
@@ -246,8 +240,8 @@ void OmniMap_Shader::init()
 
   EH_OnError() {
     EH_Log("Error!\tOmniMap_OmniMapShader failed to load...");
-    if(OmniMap_VertexShader && !OmniMap_VertexShader->isCompiled())
-    {
+    
+    if (OmniMap_VertexShader && !OmniMap_VertexShader->isCompiled()) {
       EH_Log("Error:\tVertex Shader did not compile.\n");
       EH_Log(OmniMap_VertexShader->GetLog().c_str());
     }
@@ -262,7 +256,7 @@ void OmniMap_Shader::init()
   }
 
 
-  if (glsl_CobraWarpWithTrueDimension) { delete glsl_CobraWarpWithTrueDimension; }
+  //if (glsl_CobraWarpWithTrueDimension) { delete glsl_CobraWarpWithTrueDimension; }
 }
 
 

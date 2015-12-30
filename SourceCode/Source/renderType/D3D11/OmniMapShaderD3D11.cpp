@@ -163,8 +163,7 @@ void OmniMapShaderD3D11::init()
   {
     std::string effectTotal = preprocessorMacroGlobal;
 
-    if (CobraWarpWithTrueDimension > 0) {
-      EH_Log("Elumenati Warp for CobraSimulation enabled.");
+    if (CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
       effectTotal += effectCobraWarp11;
     } else {
       effectTotal += effectOmniMapDome11;
@@ -204,12 +203,12 @@ void OmniMapShaderD3D11::init()
 
   hudProjMatrixSV = omnimapFX->GetVariableByName( "g_mProjection" )->AsMatrix();
   hudTextureSV = omnimapFX->GetVariableByName( "hudTexture" )->AsShaderResource();
-
+/*
   if (1 <= CobraWarpWithTrueDimension ) {
     ID3DX11EffectScalarVariable *sCobraWarpWithTrueDimension = omnimapFX->GetVariableByName( "CobraWarpWithTrueDimension" )->AsScalar();
     sCobraWarpWithTrueDimension->SetFloat((float)CobraWarpWithTrueDimension);
   }
-
+*/
   EH_Test(hudTechnique->GetPassByIndex( 0 )->GetDesc( &PassDesc ));
   EH_Test(d3dDevice->CreateInputLayout( posTextLayout, sizeof(posTextLayout)/sizeof(posTextLayout[0]), 
     PassDesc.pIAInputSignature, PassDesc.IAInputSignatureSize, &PositionTextureLayout ) );
