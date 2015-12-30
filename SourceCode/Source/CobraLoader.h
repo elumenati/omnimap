@@ -11,5 +11,5 @@ extern NFMemoryAccessAdquireLock_Typedef NFMemoryAccessAdquireLockFunc;
 extern NFMemoryAccessReleaseLock_Typedef NFMemoryAccessReleaseLockFunc;
 
 
-int loadCobraInterface(char *pathToDll);
+int loadCobraInterface(TCHAR *pathToDll);
 void closeCobraInterface(void);

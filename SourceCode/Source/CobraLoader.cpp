@@ -13,17 +13,24 @@ NFMemoryAccessAdquireLock_Typedef NFMemoryAccessAdquireLockFunc = NULL;
 NFMemoryAccessReleaseLock_Typedef NFMemoryAccessReleaseLockFunc = NULL;
 
 
+#ifdef UNICODE
+#define _T(V) L##V
+typedef std::wstring STDSTRING;
+#else
+#define _T(V) V
+typedef std::string STDSTRING;
+#endif
 
 
-int loadCobraInterface(char *pathToDll) {
-  std::string finalPath;
+
+int loadCobraInterface(TCHAR *pathToDll) {
+  STDSTRING finalPath;
   EH_DECLARE;
 
-  if (pathToDll == NULL) finalPath = ".\\";
-  else finalPath = std::string(pathToDll)+ "\\";
+  if (pathToDll == NULL) finalPath = _T(".\\");
+  else finalPath = STDSTRING(pathToDll)+ _T("\\");
 
-  /*
-  EH_Ptr(_cobraModule = LoadLibrary(finalPath + "NFDistorterInterface.dll"));
+  EH_Ptr(_cobraModule = LoadLibrary(&STDSTRING(finalPath + _T("NFDistorterInterface.dll"))[0]));
   EH_Ptr(NFMemoryAccessInitFunc = (NFMemoryAccessInit_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessInit"));
   EH_Ptr(NFMemoryAccessCloseFunc = (NFMemoryAccessClose_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessClose"));
   EH_Ptr(NFMemoryAccessTestChangeFunc = (NFMemoryAccessTestChange_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessTestChange"));
@@ -33,7 +40,7 @@ int loadCobraInterface(char *pathToDll) {
   EH_Ptr(NFMemoryAccessReleaseLockFunc = (NFMemoryAccessReleaseLock_Typedef) GetProcAddress(_cobraModule, "NFMemoryAccessReleaseLock"));
 
   EH_OnError() {}
-*/
+
   return EH_ERRORCODE;
 }
 
