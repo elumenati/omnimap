@@ -376,9 +376,6 @@ void OmniMapD3D11::SetupAllShaderVaribles()
 		&& ((glViewportsettings1 + glViewportsettings3) <= vp.Height)
 		&& (glViewportsettings1 >= 0))
 	{
-		//xOffset1 = 0.0;
-		//xOffset2 = 0.0;
-		//xScale = ((float) glViewportsettings2)/ ((float) vp.Width);
 		vp.TopLeftX = glViewportsettings0;
 		vp.TopLeftY = glViewportsettings1;
 		vp.Width = glViewportsettings2;
@@ -389,8 +386,8 @@ void OmniMapD3D11::SetupAllShaderVaribles()
 		yScale = 1.0;
 	} else {
 		yOffset2 = ((glViewportsettings3/2.0f)/((float) vp.Height-(float) glViewportsettings1))/2.0f;
-    yScale = (((float) glViewportsettings2) / ((float) vp.Height));
-    yOffset1 = (((float) glViewportsettings1) / ((float) glViewportsettings3));
+		yScale = (((float) glViewportsettings2) / ((float) vp.Height));
+		yOffset1 = (((float) glViewportsettings1) / ((float) glViewportsettings3));
 	}
 
 

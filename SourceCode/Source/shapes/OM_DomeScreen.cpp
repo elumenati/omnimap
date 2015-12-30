@@ -191,17 +191,8 @@ bool OM_DomeScreen::xyTo3D(float x, float y, float *xyz)
 		OmniVec3 gl_Position;	
 		gl_Position.x = x;
 		gl_Position.y = y;
-		//float x2 = x*x;
-		//float y2 = y*y;
-		//float xy2 = x2 - y2;
-		//float xy2_1 = 1.0 - xy2;
 		float xy2_2 = ((x*x)+(y*y))-1.0;
-		//float xy2_3 = 1.0-(x*x)-(y*y);
-		//gl_Position.z = sqrtf(xy2_1);
 		gl_Position.z = -sqrtf(fabs(xy2_2));
-		
-		//gl_Position.w =1.0;
-		//gl_Position.z =-D/1000.0;   // bug fix 2b fix for reverse z depth
 		if (gl_Position.z > this->Radius)
 			return false;
 		xyz[0] = gl_Position.x;
@@ -297,8 +288,6 @@ void OM_DomeScreen::createMeshGeometry(ScreenGeometryBase::SimpleVertex *vertice
 	OmniVec3 NewK = NewI.cross(NewJ);
 
 	//double domeradius= Radius;
-	
-
 	//Type = GL_POINTS;
 	
 
@@ -335,7 +324,7 @@ void OM_DomeScreen::createMeshGeometry(ScreenGeometryBase::SimpleVertex *vertice
 				}	
 				blPrime = project2DPointUpYToUnitDome(blPrime);
 				tlPrime = project2DPointUpYToUnitDome(tlPrime);
-				trPrime = project2DPointUpYToUnitDome(trPrime);
+				trPrime = project2DPointUpYToUnitDome(trPrime);	
 
 
 				blPrime  = OmniVec3(blPrime .dot(NewI),blPrime .dot(NewJ),blPrime .dot(NewK))*Radius+Center;
