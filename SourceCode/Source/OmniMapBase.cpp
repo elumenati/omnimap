@@ -86,6 +86,7 @@ String_OmniMap_Screen_Map OmniMap_GLOBAL_ScreenShapes;
 std::string preprocessorMacroGlobal("");
 
 
+extern "C" int _forceCRTManifestCUR=0;
 
 
 
