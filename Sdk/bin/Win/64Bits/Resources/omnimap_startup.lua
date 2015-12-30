@@ -50,7 +50,7 @@ end
 if(createapartialdome) then
 	CreatePartialDome("MyDome", DomeCenter,DomeOrientation,DomeRadius_unitless,DomeTesselation,
 		DomeNumStacks, DomeNumRings)
-	createadome = false
+	createapartialdome = false
 end
 
 if (createapanorama) then

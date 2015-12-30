@@ -9,7 +9,7 @@
 -- 1 = 16x9
 -- 2 = 16x10
 
-AspectRatio = 1
+AspectRatio = 2
 
 -- Lens Offset Settings
 function LensCrop_Panorama()
@@ -20,7 +20,7 @@ function LensCrop_Panorama()
 	SetglViewportsettings(0, -7.0/32.0, 0)
   end
   if(AspectRatio == 2) then
-	SetglViewportsettings(0, -3.0/16.0, 0)
+	SetglViewportsettings(0, -3.0/16.0 , 0)
   end
 end
 
@@ -67,7 +67,7 @@ if (PanoVersion == 1) then
 	Projector.Vec_ProjectorLookVec   = Vector(0,-1,0)
 	Projector.Vec_ProjectorUpVec     = Vector(0,0,-1)
 
-	DomeCenter 	= Vector(0,-.64,0)
+	DomeCenter 	= Vector(0,0,0)
 	DomeOrientation   = Vector(0,-1,0)
 
 	AudiencePos  = Vector(0.0, -0.20, 0.0) 

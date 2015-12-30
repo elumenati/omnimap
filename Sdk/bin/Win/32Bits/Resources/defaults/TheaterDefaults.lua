@@ -9,7 +9,7 @@
 -- 1 = 16x9
 -- 2 = 16x10
 
-AspectRatio = 1
+AspectRatio = 2
 
 -- Lens Offset Settings
 function LensCrop_Theater()
