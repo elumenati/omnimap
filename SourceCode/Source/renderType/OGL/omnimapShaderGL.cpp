@@ -61,6 +61,8 @@ OmniMap_Shader::OmniMap_Shader()
   glsl_channelTexture2 = NULL;
   glsl_channelTexture3 = NULL;
 
+	glsl_channelTexture4= NULL;
+	glsl_channelTexture5= NULL;
 	initFirstTime();
 }
 
@@ -110,6 +112,8 @@ void OmniMap_Shader::deinit()
   if (glsl_channelTexture1) { delete glsl_channelTexture1; glsl_channelTexture1 = NULL; }
   if (glsl_channelTexture2) { delete glsl_channelTexture2; glsl_channelTexture2 = NULL; }
   if (glsl_channelTexture3) { delete glsl_channelTexture3; glsl_channelTexture3 = NULL; }
+  if (glsl_channelTexture4) { delete glsl_channelTexture4; glsl_channelTexture4 = NULL; }
+  if (glsl_channelTexture5) { delete glsl_channelTexture5; glsl_channelTexture5 = NULL; }
 #endif
 
   if (_glsl_StencilMask) { delete _glsl_StencilMask; _glsl_StencilMask = NULL; }
@@ -217,10 +221,13 @@ void OmniMap_Shader::init()
 #else
 	EH_Ptr(glsl_channelTexture0= OmniMap_ShaderCombo->getUniformVar("channelTexture0"), "Error:\tglsl_channelTexture0 not found in shader\n");
 	EH_Ptr(glsl_channelTexture1= OmniMap_ShaderCombo->getUniformVar("channelTexture1"), "Error:\tglsl_channelTexture1 not found in shader\n");
-  if(CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
+//  if(CobraWarpWithTrueDimension & OMNIMAP_COBRA_RunningOnBackground) {
     EH_Ptr(glsl_channelTexture2= OmniMap_ShaderCombo->getUniformVar("channelTexture2"), "Error:\tglsl_channelTexture2 not found in shader\n");
     EH_Ptr(glsl_channelTexture3= OmniMap_ShaderCombo->getUniformVar("channelTexture3"), "Error:\tglsl_channelTexture3 not found in shader\n");
-  }
+ // }
+    EH_Ptr(glsl_channelTexture4= OmniMap_ShaderCombo->getUniformVar("channelTexture4"), "Error:\tglsl_channelTexture4 not found in shader\n");
+    EH_Ptr(glsl_channelTexture5= OmniMap_ShaderCombo->getUniformVar("channelTexture5"), "Error:\tglsl_channelTexture5 not found in shader\n");
+
 #endif
 
 /*
