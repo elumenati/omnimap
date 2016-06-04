@@ -301,6 +301,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\Source\OM_Protector.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\Source\omnimap_luatable.cpp"
 				>
 			</File>
@@ -1052,6 +1056,10 @@
 			</File>
 			<File
 				RelativePath="..\..\..\Source\OM_ErrorHandling.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\Source\OM_Protector.h"
 				>
 			</File>
 			<File
