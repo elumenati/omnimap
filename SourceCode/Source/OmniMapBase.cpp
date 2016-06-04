@@ -16,6 +16,7 @@
 #include "OM_ToroidScreen.h"
 #include "OM_PartialDomeScreen.h"
 #include "OM_PlaneScreen.h"
+#include "OM_Protector.h"
 
 #include "OM_ConeScreen.h"
 
@@ -810,6 +811,7 @@ OmniMapBase::OmniMapBase(int _resW, int _resH,const char* strStartUpScriptFile, 
 	EH_LogError("Omnimap Release DLL");
 #endif		// add options for static lib in the future...
 
+  om_protector.isProtected();
 
   if (loadCobraInterface(NULL) != 0) {
     CobraWarpWithTrueDimension = 0;

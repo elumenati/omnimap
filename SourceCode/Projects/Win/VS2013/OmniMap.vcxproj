@@ -285,6 +285,7 @@ xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%2
     <ClCompile Include="..\..\..\Source\GraphicsPrimitives.cpp" />
     <ClCompile Include="..\..\..\Source\OmniMapBase.cpp" />
     <ClCompile Include="..\..\..\Source\omnimap_luatable.cpp" />
+    <ClCompile Include="..\..\..\Source\OM_Protector.cpp" />
     <ClCompile Include="..\..\..\Source\privatePrimitives.cpp" />
     <ClCompile Include="..\..\..\Source\propertySet\OmnimapIncludePropertySet.cpp" />
     <ClCompile Include="..\..\..\Source\propertySet\Property.cpp" />
@@ -549,6 +550,7 @@ xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%2
     <ClInclude Include="..\..\..\Source\omnimap_luatable.h" />
     <ClInclude Include="..\..\..\Source\omnitypedefs.h" />
     <ClInclude Include="..\..\..\Source\OM_ErrorHandling.h" />
+    <ClInclude Include="..\..\..\Source\OM_Protector.h" />
     <ClInclude Include="..\..\..\Source\privatePrimitives.h" />
     <ClInclude Include="..\..\..\Source\propertySet\HashTable.h" />
     <ClInclude Include="..\..\..\Source\propertySet\IncludePropertySet.h" />
