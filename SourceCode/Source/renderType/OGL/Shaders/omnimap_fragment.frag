@@ -48,8 +48,8 @@ uniform sampler2D channelTexture0;
 uniform sampler2D channelTexture1;
 uniform sampler2D channelTexture2;
 uniform sampler2D channelTexture3;
-//uniform sampler2D channelTexture4;
-//uniform sampler2D channelTexture5;
+uniform sampler2D channelTexture4;
+uniform sampler2D channelTexture5;
 
 uniform bool stencilMaskEnabled;
 uniform sampler2D StencilMask;
@@ -117,25 +117,25 @@ void main()
 								texCoords.t >= 0.0 && texCoords.t <= 1.0)
 								gl_FragColor.rgba = MULTISAMPLE_Vin_Vout(channelTexture3, texCoords.st).rgba;
 						}
-					}// else if (i == 4)
-					//{
-						//if (tc4.w > 0.0)
-						//{
-							//texCoords = tc4.xyz / tc4.w;
-							//if (texCoords.s >= 0.0 && texCoords.s <= 1.0 &&
-								//texCoords.t >= 0.0 && texCoords.t <= 1.0)
-								//gl_FragColor.rgba = MULTISAMPLE_Vin_Vout(channelTexture4, texCoords.st).rgba;
-						//}
-					//} else if (i == 5)
-					//{
-						//if (tc5.w > 0.0)
-						//{
-							//texCoords = tc5.xyz / tc5.w;
-							//if (texCoords.s >= 0.0 && texCoords.s <= 1.0 &&
-								//texCoords.t >= 0.0 && texCoords.t <= 1.0)
-								//gl_FragColor.rgba = MULTISAMPLE_Vin_Vout(channelTexture5, texCoords.st).rgba;
-						//}
-					//}
+					} else if (i == 4)
+					{
+						if (gl_TexCoord[4].w > 0.0)
+						{
+							texCoords = gl_TexCoord[4].xyz / gl_TexCoord[4].w;
+							if (texCoords.s >= 0.0 && texCoords.s <= 1.0 &&
+								texCoords.t >= 0.0 && texCoords.t <= 1.0)
+								gl_FragColor.rgba = MULTISAMPLE_Vin_Vout(channelTexture4, texCoords.st).rgba;
+						}
+					} else if (i == 5)
+					{
+						if (gl_TexCoord[5].w > 0.0)
+						{
+							texCoords = gl_TexCoord[5].xyz / gl_TexCoord[5].w;
+							if (texCoords.s >= 0.0 && texCoords.s <= 1.0 &&
+								texCoords.t >= 0.0 && texCoords.t <= 1.0)
+								gl_FragColor.rgba = MULTISAMPLE_Vin_Vout(channelTexture5, texCoords.st).rgba;
+						}
+					}
 						
 				
 	
