@@ -123,18 +123,22 @@ HRESULT ScreenRendererD3D11::CreateVertBuffers(ID3D11DeviceContext* pDevContext1
   EH_Ptr(g_pVertexBuffers = new ID3D11Buffer *[numShapes]);
   EH_Ptr(vertexBufferStrides = new UINT[numShapes]);
   EH_Ptr(vertexBufferOffsets = new UINT[numShapes]);
+
+  memset(g_pVertexBuffers, 0, sizeof(ID3D11Buffer *) * numShapes);
+  memset(vertexBufferStrides, 0, sizeof(UINT) * numShapes);
+  memset(vertexBufferOffsets, 0, sizeof(UINT) * numShapes);
 	
   for (int i = 0; i < numShapes; i++)
 	{
 		if (d3d11Layout == OmniMapShaderD3D11::PositionLayout)
 		{
-      D3D11_BUFFER_DESC vbdesc;
+      D3D11_BUFFER_DESC vbdesc = {0};
       vbdesc.Usage = D3D11_USAGE_IMMUTABLE;
       vbdesc.ByteWidth = vertexSize * NumVertices[i];
       vbdesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
       vbdesc.CPUAccessFlags = 0;
       vbdesc.MiscFlags = 0;
-			D3D11_SUBRESOURCE_DATA InitData;
+			D3D11_SUBRESOURCE_DATA InitData = {0};
 			InitData.pSysMem = pVertices;
 			InitData.SysMemPitch = 0;
 			InitData.SysMemSlicePitch = 0;
