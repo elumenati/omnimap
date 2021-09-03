@@ -415,8 +415,6 @@ void OmniMapD3D10::PostRender()
   UINT saveStencilRef = 0;
   UINT saveSampleMask = 0;
 
-  HRESULT hr;
-
 	// Post Render does a few things
 	// A0 Clear
 	// B1 set the projective shader
