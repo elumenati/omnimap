@@ -99,7 +99,9 @@ HRESULT ScreenRendererD3D::CreateVertBuffers(IDirect3DDevice9* pDev9, void* pVer
   EH_DECLARE;
 
 	EH_Ptr(g_pVertexBuffers = new LPDIRECT3DVERTEXBUFFER9[numShapes]);
-	
+
+  memset(g_pVertexBuffers, 0, sizeof(LPDIRECT3DVERTEXBUFFER9) * numShapes);
+
   for (int i = 0; i < numShapes; i++)
 	{
 		if (vertexType == D3DFVF_XYZ_VERTEX)

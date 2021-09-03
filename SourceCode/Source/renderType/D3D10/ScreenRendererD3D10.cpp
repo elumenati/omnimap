@@ -129,6 +129,10 @@ HRESULT ScreenRendererD3D10::CreateVertBuffers(ID3D10Device* pDev10, void* pVert
   EH_Ptr(vertexBufferStrides = new UINT[numShapes]);
   EH_Ptr(vertexBufferOffsets = new UINT[numShapes]);
 
+  memset(g_pVertexBuffers, 0, sizeof(ID3D10Buffer *) * numShapes);
+  memset(vertexBufferStrides, 0, sizeof(UINT) * numShapes);
+  memset(vertexBufferOffsets, 0, sizeof(UINT) * numShapes);
+
   for (int i = 0; i < numShapes; i++)
   {
     if (d3d10Layout == OmniMapShaderD3D10::PositionLayout)
