@@ -21,7 +21,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../../../Sdk/Bin/Win/32Bits/"
+			OutputDirectory="../../../../Sdk/Bin/Win/$(PlatformName)/"
 			ConfigurationType="2"
 			InheritedPropertySheets="..\..\..\Properties\DllDebug32.vsprops"
 			CharacterSet="1"
@@ -60,7 +60,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="opengl32.lib glu32.lib dxerr.lib dxguid.lib d3dx9.lib d3dx10.lib d3d10.lib d3d11.lib d3dx11.lib effects11.lib d3dcompiler.lib"
 				OutputFile="$(OutDir)/$(ProjectName)D.dll"
-				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/32Bits/$(ProjectName)D.lib"
+				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/$(PlatformName)/$(ProjectName)D.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -87,7 +87,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="../../../../Sdk/Bin/Win/64Bits/"
+			OutputDirectory="../../../../Sdk/Bin/Win/$(PlatformName)/"
 			ConfigurationType="2"
 			InheritedPropertySheets="..\..\..\Properties\DllDebug64.vsprops"
 			CharacterSet="1"
@@ -126,7 +126,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="opengl32.lib glu32.lib dxerr.lib dxguid.lib d3dx9.lib d3dx10.lib d3d10.lib d3d11.lib d3dx11.lib effects11.lib d3dcompiler.lib"
 				OutputFile="$(OutDir)/$(ProjectName)D.dll"
-				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/64Bits/$(ProjectName)D.lib"
+				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/$(PlatformName)/$(ProjectName)D.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -153,7 +153,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="../../../../Sdk/Bin/Win/32Bits/"
+			OutputDirectory="../../../../Sdk/Bin/Win/$(PlatformName)/"
 			ConfigurationType="2"
 			InheritedPropertySheets="..\..\..\Properties\DllRelease32.vsprops"
 			CharacterSet="1"
@@ -192,7 +192,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="opengl32.lib glu32.lib dxerr.lib dxguid.lib d3dx9.lib d3dx10.lib d3d10.lib d3d11.lib d3dx11.lib effects11.lib d3dcompiler.lib"
 				OutputFile="$(OutDir)/$(ProjectName).dll"
-				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/32Bits/$(ProjectName).lib"
+				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/$(PlatformName)/$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -219,7 +219,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="../../../../Sdk/Bin/Win/64Bits/"
+			OutputDirectory="../../../../Sdk/Bin/Win/$(PlatformName)/"
 			ConfigurationType="2"
 			InheritedPropertySheets="..\..\..\Properties\DllRelease64.vsprops"
 			CharacterSet="1"
@@ -258,7 +258,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="opengl32.lib glu32.lib dxerr.lib dxguid.lib d3dx9.lib d3dx10.lib d3d10.lib d3d11.lib d3dx11.lib effects11.lib d3dcompiler.lib"
 				OutputFile="$(OutDir)/$(ProjectName).dll"
-				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/64Bits/$(ProjectName).lib"
+				ImportLibrary="../../../../Sdk/Lib/Win/VS2008/$(PlatformName)/$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"

@@ -68,18 +68,18 @@
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>../../../../Sdk/Bin/Win/32Bits/\</OutDir>
+    <OutDir>../../../../Sdk/Bin/Win/$(Platform)/\</OutDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>../../../../Sdk/Bin/Win/64Bits/\</OutDir>
+    <OutDir>../../../../Sdk/Bin/Win/$(Platform)/\</OutDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>../../../../Sdk/Bin/Win/32Bits/\</OutDir>
+    <OutDir>../../../../Sdk/Bin/Win/$(Platform)/\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>../../../../Sdk/Bin/Win/64Bits/\</OutDir>
+    <OutDir>../../../../Sdk/Bin/Win/$(Platform)/\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,7 +90,7 @@
     <Link>
       <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)D.dll</OutputFile>
-      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/32Bits/$(ProjectName)D.lib</ImportLibrary>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/$(Platform)/$(ProjectName)D.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>%40echo off
@@ -129,7 +129,7 @@ xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%2
     <Link>
       <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)D.dll</OutputFile>
-      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/64Bits/$(ProjectName)D.lib</ImportLibrary>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/$(Platform)/$(ProjectName)D.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>%40echo off
@@ -168,7 +168,7 @@ xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%2
     <Link>
       <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
-      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/32Bits/$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/$(Platform)/$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>%40echo off
@@ -207,7 +207,7 @@ xcopy "%25SOURCE_PATH%25\renderType\D3D11\OmniMapChannelD3D11.h"  %25DEST_PATH%2
     <Link>
       <AdditionalDependencies>opengl32.lib;glu32.lib;dxerr.lib;dxguid.lib;d3dx9.lib;d3dx10.lib;d3d10.lib;d3d11.lib;d3dx11.lib;effects11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
-      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/64Bits/$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>../../../../Sdk/Lib/Win/VS2013/$(Platform)/$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>%40echo off
