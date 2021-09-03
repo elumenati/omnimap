@@ -89,19 +89,19 @@
 
 // Direct3D9 includes
 #include <d3d9.h>
-#include <d3dx9.h>
+//#include <d3dx9.h>
 
 // Direct3D10 includes
 #include <dxgi.h>
-#include <d3d10_1.h>
+//#include <d3d10_1.h>
 #include <d3d10.h>
-#include <d3dx10.h>
+//#include <d3dx10.h>
 
 // XInput includes
 #include <xinput.h>
 
 // HRESULT translation for Direct3D10 and other APIs 
-#include <dxerr.h>
+//#include <dxerr.h>
 
 // strsafe.h deprecates old unsecure string functions.  If you 
 // really do not want to it to (not recommended), then uncomment the next line 

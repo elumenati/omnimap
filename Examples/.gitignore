@@ -9,7 +9,6 @@ ehthumbs.db
 Thumbs.db
 
 #Ignore files build by Visual Studio
-*.user
 *.obj
 *.exe
 *.pdb
@@ -30,3 +29,9 @@ Thumbs.db
 [Rr]elease*/
 *.dll
 #*.sys
+*.zip
+
+#Ignore files build by Xcode
+[Bb]uild/
+
+.vs/
