@@ -165,7 +165,6 @@ void OmniMapD3D11::SetUpPropertyAccess()
 }
 
 
-
 void OmniMapD3D11::init()
 {
   D3D11_RASTERIZER_DESC CurrentRasterizerState;
@@ -421,8 +420,9 @@ void OmniMapD3D11::PostRender()
   ID3D11ComputeShader *saveComputeShader = NULL;
   ID3D11DomainShader *saveDomainShader = NULL;
   ID3D11HullShader *saveHullShader = NULL;
-  ID3D11ShaderResourceView *saveShaderResourceView = NULL;
+  ID3D11ShaderResourceView *saveShaderResourceView[D3D11_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT] = {NULL};
   ID3D11RenderTargetView *saveRenderTargetView = NULL;
+  ID3D11DepthStencilView *saveDepthStencilView = NULL;
   ID3D11SamplerState *saveSamplerState = NULL;
   ID3D11RasterizerState *saveRasterState = NULL;
   ID3D11DepthStencilState *saveDepthStencilState = NULL;
@@ -455,14 +455,15 @@ void OmniMapD3D11::PostRender()
 	//  8 
 
 	// A. 0 Clear
-  //d3dDeviceContext->OMGetRenderTargets(1, &saveRenderTargetView, NULL);
+  d3dDeviceContext->OMGetRenderTargets(1, &saveRenderTargetView, &saveDepthStencilView);
+  d3dDeviceContext->OMSetRenderTargets(1, &saveRenderTargetView, NULL);
   d3dDeviceContext->RSGetViewports(&saveViewportNumber, NULL);
   d3dDeviceContext->RSGetViewports(&saveViewportNumber, saveViewport);
   d3dDeviceContext->IAGetInputLayout(&saveVertexLayout);
   d3dDeviceContext->IAGetIndexBuffer(&saveIndexBuffer, &saveFormat, &saveIOffset);
   d3dDeviceContext->IAGetVertexBuffers(0, 1, &saveVertexBuffer, &saveStride, &saveOffset);
   d3dDeviceContext->IAGetPrimitiveTopology(&saveTopology);
-  d3dDeviceContext->PSGetShaderResources(0, 1, &saveShaderResourceView);
+  d3dDeviceContext->PSGetShaderResources(0, D3D11_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT, saveShaderResourceView);
   d3dDeviceContext->PSGetShader(&savePixelShader, NULL, 0);
   d3dDeviceContext->VSGetShader(&saveVertexShader, NULL, 0);
   d3dDeviceContext->GSGetShader(&saveGeometryShader, NULL, 0);
@@ -473,6 +474,12 @@ void OmniMapD3D11::PostRender()
   d3dDeviceContext->RSGetState(&saveRasterState);
   d3dDeviceContext->OMGetBlendState(&saveBlendState, saveBlendFactor, &saveSampleMask);
   d3dDeviceContext->PSGetSamplers(0, 1, &saveSamplerState);
+
+
+  d3dDeviceContext->GSSetShader(NULL, NULL, 0);
+  d3dDeviceContext->CSSetShader(NULL, NULL, 0);
+  d3dDeviceContext->DSSetShader(NULL, NULL, 0);
+  d3dDeviceContext->HSSetShader(NULL, NULL, 0);
 
 	if(GL_STATE_CLEAR_AT_STARTFRAME)
 		Clear();
@@ -505,12 +512,12 @@ void OmniMapD3D11::PostRender()
 	}
 
 
-  //d3dDeviceContext->OMSetRenderTargets(1, &saveRenderTargetView, NULL);
+  d3dDeviceContext->OMSetRenderTargets(1, &saveRenderTargetView, saveDepthStencilView);
   d3dDeviceContext->IASetInputLayout(saveVertexLayout);
   d3dDeviceContext->IASetIndexBuffer(saveIndexBuffer, saveFormat, saveIOffset);
   d3dDeviceContext->IASetVertexBuffers(0, 1, &saveVertexBuffer, &saveStride, &saveOffset);
   d3dDeviceContext->IASetPrimitiveTopology(saveTopology);
-  d3dDeviceContext->PSSetShaderResources(0, 1, &saveShaderResourceView);
+  d3dDeviceContext->PSSetShaderResources(0, D3D11_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT, saveShaderResourceView);
   d3dDeviceContext->PSSetShader(savePixelShader, NULL, 0);
   d3dDeviceContext->VSSetShader(saveVertexShader, NULL, 0);
   d3dDeviceContext->GSSetShader(saveGeometryShader, NULL, 0);
@@ -522,8 +529,9 @@ void OmniMapD3D11::PostRender()
   d3dDeviceContext->OMSetDepthStencilState(saveDepthStencilState, saveStencilRef);
   d3dDeviceContext->OMSetBlendState(saveBlendState, saveBlendFactor, saveSampleMask);
 
+  for (int i = 0; i < D3D11_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT; i++) if (saveShaderResourceView[i]) saveShaderResourceView[i]->Release();
+  if (saveDepthStencilView) saveDepthStencilView->Release();
   if (saveRenderTargetView) saveRenderTargetView->Release();
-  if (saveShaderResourceView) saveShaderResourceView->Release();
   if (saveVertexBuffer) saveVertexBuffer->Release();
   if (saveIndexBuffer) saveIndexBuffer->Release();
   if (savePixelShader) savePixelShader->Release();

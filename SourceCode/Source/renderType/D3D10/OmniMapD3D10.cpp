@@ -391,7 +391,31 @@ void OmniMapD3D10::SetupAllShaderVaribles()
 
 void OmniMapD3D10::PostRender()
 {
-	HRESULT hr;
+  ID3D10InputLayout *saveVertexLayout = NULL;
+  D3D10_PRIMITIVE_TOPOLOGY saveTopology;
+  ID3D10Buffer *saveVertexBuffer = NULL;
+  ID3D10Buffer *saveIndexBuffer = NULL;
+  ID3D10VertexShader *saveVertexShader = NULL;
+  ID3D10PixelShader *savePixelShader = NULL;
+  ID3D10GeometryShader *saveGeometryShader = NULL;
+  ID3D10ShaderResourceView *saveShaderResourceView[D3D10_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT] = {NULL};
+  ID3D10RenderTargetView *saveRenderTargetView = NULL;
+  ID3D10DepthStencilView *saveDepthStencilView = NULL;
+  ID3D10SamplerState *saveSamplerState = NULL;
+  ID3D10RasterizerState *saveRasterState = NULL;
+  ID3D10DepthStencilState *saveDepthStencilState = NULL;
+  ID3D10BlendState *saveBlendState = NULL;
+  UINT saveViewportNumber = 0;
+  D3D10_VIEWPORT saveViewport[100];
+  float saveBlendFactor[4];
+  DXGI_FORMAT saveFormat;
+  UINT saveStride;
+  UINT saveOffset;
+  UINT saveIOffset;
+  UINT saveStencilRef = 0;
+  UINT saveSampleMask = 0;
+
+  HRESULT hr;
 
 	// Post Render does a few things
 	// A0 Clear
@@ -411,11 +435,25 @@ void OmniMapD3D10::PostRender()
 	//  8 
 
 	// A. 0 Clear
-  D3D10_STATE_BLOCK_MASK stateBlockMask;
-  D3D10StateBlockMaskEnableAll(&stateBlockMask);
-  hr =  D3D10CreateStateBlock(d3d10Device, &stateBlockMask, &pStateBlock);
+  d3d10Device->OMGetRenderTargets(1, &saveRenderTargetView, &saveDepthStencilView);
+  d3d10Device->OMSetRenderTargets(1, &saveRenderTargetView, NULL);
+  d3d10Device->RSGetViewports(&saveViewportNumber, NULL);
+  d3d10Device->RSGetViewports(&saveViewportNumber, saveViewport);
+  d3d10Device->IAGetInputLayout(&saveVertexLayout);
+  d3d10Device->IAGetIndexBuffer(&saveIndexBuffer, &saveFormat, &saveIOffset);
+  d3d10Device->IAGetVertexBuffers(0, 1, &saveVertexBuffer, &saveStride, &saveOffset);
+  d3d10Device->IAGetPrimitiveTopology(&saveTopology);
+  d3d10Device->PSGetShaderResources(0, D3D10_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT, saveShaderResourceView);
+  d3d10Device->PSGetShader(&savePixelShader);
+  d3d10Device->VSGetShader(&saveVertexShader);
+  d3d10Device->GSGetShader(&saveGeometryShader);
+  d3d10Device->OMGetDepthStencilState(&saveDepthStencilState, &saveStencilRef);
+  d3d10Device->RSGetState(&saveRasterState);
+  d3d10Device->OMGetBlendState(&saveBlendState, saveBlendFactor, &saveSampleMask);
+  d3d10Device->PSGetSamplers(0, 1, &saveSamplerState);
 
-  pStateBlock->Capture();
+
+  d3d10Device->GSSetShader(NULL);
 
   if(GL_STATE_CLEAR_AT_STARTFRAME)
     Clear();
@@ -447,8 +485,32 @@ void OmniMapD3D10::PostRender()
     DrawHeadsUpDisplay();
   }
 
-  pStateBlock->Apply();
-  SAFE_RELEASE(pStateBlock);
+  d3d10Device->OMSetRenderTargets(1, &saveRenderTargetView, saveDepthStencilView);
+  d3d10Device->IASetInputLayout(saveVertexLayout);
+  d3d10Device->IASetIndexBuffer(saveIndexBuffer, saveFormat, saveIOffset);
+  d3d10Device->IASetVertexBuffers(0, 1, &saveVertexBuffer, &saveStride, &saveOffset);
+  d3d10Device->IASetPrimitiveTopology(saveTopology);
+  d3d10Device->PSSetShaderResources(0, D3D10_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT, saveShaderResourceView);
+  d3d10Device->PSSetShader(savePixelShader);
+  d3d10Device->VSSetShader(saveVertexShader);
+  d3d10Device->GSSetShader(saveGeometryShader);
+  d3d10Device->RSSetState(saveRasterState);
+  d3d10Device->PSSetSamplers(0, 1, &saveSamplerState);
+  d3d10Device->OMSetDepthStencilState(saveDepthStencilState, saveStencilRef);
+  d3d10Device->OMSetBlendState(saveBlendState, saveBlendFactor, saveSampleMask);
+
+  for (int i = 0; i < D3D10_COMMONSHADER_CONSTANT_BUFFER_API_SLOT_COUNT; i++) if (saveShaderResourceView[i]) saveShaderResourceView[i]->Release();
+  if (saveDepthStencilView) saveDepthStencilView->Release();
+  if (saveRenderTargetView) saveRenderTargetView->Release();
+  if (saveVertexBuffer) saveVertexBuffer->Release();
+  if (saveIndexBuffer) saveIndexBuffer->Release();
+  if (savePixelShader) savePixelShader->Release();
+  if (saveVertexShader) saveVertexShader->Release();
+  if (saveGeometryShader) saveGeometryShader->Release();
+  if (saveRasterState) saveRasterState->Release();
+  if (saveSamplerState) saveSamplerState->Release();
+  if (saveDepthStencilState) saveDepthStencilState->Release();
+  if (saveBlendState) saveBlendState->Release();
 }
 
 
