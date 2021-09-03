@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="OmniMap"
 	ProjectGUID="{12EAF859-CD75-411B-A85C-E06EDCC67726}"
 	RootNamespace="OmniMap"
@@ -373,7 +373,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -383,7 +383,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -393,7 +393,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -403,7 +403,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -417,7 +417,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -427,7 +427,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -437,7 +437,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -447,7 +447,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -485,7 +485,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -495,7 +495,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -505,7 +505,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -515,7 +515,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -529,7 +529,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -539,7 +539,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -549,7 +549,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -559,7 +559,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -597,7 +597,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -607,7 +607,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -617,7 +617,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -627,7 +627,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -641,7 +641,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -651,7 +651,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -661,7 +661,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -671,7 +671,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -745,7 +745,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -755,7 +755,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -765,7 +765,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -775,7 +775,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -789,7 +789,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -799,7 +799,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -809,7 +809,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -819,95 +819,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-						</File>
-						<File
-							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_fragmentCobra.frag"
-							>
-							<FileConfiguration
-								Name="Debug|Win32"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-							<FileConfiguration
-								Name="Debug|x64"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-							<FileConfiguration
-								Name="Release|Win32"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-							<FileConfiguration
-								Name="Release|x64"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-						</File>
-						<File
-							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_vertexCobra.vert"
-							>
-							<FileConfiguration
-								Name="Debug|Win32"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-							<FileConfiguration
-								Name="Debug|x64"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-							<FileConfiguration
-								Name="Release|Win32"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
-									AdditionalDependencies="$(InputPath)"
-									Outputs="$(InputDir)$(InputName).h"
-								/>
-							</FileConfiguration>
-							<FileConfiguration
-								Name="Release|x64"
-								>
-								<Tool
-									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -921,7 +833,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -931,7 +843,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -941,7 +853,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -951,7 +863,51 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_fragmentCobra.frag"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -965,7 +921,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -975,7 +931,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -985,7 +941,7 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
@@ -995,7 +951,51 @@
 								>
 								<Tool
 									Name="VCCustomBuildTool"
-									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="..\..\..\Source\renderType\OGL\Shaders\omnimap_vertexCobra.vert"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Debug|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+									AdditionalDependencies="$(InputPath)"
+									Outputs="$(InputDir)$(InputName).h"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|x64"
+								>
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="..\..\..\Script\fxToH.bat &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 									AdditionalDependencies="$(InputPath)"
 									Outputs="$(InputDir)$(InputName).h"
 								/>
