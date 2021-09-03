@@ -72,7 +72,7 @@ bool CLua::RunScript(const char *pFname)
 	{
 		if(m_pErrorHandler)
 		{
-			char buf[256];
+			char buf[512];
 			sprintf(buf, "Lua Error - Script Load\nScript Name:%s\nError Message:%s\n", pFname, luaL_checkstring(m_pScriptContext, -1));
 			m_pErrorHandler(buf);
 		}
@@ -83,7 +83,7 @@ bool CLua::RunScript(const char *pFname)
 	{
 		if(m_pErrorHandler)
 		{
-			char buf[256];
+			char buf[512];
 			sprintf(buf, "Lua Error - Script Run\nScript Name:%s\nError Message:%s\n", pFname, luaL_checkstring(m_pScriptContext, -1));
 			m_pErrorHandler(buf);
 		}
@@ -100,7 +100,7 @@ bool CLua::RunString(const char *pCommand)
 	{
 		if(m_pErrorHandler)
 		{
-			char buf[256];
+			char buf[512];
 			sprintf(buf, "Lua Error - String Load\nError Message:%s\nString:", luaL_checkstring(m_pScriptContext, -1));
 			m_pErrorHandler(buf);
 			m_pErrorHandler(pCommand);
@@ -112,7 +112,7 @@ bool CLua::RunString(const char *pCommand)
 	{
 		if(m_pErrorHandler)
 		{
-			char buf[256];
+			char buf[512];
 			sprintf(buf, "Lua Error - String Run\nError Message:%s\nString:", luaL_checkstring(m_pScriptContext, -1));
 			m_pErrorHandler(buf);
 			m_pErrorHandler(pCommand);
