@@ -137,13 +137,13 @@ HRESULT ScreenRendererD3D10::CreateVertBuffers(ID3D10Device* pDev10, void* pVert
   {
     if (d3d10Layout == OmniMapShaderD3D10::PositionLayout)
     {
-      D3D10_BUFFER_DESC vbdesc;
+      D3D10_BUFFER_DESC vbdesc = {0};
       vbdesc.Usage = D3D10_USAGE_IMMUTABLE;
       vbdesc.ByteWidth = vertexSize * NumVertices[i];
       vbdesc.BindFlags = D3D10_BIND_VERTEX_BUFFER;
       vbdesc.CPUAccessFlags = 0;
       vbdesc.MiscFlags = 0;
-      D3D10_SUBRESOURCE_DATA InitData;
+      D3D10_SUBRESOURCE_DATA InitData = {0};
       InitData.pSysMem = pVertices;
       InitData.SysMemPitch = 0;
       InitData.SysMemSlicePitch = 0;
