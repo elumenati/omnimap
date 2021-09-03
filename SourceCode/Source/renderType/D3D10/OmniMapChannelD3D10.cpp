@@ -79,7 +79,6 @@ DXGI_FORMAT OmniMapChannelD3D10::getDSFormat()
 void OmniMapChannelD3D10::Initialize()
 {
   ID3D10RenderTargetView* pOrigRT = NULL;
-  ID3D10DepthStencilView* pOrigDS = NULL;
   D3D10_RENDER_TARGET_VIEW_DESC DescRTV;
   D3D10_TEXTURE2D_DESC tDesc;
   D3D10_TEXTURE2D_DESC dstex;
@@ -93,10 +92,9 @@ void OmniMapChannelD3D10::Initialize()
 
   EH_Log("Initialize");
 
-  d3dDevice->OMGetRenderTargets( 1, &pOrigRT, &pOrigDS );
+  d3dDevice->OMGetRenderTargets( 1, &pOrigRT, NULL );
 
   EH_Ptr(pOrigRT);
-  EH_Ptr(pOrigDS);
 
   pOrigRT->GetDesc( &DescRTV );
 
@@ -105,12 +103,26 @@ void OmniMapChannelD3D10::Initialize()
   {
 #endif
     // Create the multisample render target
+    UINT currentMultisampleQuality = (UINT)multiSampleQuality;
+    pNumQualityLevels = 0;
+
+    if (currentMultisampleQuality > 1) {
+      EH_Test(d3dDevice->CheckMultisampleQualityLevels(DescRTV.Format, currentMultisampleQuality, &pNumQualityLevels));
+      EH_Zero(pNumQualityLevels);
+      pNumQualityLevels--;
+    } else {
+      currentMultisampleQuality = 1;
+      pNumQualityLevels = 0;
+    }
+
+    EH_Log("Values Quality:%d, Count:%d", pNumQualityLevels, currentMultisampleQuality);
 
     tDesc.Width = xResolution;
     tDesc.Height = yResolution;
     tDesc.MipLevels = 1;
     tDesc.Format = DescRTV.Format;
-    tDesc.SampleDesc.Count = (UINT)multiSampleQuality;
+    tDesc.SampleDesc.Quality = pNumQualityLevels;
+    tDesc.SampleDesc.Count = currentMultisampleQuality;
     tDesc.Usage = D3D10_USAGE_DEFAULT;
     tDesc.BindFlags = D3D10_BIND_RENDER_TARGET | D3D10_BIND_SHADER_RESOURCE;
     tDesc.CPUAccessFlags = 0;
@@ -134,8 +146,8 @@ void OmniMapChannelD3D10::Initialize()
     dstex.Height = yResolution;
     dstex.MipLevels = 1;
     dstex.Format = dfmt;
-    dstex.SampleDesc.Count = (UINT)multiSampleQuality;
-    dstex.SampleDesc.Quality = 0; //D3D10_STANDARD_MULTISAMPLE_PATTERN;
+    tDesc.SampleDesc.Quality = pNumQualityLevels;
+    tDesc.SampleDesc.Count = currentMultisampleQuality;
     dstex.Usage = D3D10_USAGE_DEFAULT;
     dstex.BindFlags = D3D10_BIND_DEPTH_STENCIL;
     dstex.CPUAccessFlags = 0;
@@ -200,7 +212,6 @@ void OmniMapChannelD3D10::Initialize()
 
   // always clear temporary interfaces
   SAFE_RELEASE( pOrigRT );
-  SAFE_RELEASE( pOrigDS );
 }
 
 
