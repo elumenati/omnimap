@@ -18,7 +18,6 @@ projectorFile =  AddSupportDirectory( "omnimap_projector.lua")
 renderchannelFile =  AddSupportDirectory( "omnimap_renderchannel.lua")
 
 
-
 dofile(mathFile)
 dofile(vectorFile) 
 dofile(matrix3x3File) 
@@ -31,11 +30,8 @@ dofile(hudFile)
 dofile(projectorFile)  
 dofile(renderchannelFile)
 
-if (Screenshape == nil)
-then
-	dofile("OmniMapD3D11Config/omnimap_user_edit.lua")    -- user editable config
-end
-dofile("OmniMapD3D11Config/omnimap_dome_wiz_ai.lua") -- Programmer editable config
+dofile(AddSupportDirectory("../omnimap_user_edit.lua"))    -- user editable config
+dofile(AddSupportDirectory("omnimap_dome_wiz_ai.lua"))  -- dome wizard
 
 ------------------------------------------------------------------------------------------------------------------
 if(createacylinder) then
@@ -51,6 +47,12 @@ if(createadome) then
 	createadome = false
 end
 
+if(createapartialdome) then
+	CreatePartialDome("MyDome", DomeCenter,DomeOrientation,DomeRadius_unitless,DomeTesselation,
+		DomeNumStacks, DomeNumRings)
+	createapartialdome = false
+end
+
 if (createapanorama) then
 	CreatePanorama("MyPanorama", numRings,
 		numSides,
@@ -62,6 +64,10 @@ if (createapanorama) then
 		ringEndAngle,
 		sideStartAngle,
 		sideEndAngle)
+end
+
+if (createaplane) then
+	CreatePlane("MyPlane", PlaneWidth, PlaneHeight, PlaneCenter, PlaneOrientation) 
 end
 
 if(usestencilmask) then
@@ -102,7 +108,7 @@ SetOmnimapParameter("clearcolor_r",0)
 SetOmnimapParameter("clearcolor_g",0)
 SetOmnimapParameter("clearcolor_b",0)  
 SetOmnimapParameter("clearcolor_a",1)  
-SetOmnimapParameter("GL_STATE_CLEAR_AT_STARTFRAME"     ,"false")		-- glstate options... posible performace tweaks 
+SetOmnimapParameter("GL_STATE_CLEAR_AT_STARTFRAME"     ,"true")		-- glstate options... posible performace tweaks 
 SetOmnimapParameter("GL_STATE_glDisable_GL_DEPTH_TEST" ,"true")  -- glstate options... posible performace tweaks
 SetOmnimapParameter("GL_STATE_glDepthMask_FALSE"       ,"true")		-- glstate options... posible performace tweaks
 -------------------------------------------------------------
@@ -180,7 +186,7 @@ then
 		bottomChannel:SetViewRotateMatrix4x4(CreateViewMatrixFromBasis(AudiencePos,Vector_Reverse(BaseHeadsUp) ,RotateVec(BaseViewDirection,BaseHeadsUp,45) ))
 	end
 	bottomChannel:Update()
-end
+        end
 if(topChannel)
 then
 	topChannel:CreateChannel() -- last chance to set fbo
@@ -191,7 +197,7 @@ then
 		topChannel:SetViewRotateMatrix4x4(CreateViewMatrixFromBasis(AudiencePos,VectorCopy(BaseHeadsUp) , RotateVec(Vector_Reverse(BaseViewDirection),BaseHeadsUp,45)))
         end
 	topChannel:Update()
-end
+        end
 if(frontChannel)
 then
 	frontChannel:CreateChannel() -- last chance to set fbo
@@ -202,7 +208,7 @@ then
 		frontChannel:SetViewRotateMatrix4x4(CreateViewMatrixFromBasis(AudiencePos,RotateVec(BaseViewDirection,BaseHeadsUp,45+180) ,VectorCopy(BaseHeadsUp) ))
         end
 	frontChannel:Update()
-end
+        end
 if(backChannel)
 then
 	backChannel:CreateChannel() -- last chance to set fbo
@@ -211,18 +217,18 @@ then
 	if(backChannel.UseOmniMapMatrix)
 	then
 		backChannel:SetViewRotateMatrix4x4(CreateViewMatrixFromBasis(AudiencePos, RotateVec(BaseViewDirection,BaseHeadsUp,-45+180), VectorCopy(BaseHeadsUp)))
-    end
+        end
 	backChannel:Update()
 end
 
 -- create and set meta data
---local NumberOfChannels = 0 --(TODO) switch to TopChannelNumber etc  have create_channel return this number and clear channel reset it to zero 
---if(UseTopChannel)then 		CreateChannelMetaData("Top",NumberOfChannels)    NumberOfChannels = NumberOfChannels + 1 end
---if(UseBottomChannel)then 	CreateChannelMetaData("Bottom",NumberOfChannels) NumberOfChannels = NumberOfChannels + 1 end
---if(UseLeftChannel)then 		CreateChannelMetaData("Left",NumberOfChannels)  NumberOfChannels = NumberOfChannels + 1 end
---if(UseRightChannel)then 	CreateChannelMetaData("Right",NumberOfChannels) NumberOfChannels = NumberOfChannels + 1 end
---if(UseFrontChannel)then 	CreateChannelMetaData("Front",NumberOfChannels) NumberOfChannels = NumberOfChannels + 1 end
---if(UseBackChannel)then 		CreateChannelMetaData("Back",NumberOfChannels)  NumberOfChannels = NumberOfChannels + 1 end
+local NumberOfChannels = 0 --(TODO) switch to TopChannelNumber etc  have create_channel return this number and clear channel reset it to zero 
+if(topChannel)then 		CreateChannelMetaData("Top",NumberOfChannels)    NumberOfChannels = NumberOfChannels + 1 end
+if(bottomChannel)then 	CreateChannelMetaData("Bottom",NumberOfChannels) NumberOfChannels = NumberOfChannels + 1 end
+if(leftChannel)then 		CreateChannelMetaData("Left",NumberOfChannels)  NumberOfChannels = NumberOfChannels + 1 end
+if(rightChannel)then 	CreateChannelMetaData("Right",NumberOfChannels) NumberOfChannels = NumberOfChannels + 1 end
+if(frontChannel)then 	CreateChannelMetaData("Front",NumberOfChannels) NumberOfChannels = NumberOfChannels + 1 end
+if(backChannel)then 		CreateChannelMetaData("Back",NumberOfChannels)  NumberOfChannels = NumberOfChannels + 1 end
 
 --- Final Step is to recompute the PlaneEquations shader parameters
 --RecomputePlaneEquations()

@@ -34,7 +34,7 @@ dofile(renderchannelFile)
 if (Screenshape == nil)
 then
 	ConsolePrintString("USE USER EDIT");
-	dofile("OmniMapConfig/omnimap_user_edit.lua")    -- user editable config
+	dofile("OmniMapD3DConfig/omnimap_user_edit.lua")    -- user editable config
 end
 
 dofile("OmniMapD3DConfig/omnimap_dome_wiz_ai.lua") -- Programmer editable config
